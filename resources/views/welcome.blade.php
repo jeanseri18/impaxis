@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         goToSlide(currentIndex);
-    }, 50000);
+    }, 9000);
 
     goToSlide(0);
 });
