@@ -6,7 +6,7 @@
 
 <style>
     body {
-        background-color: #222;
+        background-color: #222222;
         color: white;
         font-family: Arial, sans-serif;
         font-size: 1rem;
@@ -30,6 +30,28 @@
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
+   /* Superposition de filtre (ajout d'un filtre via un div supplémentaire) */
+.slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* La vidéo reste derrière le contenu */
+}
+
+/* Filtre appliqué via une superposition */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Superposition semi-transparente noire */
+    z-index: 0; /* Placer la superposition devant la vidéo mais derrière le contenu */
+    filter: blur(3px); /* Filtre supplémentaire comme un flou */
+}
 
     .slide {
         min-width: 100%;
@@ -157,9 +179,15 @@
 <div class="slider-container">
     <div class="slides">
         <div class="slide active">
+        <video autoplay muted loop id="background-video">
+                <source src="assets/accueil.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+
             <div class="container">
-                <h1 class="display-3" style="color:#F2920E;font-size:65px">IMPAXIS</h1> 
-                <p>Votre partenaire financier panafricain pour des solutions sur mesure</p>
+                
+                <h1 class="display-3" style="color:#F2920E;font-size:75px">IMPAXIS</h1> 
+                <p>Votre partenaire financier panafricain pour<br> des solutions sur mesure</p>
                 <a href="#" class="btn" style="background-color:#1A2C45;color:white">En savoir plus</a>
             </div>
         </div>
@@ -255,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         goToSlide(currentIndex);
-    }, 10000);
+    }, 100000);
 
     goToSlide(0);
 });
