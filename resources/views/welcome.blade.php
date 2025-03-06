@@ -184,57 +184,57 @@
             </video>
             <div class="video-overlay"></div>
 
-            <div class="container">
+            <div class="container" style="margin: 0 50px;">
                 
-                <h1 class="display-3" style="color:#F2920E;font-size:75px">IMPAXIS</h1> 
-                <p>Votre partenaire financier panafricain pour<br> des solutions sur mesure</p>
-                <a href="#" class="btn" style="background-color:#1A2C45;color:white">En savoir plus</a>
+                <h1 class="display-3" style="color:#F2920E;font-size:75px;font-family: 'Roboto', sans-serif;">IMPAXIS</h1> 
+                <p style="font-family: 'Roboto', sans-serif;">Votre partenaire financier panafricain pour<br> des solutions sur mesure</p>
+                <a href="#" class="btn btn-lg" style="background-color:#1A2C45;color:white;font-family: 'Roboto', sans-serif;">En savoir plus</a>
             </div>
         </div>
         <div class="slide">
-            <div class="container">
-                <h1 style="font-size:65px;color:white">Notre mission</h1>
+            <div class="container" style="margin: 0 50px;">
+                <h1 style="font-size:65px;color:white;font-family: 'Roboto', sans-serif;">Notre mission</h1>
                 <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                <p>Suspendisse varius enim in eros elementum tristique.</p>
-                <a href="#" class="btn" style="background-color:#1A2C45;color:white">En savoir plus</a>
+                <p style="font-family: 'Roboto', sans-serif;">Suspendisse varius enim in eros elementum tristique.</p>
+                <a href="#" class="btn btn-lg" style="background-color:#1A2C45;color:white;font-family: 'Roboto', sans-serif;">En savoir plus</a>
             </div>
         </div>
         <div class="slide">
-            <div class="container">
-                <h1 style="font-size:65px;color:white">Notre vision</h1>
+            <div class="container" style="margin: 0 50px;">
+                <h1 style="font-size:65px;color:white;font-family: 'Roboto', sans-serif;">Notre vision</h1>
                 <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                <p>Suspendisse varius enim in eros elementum tristique.</p>
-                <a href="#" class="btn" style="background-color:#1A2C45;color:white">En savoir plus</a>
+                <p style="font-family: 'Roboto', sans-serif;">Suspendisse varius enim in eros elementum tristique.</p>
+                <a href="#" class="btn btn-lg" style="background-color:#1A2C45;color:white;font-family: 'Roboto', sans-serif;">En savoir plus</a>
             </div>
         </div>
         <div class="slide">
-            <div class="container">
-                <h1 style="font-size:65px;color:white">Nos valeurs</h1>
+            <div class="container" style="margin: 0 50px;">
+                <h1 style="font-size:65px;color:white;font-family: 'Roboto', sans-serif;">Nos valeurs</h1><br>
                 <div class="row">
-                    <div class="col-md-2 card" style="font-size:15px;">
-                        <h3>Excellence</h3>
+                    <div class="col-md-2 card" style="font-size:15px;font-family: 'Roboto', sans-serif;">
+                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Excellence</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p>Nous nous efforçons d'atteindre l'excellence.</p>
+                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p>
                     </div>
                     <div class="col-md-2 card">
-                        <h3>Innovation</h3>
+                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Innovation</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p>Nous encourageons l'innovation.</p>
+                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous encourageons l'innovation.</p>
                     </div>
                     <div class="col-md-2 card">
-                        <h3>Partage</h3>
+                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Partage</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p>Nous croyons en la valeur du partage.</p>
+                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous croyons en la valeur du partage.</p>
                     </div>
                     <div class="col-md-2 card">
-                        <h3>Éthique</h3>
+                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Éthique</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p>Nous adhérons aux normes éthiques.</p>
+                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous adhérons aux normes éthiques.</p>
                     </div>
                     <div class="col-md-2 card">
-                        <h3>Audace</h3>
+                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Audace</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p>Nous faisons preuve d'audace.</p>
+                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous faisons preuve d'audace.</p>
                     </div>
                 </div>
             </div>
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         goToSlide(currentIndex);
-    }, 100000);
+    }, 50000);
 
     goToSlide(0);
 });

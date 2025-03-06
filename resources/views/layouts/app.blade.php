@@ -49,7 +49,7 @@
 
 <nav class="navbar navbar-dark navbar-expand-lg px-3">
     <a class="navbar-brand" href="#">
-        <img src="assets/logo.png" alt="Logo" width="70">
+        <img src="assets/logos.png" alt="Logo">
     </a>
     <button class="btn btn-outline-light ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
         ☰
