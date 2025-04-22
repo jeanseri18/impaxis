@@ -74,13 +74,13 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
+
     }
 
     .content {
         position: relative;
         z-index: 2;
-       
+
     }
     .indicators {
         position: absolute;
@@ -102,7 +102,7 @@
     .indicator.active {
         background: #F2920E;
     }
-    
+
 
     @keyframes fadeInUp {
     from {
@@ -158,26 +158,26 @@
         <div class="slide active" style=" background:#767677B7;">
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
-                    <source src="assets/accueil.mp4" type="video/mp4">
+                    <source src="{{asset('assets/image/slide_1.mp4')}}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="container content">
                 <h1 class="display-1 animated-text" style="color: #F2920E">IMPAXIS</h1>
-                <p class="display-5 animated-text">Votre partenaire financier panafricain pour 
+                <p class="display-5 animated-text">Votre partenaire financier panafricain pour
                     <br>des solutions sur mesure</p><br>
                 <a href="#" class="btn btn-lg btn-primary animated-btn">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide" style="background-image: url('assets/notremission.png');">
+        <div class="slide" style="background-image: url('{{asset('assets/image/slide_2.jpg')}}'); background-size: cover;">
             <div class="container">
                 <h1 class="display-1 text-white">Notre mission</h1>
                 <hr style="border: 3px solid #F2920E;width: 100%;">
-                <p class="display-5">Suspendisse varius enim in eros elementum tristique.</p><br>
+                <p class="display-5">Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.</p><br>
                 <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide" style="background-image: url('assets/notrevision.png');">
+        <div class="slide" style="background-image: url('{{asset('assets/image/slide_3.jpg')}}'); background-size: cover;">
             <div class="container">
                 <h1 class="display-1 text-white">Notre vision</h1>
                 <hr style="border: 3px solid #F2920E;width: 100%;">
@@ -185,7 +185,7 @@
                 <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide" style="background-image: url('assets/nosvaleur.png');">
+        <div class="slide" style="background-image: url('{{asset('assets/image/slide_4.jpg')}}'); background-size: cover;">
             <div class="container" style="margin: 0 50px;">
                 <h1 class="display-1 text-white" style="color:white;font-family: 'Roboto', sans-serif;">Nos valeurs</h1><br>
                 <div class="row">
@@ -234,7 +234,7 @@ function updateSlidePosition() {
     slides.forEach((slide, i) => {
         if (i === currentIndex) {
             slide.classList.add('active');
-            
+
             // Supprime d'abord toutes les animations, puis les réapplique après un petit délai
             slide.querySelectorAll('.animated-text, .animated-btn, .animated-hr').forEach(el => {
                 el.classList.remove('animated-text', 'animated-btn', 'animated-hr');
