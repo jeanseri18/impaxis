@@ -188,11 +188,11 @@
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
                 <h1 class="display-1">Notre mission</h1>
-                <hr style="border: 3px solid #F2920E; width: 100%;">
-                <p class="display-5">
+                <hr style="border: 0.5px solid #F2920E; width: 100%;">
+                <p class="display-5" style="color: #fff">
                     Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
                 </p><br>
-                <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
+
             </div>
         </div>
         <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_3.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
@@ -203,40 +203,46 @@
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
                 <h1 class="display-1">Notre vision</h1>
-                <hr style="border: 3px solid #F2920E; width: 100%;">
-                <p class="display-5">Suspendisse varius enim in eros elementum tristique.</p><br>
-                <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
+                <hr style="border: 0.5px solid #F2920E; width: 100%;">
+                <p class="display-5" style="color: #fff">Suspendisse varius enim in eros elementum tristique.</p><br>
+                {{-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> --}}
             </div>
         </div>
-        <div class="slide" style="background-image: url('{{asset('assets/image/slide_4.jpg')}}'); background-size: cover;">
-            <div class="container" style="margin: 0 50px;">
-                <h1 class="display-1 text-white" style="color:white;font-family: 'Roboto', sans-serif;">Nos valeurs</h1><br>
+        <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_4.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
+
+            <!-- Superposition noire à 50% -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+            <!-- Contenu au-dessus de l’overlay -->
+            <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
+                <h1 class="display-1" style="font-family: 'Roboto', sans-serif;">Nos métiers</h1><br>
+
                 <div class="row">
-                    <div class="col-md-2 card" style="font-size:15px;font-family: 'Roboto', sans-serif;">
-                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Excellence</h3>
-                        <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p>
+                    <div class="col-md-2 card border-0 text-white" style="font-size:15px;font-family: 'Roboto', sans-serif;">
+                        <h3 style="font-size:25px;">Investment Banking</h3>
+                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                        <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p>
                     </div>
-                    <div class="col-md-2 card">
-                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Innovation</h3>
-                        <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous encourageons l'innovation.</p>
+                    <div class="col-md-2 card border-0 text-white">
+                        <h3 style="font-size:25px;">Markets</h3>
+                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                        <p style="font-size:18px;">Nous encourageons l'innovation.</p>
                     </div>
-                    <div class="col-md-2 card">
-                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Partage</h3>
-                        <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous croyons en la valeur du partage.</p>
+                    <div class="col-md-2 card border-0 text-white">
+                        <h3 style="font-size:25px;">Multi-Asset Management</h3>
+                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                        <p style="font-size:18px;">Nous croyons en la valeur du partage.</p>
                     </div>
-                    <div class="col-md-2 card">
-                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Éthique</h3>
-                        <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous adhérons aux normes éthiques.</p>
+                    <div class="col-md-2 card border-0 text-white">
+                        <h3 style="font-size:25px;">Global Research</h3>
+                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                        <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p>
                     </div>
-                    <div class="col-md-2 card">
-                        <h3 style="font-family: 'Roboto', sans-serif;font-size:25px;">Audace</h3>
+                    {{-- <div class="col-md-2 card bg-transparent border-0 text-white">
+                        <h3 style="font-size:25px;">Audace</h3>
                         <hr style="border: 3px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-family: 'Roboto', sans-serif;font-size:18px;">Nous faisons preuve d'audace.</p>
-                    </div>
+                        <p style="font-size:18px;">Nous faisons preuve d'audace.</p>
+                    </div> --}}
                 </div><br><br>
             </div>
         </div>    </div>
