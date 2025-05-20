@@ -166,21 +166,44 @@
                 <h1 class="display-1 animated-text" style="color: #F2920E">IMPAXIS</h1>
                 <p class="display-5 animated-text">Votre partenaire financier panafricain pour
                     <br>des solutions sur mesure</p><br>
-                <a href="#" class="btn btn-lg btn-primary animated-btn">En savoir plus</a><br><br>
+                    <a href="#" class="btn btn-lg"
+                    style="
+                        border: none;
+                        background-color: transparent;
+                        color: #fff;
+                        transition: all 0.3s ease;
+                        padding: 0.75rem 1.5rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    "
+                    onmouseover="this.style.border='2px solid #F2920E'"
+                    onmouseout="this.style.border='none'">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide" style="background-image: url('{{asset('assets/image/slide_2.jpg')}}'); background-size: cover;">
-            <div class="container">
-                <h1 class="display-1 text-white">Notre mission</h1>
-                <hr style="border: 3px solid #F2920E;width: 100%;">
-                <p class="display-5">Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.</p><br>
+        <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
+
+            <!-- Superposition noire -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
+
+            <!-- Contenu au-dessus de l’overlay -->
+            <div class="container position-relative z-2 text-white">
+                <h1 class="display-1">Notre mission</h1>
+                <hr style="border: 3px solid #F2920E; width: 100%;">
+                <p class="display-5">
+                    Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
+                </p><br>
                 <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide" style="background-image: url('{{asset('assets/image/slide_3.jpg')}}'); background-size: cover;">
-            <div class="container">
-                <h1 class="display-1 text-white">Notre vision</h1>
-                <hr style="border: 3px solid #F2920E;width: 100%;">
+        <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_3.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
+
+            <!-- Superposition noire à 50% -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+            <!-- Contenu au-dessus de l’overlay -->
+            <div class="container position-relative z-2 text-white">
+                <h1 class="display-1">Notre vision</h1>
+                <hr style="border: 3px solid #F2920E; width: 100%;">
                 <p class="display-5">Suspendisse varius enim in eros elementum tristique.</p><br>
                 <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br>
             </div>

@@ -24,13 +24,13 @@
     <title>@yield('title', 'Homepage | Geeks - Bootstrap 5 Template')</title>
     <style>
         .navbar {
-            background-color: #011F48FF; 
+            background-color: #232324FF;
         }
         .navbar-brand img {
             height: 40px;
         }
         .offcanvas {
-            background-color: #011F48FF; 
+            background-color: #1E1E1FFF;
             color: white;
         }
         .offcanvas a {
@@ -68,7 +68,7 @@
         background-color: #F2920E; /* Changez cette couleur selon vos besoins */
         color: #011F48FF; /* Changez cette couleur selon vos besoins */
     }
-   
+
 </style>
 </head>
 
@@ -105,7 +105,7 @@
         <!-- Trusted -->
     </main>
 <!-- Footer -->
-<!-- Footer 
+<!-- Footer
 <footer class="footer bg-dark-stable py-8" style="background:#023252">
     <div class="container">
         <div class="row gy-6 gy-xl-0 pb-8">
@@ -116,7 +116,7 @@
                     </div>
                     <p class="mb-0">Découvrez et connectez-vous avec les entreprises et professionnels de la Côte d'Ivoire sur notre plateforme dédiée.
                     Notre objectif est construit sur la base du jobbing, un modèle économique entre particuliers. C'est avant tout une mise en relation entre les besoins d'une personne ou une entreprise et la compétence d'une autre.Nous proposons des jobbers aux compétences confirmées aux personnes ou aux entreprises dans le besoin.</p>
-                  
+
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 col-12">
@@ -142,8 +142,8 @@
                         <a href="#"><img src="{{ asset('assets/images/svg/playstore.svg') }}" alt="" class="img-fluid" /></a>
                 </div>
             </div>
-         
-           
+
+
         </div>
         <div class="py-4" style="background:#023252">
             <div class="container text-center">
