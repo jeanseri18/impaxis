@@ -78,7 +78,7 @@
     <a class="navbar-brand" href="#">
         <img src="assets/logos.png" alt="Logo">
     </a>
-    <button class="btn btn-outline-light ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+    <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
         ☰
     </button>
 </nav>
@@ -86,7 +86,7 @@
 <!-- Menu Offcanvas -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title text-white">Menu</h5>
+        <h5 class="offcanvas-title" style="color: white;">Menu</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
