@@ -190,7 +190,7 @@
                 <h1 class="display-1">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
+                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
                 </p><br>
 
             </div>
@@ -221,22 +221,51 @@
                     <div class="col-md-2 card border-0 text-white" style="font-size:15px;font-family: 'Roboto', sans-serif;">
                         <h3 style="font-size:25px;">Investment Banking</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p>
+                        <!-- Liste à puces -->
+                        <ul style="color: white; list-style-type: disc;">
+                            <li>Conseil Financier Stratégique</li>
+                            <li>Strategic Financing Advisory</li>
+                            <li>Project Finance</li>
+                            <li>M&A</li>
+                            <li>IPO / ECM</li>
+                            <li>DCM</li>
+                            <li>Structured & Leveraged Finance</li>
+                        </ul>
+                        {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white">
                         <h3 style="font-size:25px;">Markets</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-size:18px;">Nous encourageons l'innovation.</p>
+                        <ul style="color: white; list-style-type: disc;">
+                            <li>Sales & Trading</li>
+                            <li>Primaire & Secondaire</li>
+                            <li>FX & Commodities/Hedging</li>
+                            <li>Produits structurés</li>
+                            <li>Custody</li>
+                        </ul>
+                        {{-- <p style="font-size:18px;">Nous encourageons l'innovation.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white">
                         <h3 style="font-size:25px;">Multi-Asset Management</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-size:18px;">Nous croyons en la valeur du partage.</p>
+                        <ul style="color: white; list-style-type: disc;">
+                            <li>Private Equity</li>
+                            <li>SGO/AM</li>
+                            <li>Private Banking</li>
+                        </ul>
+                        {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white">
                         <h3 style="font-size:25px;">Global Research</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p>
+                        <ul style="color: white; list-style-type: disc;">
+                            <li>Global Macro Economy (Monde / Régions / Pays)</li>
+                            <li>Global Equity / FI / Benchmarks</li>
+                            <li>Secteurs</li>
+                            <li>Produits : Equity / FI</li>
+                            <li>Illiquid assets</li>
+                        </ul>
+                        {{-- <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p> --}}
                     </div>
                     {{-- <div class="col-md-2 card bg-transparent border-0 text-white">
                         <h3 style="font-size:25px;">Audace</h3>
