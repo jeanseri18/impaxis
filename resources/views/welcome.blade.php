@@ -190,7 +190,7 @@
                 <h1 class="display-1">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
+                    Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
                 </p><br>
 
             </div>
@@ -204,7 +204,7 @@
             <div class="container position-relative z-2 text-white">
                 <h1 class="display-1">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">Suspendisse varius enim in eros elementum tristique.</p><br>
+                <p class="display-5" style="color: #fff">Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.</p><br>
                 {{-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> --}}
             </div>
         </div>
