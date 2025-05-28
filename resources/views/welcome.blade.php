@@ -159,7 +159,7 @@
 
 <div class="slider-container">
     <div class="slides">
-        {{-- <div class="slide active" style=" background:#767677B7;">
+        <div class="slide active" style=" background:#767677B7;">
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
                     <source src="{{asset('assets/image/slide_1.mp4')}}" type="video/mp4">
@@ -211,7 +211,7 @@
                 <p class="display-5" style="color: #fff">Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.</p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
-        </div> --}}
+        </div>
         <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_4.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
 
             <!-- Superposition noire à 50% -->
