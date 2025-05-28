@@ -34,42 +34,41 @@
             color: white;
         }
         .offcanvas a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    position: relative;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-}
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            position: relative;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
 
-.offcanvas a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    width: 0%;
-    height: 2px;
-    background-color: #F2920E; /* Couleur du soulignement */
-    transition: width 0.3s ease-in-out;
-}
+        .offcanvas a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 0%;
+            height: 2px;
+            background-color: #F2920E; /* Couleur du soulignement */
+            transition: width 0.3s ease-in-out;
+        }
 
-.offcanvas a:hover {
-    color: #F2920E; /* Changement de couleur du texte au survol */
-}
+        .offcanvas a:hover {
+            color: #F2920E; /* Changement de couleur du texte au survol */
+        }
 
-.offcanvas a:hover::after {
-    width: 100%; /* Animation du soulignement */
-}
+        .offcanvas a:hover::after {
+            width: 100%; /* Animation du soulignement */
+        }
 
 
+        .btn:hover {
+            background-color: #F2920E; /* Changez cette couleur selon vos besoins */
+            color: #011F48FF; /* Changez cette couleur selon vos besoins */
+        }
 
-    .btn:hover {
-        background-color: #F2920E; /* Changez cette couleur selon vos besoins */
-        color: #011F48FF; /* Changez cette couleur selon vos besoins */
-    }
-
-</style>
+    </style>
 </head>
 
 <body class="bg-white">
