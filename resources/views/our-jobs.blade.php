@@ -53,7 +53,7 @@
         margin-bottom: 20px; /* Espace entre les groupes de services */
     }
     .service-group h3 {
-        font-size: 1.5rem; /* Taille du titre */
+        font-size: 1.2rem; /* Taille du titre */
         font-weight: bold;
         /* color: #fff; */
         margin-bottom: 15px;
@@ -80,7 +80,7 @@
         margin-right: 10px;
     }
     .service-title {
-        font-size: 4.5rem; /* Taille du titre */
+        font-size: 4.0rem; /* Taille du titre */
         font-weight: bold;
         margin-bottom: 20px; /* Espace sous le titre */
     }
@@ -139,49 +139,56 @@
                 </section>
             </div>
         </div>
-
+    </div>
+    
+    <div style="background-color: #f8f8f8">
+        <div class="container">
         {{-- 2ème --}}
-        <div class="row">
-            <div class="col-md-8">
-                <section class="services-section">
-                    <div class="container">
-                        <div class="orange-line"></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <section class="services-section">
+                        <div class="container">
+                            <div class="orange-line"></div>
 
-                        <div class="service-group">
-                            <h3>Sales & Trading</h3>
-                            <ul>
-                                <li>Equities</li>
-                                <li>Fixed income</li>
-                            </ul>
-                        </div>
+                            <div class="service-group">
+                                <h3>Sales & Trading</h3>
+                                <ul>
+                                    <li>Equities</li>
+                                    <li>Fixed income</li>
+                                </ul>
+                            </div>
 
-                        <div class="service-group">
-                            <h3>Primaire & Secondaire</h3>
-                        </div>
+                            <div class="service-group">
+                                <h3>Primaire & Secondaire</h3>
+                            </div>
 
-                        <div class="service-group">
-                            <h3>FX & Commodities/Hedging</h3>
-                            <ul>
-                                <li>Realationship Mgt</li>
-                                <li>Sales</li>
-                            </ul>
+                            <div class="service-group">
+                                <h3>FX & Commodities/Hedging</h3>
+                                <ul>
+                                    <li>Realationship Mgt</li>
+                                    <li>Sales</li>
+                                </ul>
+                            </div>
+                            <div class="service-group">
+                                <h3>Produits structurés</h3>
+                            </div>
+                            <div class="service-group">
+                                <h3>Custody</h3>
+                            </div>
                         </div>
-                        <div class="service-group">
-                            <h3>Produits structurés</h3>
-                        </div>
-                        <div class="service-group">
-                            <h3>Custody</h3>
-                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <h1 class="service-title">Markets </h1>
                     </div>
-                </section>
-            </div>
-            <div class="col-md-4">
-                <div class="d-flex align-items-center justify-content-center h-100">
-                    <h1 class="service-title">Markets </h1>
                 </div>
             </div>
         </div>
+    </div>
+    
 
+    <div class="container">
         {{-- 3ème --}}
         <div class="row">
             <div class="col-md-5">
@@ -223,7 +230,10 @@
                 </section>
             </div>
         </div>
+    </div>
 
+<div style="background-color: #f8f8f8">
+    <div class="container">
         {{-- 4ème --}}
         <div class="row">
             <div class="col-md-8">
@@ -260,6 +270,7 @@
         </div>
 
     </div>
+</div>
 
 
 
