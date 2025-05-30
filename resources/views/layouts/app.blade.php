@@ -19,9 +19,10 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/app-style.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/libs/tiny-slider/dist/tiny-slider.css') }}" />
-    <title>@yield('title', 'Homepage | Geeks - Bootstrap 5 Template')</title>
+    <title>@yield('title', 'Welcome')</title>
     <style>
         .navbar {
             background-color: #232324FF;
@@ -69,35 +70,39 @@
         }
 
     </style>
+
+    @stack('styles')
 </head>
 
 <body class="bg-white">
 
-<nav class="navbar navbar-dark navbar-expand-lg px-3">
-    <a class="navbar-brand" href="#">
-        <img src="assets/logos.png" alt="Logo">
-    </a>
-    <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
-        ☰
-    </button>
-</nav>
+    <main>
 
-<!-- Menu Offcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" style="color: white;">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <a href="#"> Accueil</a>
-        <a href="#"> A propos</a>
-        <a href="#"> Notre equipe</a>
-        <a href="#"> References</a>
-        <a href="#"> Nos metiers</a>
-        <a href="#"> New</a>
-        <a href="#"> Contact</a>
-    </div>
-</div>
+        <nav class="navbar navbar-dark navbar-expand-lg px-3">
+            <a class="navbar-brand" href="{{ route('front.welcome') }}">
+                <img src="assets/logos.png" alt="Logo">
+            </a>
+            <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+                ☰
+            </button>
+        </nav>
+
+        <!-- Menu Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" style="color: white;">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="{{ route('front.welcome') }}"> Accueil</a>
+                <a href="{{ route('front.about') }}"> A propos</a>
+                <a href="#"> Notre equipe</a>
+                <a href="#"> References</a>
+                <a href="{{ route('front.our-jobs') }}"> Nos metiers</a>
+                <a href="#"> New</a>
+                <a href="#"> Contact</a>
+            </div>
+        </div>
 
         <!-- Hero Section -->
         @yield('content')
@@ -163,6 +168,7 @@
 
     <!-- Scripts -->
     <!-- Libs JS -->
+    {{-- <script src="{{ asset('assets/js/jquery.min.js') }}"></script> --}}
     <script src="{{ asset('assets/libs/%40popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.min.js') }}"></script>
@@ -171,5 +177,8 @@
     <script src="{{ asset('assets/js/theme.min.js') }}"></script>
     <script src="{{ asset('assets/libs/tiny-slider/dist/min/tiny-slider.js') }}"></script>
     <script src="{{ asset('assets/js/vendors/tnsSlider.js') }}"></script>
+
+    @stack('scripts')
+    
 </body>
 </html>

@@ -2,9 +2,8 @@
 
 @section('title', 'Welcome | Impaxis')
 
-@section('content')
+@push('styles')
 <style>
-
     .row {
             display: flex;
             flex-wrap: wrap;
@@ -156,7 +155,9 @@
     } */
 
 </style>
+@endpush
 
+@section('content')
 <div class="slider-container">
     <div class="slides">
         <div class="slide active" style=" background:#767677B7;">
@@ -349,5 +350,9 @@
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
 
 </script>
-
 @endsection
+
+
+@push('srcipts')
+
+@endpush
