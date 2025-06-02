@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome | Impaxis')
+@section('title', 'Nos métiers | ')
 
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/bg-test-2.jpg'); /* remplace par ton image */
+        background-image: url('/assets/image/bg-notre-equipe.jpg'); /* remplace par ton image */
         background-size: cover;
         background-position: center;
-        height: 80vh; /* ou 100vh pour plein écran */
+        height: 60vh; /* ou 100vh pour plein écran */
         position: relative;
     }
 
@@ -43,7 +43,7 @@
         max-width: 800px; /* Limite la largeur du contenu pour une meilleure lisibilité */
     }
     .orange-line {
-        height: 5px;
+        height: 3px;
         background-color: #ff9900; /* Couleur orange */
         width: 100%;
         margin-top: 50px; /* Espace au dessus de la ligne */

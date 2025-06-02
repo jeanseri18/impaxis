@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome | Impaxis')
+@section('title', 'Welcome | ')
 
 @push('styles')
 <style>
@@ -220,56 +220,56 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
-                <h1 class="display-1" style="font-family: 'Roboto', sans-serif;">Nos métiers</h1><br>
+                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff">Nos métiers</h1><br>
 
                 <div class="row">
-                    <div class="col-md-2 card border-0 text-white" style="font-size: 15px; font-family: 'Roboto', sans-serif;  border: 1px solid #fff !important; background-color: #0000008d;">
+                    <div class="col-md-2 card border-0 text-white" style="font-size: 15px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Investment Banking</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">
                         <!-- Liste à puces -->
-                        <ul class="list-group" style="background-color: transparent; color: white; border-color: #333;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Strategic Financing Advisory</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Project Finance</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">M&A</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">IPO / ECM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">DCM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Structured & Leveraged Finance</li>
+                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Conseil Financier Stratégique</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Conseil Financier Stratégique</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Strategic Financing Advisory</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Project Finance</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">M&A</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">IPO / ECM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">DCM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Structured & Leveraged Finance</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Markets</h3>
                         <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border-color: #333;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Sales & Trading</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Primaire & Secondaire</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">FX & Commodities/Hedging</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Produits structurés</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Custody</li>
+                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Sales & Trading</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Primaire & Secondaire</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">FX & Commodities/Hedging</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Produits structurés</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Custody</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous encourageons l'innovation.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Multi-Asset Management</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border-color: #333;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Private Equity</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">SGO/AM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Private Banking</li>
+                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Private Equity</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">SGO/AM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Private Banking</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Global Research</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border-color: #333;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Global Macro Economy (Monde / Régions / Pays)</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Global Equity / FI / Benchmarks</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Secteurs</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Produits : Equity / FI</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border-color: #333;">Illiquid assets</li>
+                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Global Macro Economy (Monde / Régions / Pays)</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Global Equity / FI / Benchmarks</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Secteurs</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Produits : Equity / FI</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Illiquid assets</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p> --}}
                     </div>

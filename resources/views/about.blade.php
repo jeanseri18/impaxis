@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome | Impaxis')
+@section('title', 'A propos | ')
 
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/bg-test-2.jpg'); /* remplace par ton image */
+        background-image: url('/assets/image/bg-apropos.jpg'); /* remplace par ton image */
         background-size: cover;
         background-position: center;
-        height: 80vh; /* ou 100vh pour plein écran */
+        height: 60vh; /* ou 100vh pour plein écran */
         position: relative;
     }
 
@@ -136,6 +136,15 @@
         color: #ccc; /* Couleur légèrement plus claire pour l'expérience */
     }
 
+    /* Animate team-member-card */
+    .team-member-animated {
+        transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    }
+    .team-member-animated:hover {
+        transform: translateY(-10px) scale(1.04) rotate(-1deg);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    }
+
     /* Responsive adjustments for smaller screens */
     @media (max-width: 767.98px) {
         .team-member-card {
@@ -158,7 +167,7 @@
 </div>
 
 <div class="container">
-    <p class="mt-5 text-justify" style="">
+    <p class="mt-6 text-justify" style="">
         IMPAXIS est une banque d’affaires panafricaine indépendante fondée en 2003 par une équipe de banquiers senior chevronnés avec une expérience couvrant l’Afrique sub-saharienne, l’Europe et le Moyen-Orient
         Elle a pour vision d’accompagner ses clients stratégiques avec des solutions financières et de conseil sur mesure permettant d’atteindre leurs objectifs et par la même de contribuer à la structuration de l’économie africaine de demain
         IMPAXIS a une présence géographique à Dakar, à Abidjan et à Dubaï avec un champ d’action couvrant l’Afrique avec un focus sur l’Afrique Francophone (régions UEMOA et CEMAC)
@@ -166,8 +175,8 @@
         IMPAXIS bénéficie de la licence SGI de l’AMF-UMOA (l’Autorité Régionale du MFR) lui permettant d’intervenir sur toutes les opérations de marché.
     </p>
 
-    <div class="text-center mb-5 mt-5">
-        <h3>Le Groupe Impaxis est structuré autour de trois filiales principales, <br>chacune spécialisée dans des services spécifiques :</h3>
+    <div class="text-center mb-6 mt-6">
+        <h2>Le Groupe Impaxis est structuré autour de trois filiales principales, <br>chacune spécialisée dans des services spécifiques :</h2>
     </div>
 
     <div class="row">
@@ -233,17 +242,20 @@
 
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card">
-                        <img src="{{ asset('/assets/image/photo-profile.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
+                    <div class="team-member-card team-member-animated">
+                        <img src="{{ asset('/assets/image/equipes/momar-ndour.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Momar NDOUR</h3>
                         <p class="title-role">Président Directeur Général</p>
                         <p class="experience">23 ans d'expérience</p>
                     </div>
+                    <style>
+                    
+                    </style>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card">
-                        <img src="{{ asset('/assets/image/photo-profile.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
+                    <div class="team-member-card team-member-animated">
+                        <img src="{{ asset('/assets/image/equipes/aboubacar-diaw.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Aboubacar DIAW</h3>
                         <p class="title-role">Administrateur Directeur Général<br>d'Impaxis Securities</p>
                         <p class="experience">12 ans d'expérience</p>
@@ -251,8 +263,8 @@
                 </div>
 
                 <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card">
-                        <img src="{{ asset('/assets/image/photo-profile.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
+                    <div class="team-member-card team-member-animated">
+                        <img src="{{ asset('/assets/image/equipes/romaric-socia.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Romaric SOCIA</h3>
                         <p class="title-role">Senior Associate</p>
                         <p class="experience">5 années d'expérience</p>

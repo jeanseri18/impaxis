@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app-style.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/libs/tiny-slider/dist/tiny-slider.css') }}" />
-    <title>@yield('title', 'Welcome')</title>
+    <title>@yield('title', 'Welcome') {{ config('app.name') }}</title>
     <style>
         .navbar {
             background-color: #232324FF;
