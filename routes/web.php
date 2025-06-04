@@ -20,5 +20,6 @@ Route::name('front.')->group(function () {
     Route::get('/', [ManagerController::class, 'Welcome'])->name('welcome');
     Route::get('/a-propos', [ManagerController::class, 'About'])->name('about');
     Route::get('/nos-metiers', [ManagerController::class, 'OurJobs'])->name('our-jobs');
+    Route::get('/nos-references', [ManagerController::class, 'OurReferences'])->name('our-references');
 });
 

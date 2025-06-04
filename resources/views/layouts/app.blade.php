@@ -9,9 +9,6 @@
     <!-- Favicon icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon/favicon.ico') }}" />
 
-    <!-- Darkmode JS -->
-    <script src="{{ asset('assets/js/vendors/darkMode.js') }}"></script>
-
     <!-- Libs CSS -->
     <link href="{{ asset('assets/fonts/feather/feather.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/libs/bootstrap-icons/font/bootstrap-icons.min.css') }}" rel="stylesheet" />
@@ -97,7 +94,7 @@
                 <a href="{{ route('front.welcome') }}"> Accueil</a>
                 <a href="{{ route('front.about') }}"> A propos</a>
                 <a href="#"> Notre equipe</a>
-                <a href="#"> References</a>
+                <a href="{{ route('front.our-references') }}"> References</a>
                 <a href="{{ route('front.our-jobs') }}"> Nos metiers</a>
                 <a href="#"> New</a>
                 <a href="#"> Contact</a>
@@ -168,7 +165,7 @@
 
     <!-- Scripts -->
     <!-- Libs JS -->
-    {{-- <script src="{{ asset('assets/js/jquery.min.js') }}"></script> --}}
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/libs/%40popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.min.js') }}"></script>
@@ -177,6 +174,9 @@
     <script src="{{ asset('assets/js/theme.min.js') }}"></script>
     <script src="{{ asset('assets/libs/tiny-slider/dist/min/tiny-slider.js') }}"></script>
     <script src="{{ asset('assets/js/vendors/tnsSlider.js') }}"></script>
+
+    {{-- <!-- Darkmode JS -->
+    <script src="{{ asset('assets/js/vendors/darkMode.js') }}"></script> --}}
 
     @stack('scripts')
     

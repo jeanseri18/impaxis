@@ -22,4 +22,8 @@ class ManagerController extends Controller
         return view('our-jobs');
     }
     
+    public function OurReferences()
+    {
+        return view('our-references');
+    }
 }

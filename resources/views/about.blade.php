@@ -279,6 +279,6 @@
 @endsection
 
 
-@push('srcipts')
+@push('scripts')
 
 @endpush
