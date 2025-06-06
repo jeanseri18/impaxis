@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Nos métiers | ')
+@section('title', 'Références | ')
 
 @push('styles')
 <style>
