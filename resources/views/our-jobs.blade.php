@@ -95,7 +95,7 @@
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
             <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Nos metiers</h1>
+                <h1 class="display-3 fw-bold page-title">Nos métiers</h1>
             </div>
         </section>
     </div>

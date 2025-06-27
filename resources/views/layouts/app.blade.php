@@ -7,7 +7,7 @@
     <meta name="author" content="Codescandy" />
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}" />
 
     <!-- Libs CSS -->
     <link href="{{ asset('assets/fonts/feather/feather.css') }}" rel="stylesheet" />
@@ -72,15 +72,13 @@
 </head>
 
 <body class="bg-white">
-
     <main>
-
         <nav class="navbar navbar-dark navbar-expand-lg px-3">
             <a class="navbar-brand" href="{{ route('front.welcome') }}">
                 <img src="assets/logos.png" alt="Logo">
             </a>
             <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
-                ☰
+                {{-- ☰ --}}<i class="bi bi-list"></i>
             </button>
         </nav>
 
@@ -93,10 +91,10 @@
             <div class="offcanvas-body">
                 <a href="{{ route('front.welcome') }}"> Accueil</a>
                 <a href="{{ route('front.about') }}"> A propos</a>
-                <a href="#"> Notre equipe</a>
-                <a href="{{ route('front.our-references') }}"> References</a>
-                <a href="{{ route('front.our-jobs') }}"> Nos metiers</a>
-                <a href="#"> New</a>
+                <a href="#"> Notre équipe</a>
+                <a href="{{ route('front.our-references') }}"> Références</a>
+                <a href="{{ route('front.our-jobs') }}"> Nos métiers</a>
+                <a href="#"> Actualité</a>
                 <a href="#"> Contact</a>
             </div>
         </div>

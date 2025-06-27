@@ -103,6 +103,17 @@
         margin: 20px auto; /* Centrer la ligne et espacement */
     }
 
+    .logo-container {
+        text-align: center;
+        margin-bottom: 30px; /* Espace entre le logo et les éléments financiers */
+    }
+
+    .logo-partener {
+        width: auto; /* Largeur maximale du logo */
+        height: 100px; /* Hauteur fixe pour les logos */
+        max-height: 150px; /* Hauteur automatique pour conserver les proportions */
+        margin-bottom: 20px; /* Espace sous le logo */
+    }
 </style>
 @endpush
 
@@ -203,145 +214,384 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane  active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                     {{-- <h4>Nos Références - Marché Financier</h4> --}}
-                    
+
                     <section class="financial-section">
-                        <div class="container">
+                        <div class="container mb-5">
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
+                                        <p>7,25% 2024 – 2029</p>
+                                        <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                        <p class="amount">20 milliards F CFA</p>
+                                        <p class="year">en 2025</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/kf_titrisation.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
+                                        <p>9,5% 2024-2031</p>
+                                        <p class="title">CO-CHEF DE FILE</p>
+                                        <p class="amount">160 milliards F CFA</p>
+                                        <p class="year">en 2024</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L'ÉPARGNE - GSS Bond BIDC - EBID</p>
+                                        <p>6,50% 2024-2031</p>
+                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE</p>
+                                        <p class="amount">70 milliards F CFA</p>
+                                        <p class="year">en 2024</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/fidelis-finance.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L'ÉPARGNE - FIDELIS FINANCE CAP25</p>
+                                        <p>7% 2023-2030</p>
+                                        <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                        <p class="amount">15 milliards F CFA</p>
+                                        <p class="year">en 2023</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
+                                        <p>6,10% 2023-2030</p>
+                                        <p class="title">CO-CHEF DE FILE</p>
+                                        <p class="amount">150 milliards F CFA</p>
+                                        <p class="year">en 2023</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
+                                        <p>5,90% 2022-2029​</p>
+                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
+                                        <p class="amount">120 milliards F CFA</p>
+                                        <p class="year">en 2022</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
+                                        <p>6,50% 2021-2028​</p>
+                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE  </p>
+                                        <p class="amount">50 milliards F CFA</p>
+                                        <p class="year">en 2022</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
+                                        <p>5,90% 2022-2029​</p>
+                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
+                                        <p class="amount">120 milliards F CFA</p>
+                                        <p class="year">en 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sonatel.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SONATEL</p>
+                                        <p>6,50% 2020-2027​​</p>
+                                        <p class="title">ARRANGEUR CHEF DE FILE  </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2020</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/BHS.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">1er DIASPORA BONDS DE LA RÉGION​ - BHS</p>
+                                        <p>6,25% 2019-2023​​</p>
+                                        <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
+                                        <p class="amount">20 milliards F CFA</p>
+                                        <p class="year">en 2019</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/SENELEC.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SENELEC</p>
+                                        <p>6,5% 2018-2025​​</p>
+                                        <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
+                                        <p class="amount">38 milliards F CFA</p>
+                                        <p class="year">en 2018</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6% 2016-2026​</p>
+                                        <p class="title">CO-CHEF DE FILE </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2016</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6% 2016-2026​</p>
+                                        <p class="title">CO-CHEF DE FILE </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2016</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6,30% 2015-2025​</p>
+                                        <p class="title">CO-ARRANGEUR CHEF DE FILE </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2015</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6,50% 2014-2021​</p>
+                                        <p class="title">CO-ARRANGEUR CHEF DE FILE</p>
+                                        <p class="amount">119 milliards F CFA</p>
+                                        <p class="year">en 2014</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
+                                        <p> 2014-2021​​</p>
+                                        <p class="title">AGENT PLACEUR </p>
+                                        <p class="amount">50 milliards F CFA</p>
+                                        <p class="year">en 2014</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {{-- <div class="logo-container">
+                                <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
+                            </div>
                             <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
                                 <p>7,25% 2024 – 2029</p>
                                 <p class="title">ARRANGEUR CHEF DE FILE</p>
                                 <p class="amount">20 milliards F CFA</p>
                                 <p class="year">en 2025</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
+                            {{-- <div class="logo-container">
+                                <img src="{{ asset('/assets/image/logo-partners/kf_titrisation.png') }}" alt="Mourmony Logo" class="logo-partener">
+                            </div>
                             <div class="financial-item">
                                 <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
                                 <p>9,5% 2024-2031</p>
                                 <p class="title">CO-CHEF DE FILE</p>
                                 <p class="amount">160 milliards F CFA</p>
                                 <p class="year">en 2024</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
+                            {{-- <div class="logo-container">
+                                <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                            </div>
                             <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L'ÉPARGNE - GSS Bond BIDC - EBID</p>
                                 <p>6,50% 2024-2031</p>
                                 <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE</p>
                                 <p class="amount">70 milliards F CFA</p>
                                 <p class="year">en 2024</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
+                            {{-- <div class="logo-container">
+                                <img src="{{ asset('/assets/image/logo-partners/fidelis-finance.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                            </div>
                             <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L'ÉPARGNE - FIDELIS FINANCE CAP25</p>
                                 <p>7% 2023-2030</p>
                                 <p class="title">ARRANGEUR CHEF DE FILE</p>
                                 <p class="amount">15 milliards F CFA</p>
                                 <p class="year">en 2023</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
                                 <p>6,10% 2023-2030</p>
                                 <p class="title">CO-CHEF DE FILE</p>
                                 <p class="amount">150 milliards F CFA</p>
                                 <p class="year">en 2023</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
                                 <p>5,90% 2022-2029​</p>
                                 <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
                                 <p class="amount">120 milliards F CFA</p>
                                 <p class="year">en 2022</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
                                 <p>6,50% 2021-2028​</p>
                                 <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE  </p>
                                 <p class="amount">50 milliards F CFA</p>
                                 <p class="year">en 2022</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
                                 <p>5,90% 2022-2029​</p>
                                 <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
                                 <p class="amount">120 milliards F CFA</p>
                                 <p class="year">en 2021</p>
-                                <div class="separator-line"></div>
-                            </div>
-
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> 
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - SONATEL</p>
                                 <p>6,50% 2020-2027​​</p>
                                 <p class="title">ARRANGEUR CHEF DE FILE  </p>
                                 <p class="amount">100 milliards F CFA</p>
                                 <p class="year">en 2020</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
                             
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">1er DIASPORA BONDS DE LA RÉGION​ - BHS</p>
                                 <p>6,25% 2019-2023​​</p>
                                 <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                 <p class="amount">20 milliards F CFA</p>
                                 <p class="year">en 2019</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - SENELEC</p>
                                 <p>6,5% 2018-2025​​</p>
                                 <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                 <p class="amount">38 milliards F CFA</p>
                                 <p class="year">en 2018</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
                                 <p>6% 2016-2026​</p>
                                 <p class="title">CO-CHEF DE FILE </p>
                                 <p class="amount">100 milliards F CFA</p>
                                 <p class="year">en 2016</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
                                 <p>6,30% 2015-2025​</p>
                                 <p class="title">CO-ARRANGEUR CHEF DE FILE </p>
                                 <p class="amount">100 milliards F CFA</p>
                                 <p class="year">en 2015</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
                                 <p>6,50% 2014-2021​</p>
                                 <p class="title">CO-ARRANGEUR CHEF DE FILE</p>
                                 <p class="amount">119 milliards F CFA</p>
                                 <p class="year">en 2014</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
                                 <p> 2014-2021​​</p>
                                 <p class="title">AGENT PLACEUR </p>
                                 <p class="amount">50 milliards F CFA</p>
                                 <p class="year">en 2014</p>
-                                <div class="separator-line"></div>
-                            </div><div class="financial-item">
-                                <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
-                                <p>6,8% 2016-2023​</p>
-                                <p class="title">ARRANGEUR CHEF DE FILE</p>
-                                <p class="amount">3,8 milliards​ F CFA</p>
-                                <p class="year">en 2016</p>
-                                <div class="separator-line"></div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            <div class="card mb-4">
+                                <div class="logo-container">
+                                <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                </div>
+                                <div class="financial-item">
+                                    <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
+                                    <p>6,8% 2016-2023​</p>
+                                    <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                    <p class="amount">3,8 milliards​ F CFA</p>
+                                    <p class="year">en 2016</p>
+                                    {{-- <div class="separator-line"></div> --}}
+                                </div>
                             </div>
+                            
 
                         </div>
                     </section>
@@ -352,135 +602,311 @@
                     
                     <section class="financial-section">
                         <div class="container">
-                            <div class="financial-item">
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/hopital-international-dakar.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">STRUCTURATION ET LEVÉE DE FONDS POUR CONSTRUCTION HÔPITAL AMBULATOIRE</p>
+                                        <p class="title">ARRANGEUR & CONSEIL</p>
+                                        <p class="amount">26 milliards​ F CFA</p>
+                                        <p class="year">HÔPITAL INTERNATIONAL DE DAKAR</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/aeroport-intenational-dakar.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">FINANCEMENT</p>
+                                        <p class="title">ARRANGEUR</p>
+                                        <p class="amount">2 milliards F CFA</p>
+                                        <p class="year">ADS (AÉROPORTS DU SÉNÉGAL)</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/aire-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">FINANCEMENT</p>
+                                        <p class="title">ARRANGEUR</p>
+                                        <p class="amount">13,5 milliards F CFA</p>
+                                        <p class="year">SÉNÉGAL AIRLINES</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/clubmed.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">FINANCEMENT DE CLUB MED AFRIQUE DE L’OUEST</p>
+                                        <p class="title">CONSEIL & ARRANGEUR</p>
+                                        <p class="amount">63 milliards F CFA</p>
+                                        <p class="year">CLUB MED AFRIQUE DE L’OUEST</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/aire-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">RESTRUCTURATION DE DETTE</p>
+                                        <p class="title">CO-CHEF DE FILE</p>
+                                        <p class="amount">4 milliards F CFA</p>
+                                        <p class="year">AIR SENEGAL</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/aftu.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">ACQUISITION DE 700 MINI BUS</p>
+                                        <p class="title">ARRANGEUR </p>
+                                        <p class="amount">13,5 milliards F CFA</p>
+                                        <p class="year">AFTU</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/china-exim-bank.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">ACQUISITION DE 700 MINI BUS</p>
+                                        <p class="title">ARRANGEUR</p>
+                                        <p class="amount">160 milliards F CFA</p>
+                                        <p class="year">CHINA EXIM BANK</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">FINANCEMENT ACQUISITION DE 100% DU CAPITAL</p>
+                                        <p class="title">CO-CHEF DE FILE</p>
+                                        <p class="amount">Confidentiel</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sar.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">FINANCEMENT ET FONDS DE ROULEMENT</p>
+                                        <p class="title">ARRANGEUR</p>
+                                        <p class="amount">20 millions EURO</p>
+                                        <p class="year">SAR – SOCIÉTÉ AFRICAINE DE RAFFINAGE</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/rts.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">ACQUISITION ÉQUIPEMENT AUDIOVISUEL</p>
+                                        <p class="title">ARRANGEUR</p>
+                                        <p class="amount">4,2 milliards F CFA</p>
+                                        <p class="year">RTS</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/engen-guinee-bissau.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">ACQUISITION FINANCEMENT D’ENGEN GUINÉE-BISSAU​</p>
+                                        <p class="title">CONSEIL</p>
+                                        <p class="amount">Confidentiel</p>
+                                        <p class="year">ENGEN GUINÉE-BISSAU​</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/essarts-participations.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">ACQUISITION DE BUHAN & TEISSEIRE PAR ESSARTS PARTICIPATIONS​</p>
+                                        <p class="title">CONSEIL </p>
+                                        <p class="amount">Confidentiel</p>
+                                        <p class="year">ESSARTS PARTICIPATIONS​</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">LBO 100% DE SIFI, HOLDING DE ELTON OIL ET SENBUS INDUSTRIES​​</p>
+                                        <p class="title">ARRANGEUR & CONSEIL</p>
+                                        <p class="amount">Confidentiel</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/clubmed.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">LBO, ACQUISITION DE CLUB MED PAR DES PRIVÉS SÉNÉGALAIS​​</p>
+                                        <p class="title">ARRANGEUR & CONSEIL</p>
+                                        <p class="amount">Confidentiel</p>
+                                        <p class="year">CLUB MED</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/vacap-world.png') }}" alt="RTS Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">LBO, ACQUISITION SSRT POUR VACAP​</p>
+                                        <p class="title">ARRANGEUR & CONSEIL</p>
+                                        <p class="amount">Confidentiel</p>
+                                        <p class="year">VACAP WORLD</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 " style="padding: 20px;"></div>
+                            </div>
+
+
+                            {{-- <div class="financial-item">
                                 <p class="title">STRUCTURATION ET LEVÉE DE FONDS POUR CONSTRUCTION HÔPITAL AMBULATOIRE</p>
-                                {{-- <p>7,25% 2024 – 2029</p> --}}
                                 <p class="title">ARRANGEUR & CONSEIL</p>
                                 <p class="amount">26 milliards​ F CFA</p>
                                 <p class="year">HÔPITAL INTERNATIONAL DE DAKAR</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div>
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">FINANCEMENT</p>
-                                {{-- <p>9,5% 2024-2031</p> --}}
                                 <p class="title">ARRANGEUR</p>
                                 <p class="amount">2 milliards F CFA</p>
                                 <p class="year">ADS (AÉROPORTS DU SÉNÉGAL)</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">FINANCEMENT</p>
-                                {{-- <p>6,50% 2024-2031</p> --}}
                                 <p class="title">ARRANGEUR</p>
                                 <p class="amount">13,5 milliards F CFA</p>
                                 <p class="year">SÉNÉGAL AIRLINES</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div>
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">FINANCEMENT DE CLUB MED AFRIQUE DE L’OUEST</p>
-                                {{-- <p>7% 2023-2030</p> --}}
                                 <p class="title">CONSEIL & ARRANGEUR</p>
                                 <p class="amount">63 milliards F CFA</p>
                                 <p class="year">CLUB MED AFRIQUE DE L’OUEST</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">RESTRUCTURATION DE DETTE</p>
-                                {{-- <p>6,10% 2023-2030</p> --}}
                                 <p class="title">CO-CHEF DE FILE</p>
                                 <p class="amount">4 milliards F CFA</p>
                                 <p class="year">AIR SENEGAL</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">ACQUISITION DE 700 MINI BUS</p>
-                                {{-- <p>5,90% 2022-2029​</p> --}}
                                 <p class="title">ARRANGEUR </p>
                                 <p class="amount">13,5 milliards F CFA</p>
                                 <p class="year">AFTU</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">ACQUISITION DE 700 MINI BUS</p>
-                                {{-- <p>6,50% 2021-2028​</p> --}}
                                 <p class="title">ARRANGEUR</p>
                                 <p class="amount">160 milliards F CFA</p>
                                 <p class="year">CHINA EXIM BANK</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">FINANCEMENT ACQUISITION DE 100% DU CAPITAL</p>
-                                {{-- <p>5,90% 2022-2029​</p> --}}
                                 <p class="title">CO-CHEF DE FILE</p>
                                 <p class="amount">Confidentiel</p>
-                                {{-- <p class="year">en 2021</p> --}}
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">FINANCEMENT ET FONDS DE ROULEMENT</p>
-                                {{-- <p>6,50% 2020-2027​​</p> --}}
                                 <p class="title">ARRANGEUR</p>
                                 <p class="amount">20 millions EURO</p>
                                 <p class="year">SAR – SOCIÉTÉ AFRICAINE DE RAFFINAGE</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
                             
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">ACQUISITION ÉQUIPEMENT AUDIOVISUEL</p>
-                                {{-- <p>6,25% 2019-2023​​</p> --}}
                                 <p class="title">ARRANGEUR</p>
                                 <p class="amount">4,2 milliards F CFA</p>
                                 <p class="year">RTS</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div>
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">ACQUISITION FINANCEMENT D’ENGEN GUINÉE-BISSAU​</p>
-                                {{-- <p>6,5% 2018-2025​​</p> --}}
                                 <p class="title">CONSEIL</p>
                                 <p class="amount">Confidentiel</p>
                                 <p class="year">ENGEN GUINÉE-BISSAU​</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                <div class="separator-line"></div> 
+                            </div> 
+                            {{-- <div class="financial-item">
                                 <p class="title">ACQUISITION DE BUHAN & TEISSEIRE PAR ESSARTS PARTICIPATIONS​</p>
-                                {{-- <p>6% 2016-2026​</p> --}}
                                 <p class="title">CONSEIL </p>
                                 <p class="amount">Confidentiel</p>
                                 <p class="year">ESSARTS PARTICIPATIONS​</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> --}}
+                            </div> 
 
-                            <div class="financial-item">
+                            {{-- <div class="financial-item">
                                 <p class="title">LBO 100% DE SIFI, HOLDING DE ELTON OIL ET SENBUS INDUSTRIES​​</p>
-                                {{-- <p>6,30% 2015-2025​</p> --}}
                                 <p class="title">ARRANGEUR & CONSEIL</p>
                                 <p class="amount">Confidentiel</p>
-                                {{-- <p class="year">en 2015</p> --}}
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> --}}
+                            </div> 
+                            {{-- <div class="financial-item">
                                 <p class="title">LBO, ACQUISITION DE CLUB MED PAR DES PRIVÉS SÉNÉGALAIS​​</p>
-                                {{-- <p>6,50% 2014-2021​</p> --}}
                                 <p class="title">ARRANGEUR & CONSEIL</p>
                                 <p class="amount">Confidentiel</p>
                                 <p class="year">CLUB MED</p>
-                                <div class="separator-line"></div>
-                            </div>
-                            <div class="financial-item">
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
+                            {{-- <div class="financial-item">
                                 <p class="title">LBO, ACQUISITION SSRT POUR VACAP​</p>
-                                {{-- <p> 2014-2021​​</p> --}}
                                 <p class="title">ARRANGEUR & CONSEIL</p>
                                 <p class="amount">Confidentiel</p>
                                 <p class="year">VACAP WORLD</p>
-                                <div class="separator-line"></div>
-                            </div>
+                                {{-- <div class="separator-line"></div> 
+                            </div> --}}
 
                         </div>
                     </section>

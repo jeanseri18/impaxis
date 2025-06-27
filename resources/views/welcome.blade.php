@@ -195,7 +195,7 @@
                 <h1 class="display-1" style="color: #ffffff">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
+                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
                 </p><br>
 
             </div>
@@ -209,7 +209,10 @@
             <div class="container position-relative z-2 text-white">
                 <h1 class="display-1" style="color: #ffffff">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.</p><br>
+                <p class="display-5" style="color: #fff">
+                    {{-- Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable. --}}
+                    La mission c’est faire de l’innovation financière et l’excellence opérationnelle des leviers alternatifs de développement de l’Afrique.
+                </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
         </div>
@@ -289,7 +292,7 @@
         <div class="indicator" data-index="3"></div>
     </div>
 </div>
-
+{{-- 
 <script>
    let currentIndex = 0;
     const slides = document.querySelectorAll('.slide');
@@ -349,10 +352,70 @@
     // Appliquer les animations sur la première slide au chargement
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
 
-</script>
+</script> --}}
 @endsection
 
 
 @push('scripts')
 
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function updateSlidePosition() {
+        slides.forEach((slide, i) => {
+            if (i === currentIndex) {
+                slide.classList.add('active');
+
+                // Supprime d'abord toutes les animations, puis les réapplique après un petit délai
+                slide.querySelectorAll('.animated-text, .animated-btn, .animated-hr').forEach(el => {
+                    el.classList.remove('animated-text', 'animated-btn', 'animated-hr');
+                    void el.offsetWidth; // Hack pour forcer le reflow (reset l'animation)
+                });
+
+                setTimeout(() => {
+                    slide.querySelectorAll('h1, p, a, hr').forEach(el => {
+                        if (el.tagName === 'H1' || el.tagName === 'P') {
+                            el.classList.add('animated-text');
+                        } else if (el.tagName === 'A') {
+                            el.classList.add('animated-btn');
+                        } else if (el.tagName === 'HR') {
+                            el.classList.add('animated-hr');
+                        }
+                    });
+                }, 100); // Petit délai pour un effet fluide
+
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+
+        // Mettre à jour les indicateurs
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+
+        // Déplacer les slides
+        document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Gestion des clics sur les indicateurs
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            currentIndex = parseInt(indicator.getAttribute('data-index'));
+            updateSlidePosition();
+        });
+    });
+
+    // Changement automatique des slides toutes les 8 secondes
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlidePosition();
+    }, 10000);
+
+    // Appliquer les animations sur la première slide au chargement
+    document.addEventListener("DOMContentLoaded", updateSlidePosition);
+
+</script>
 @endpush

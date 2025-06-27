@@ -168,9 +168,9 @@
 
 <div class="container">
     <p class="mt-6 text-justify" style="">
-        IMPAXIS est une banque d’affaires panafricaine indépendante fondée en 2003 par une équipe de banquiers senior chevronnés avec une expérience couvrant l’Afrique sub-saharienne, l’Europe et le Moyen-Orient
-        Elle a pour vision d’accompagner ses clients stratégiques avec des solutions financières et de conseil sur mesure permettant d’atteindre leurs objectifs et par la même de contribuer à la structuration de l’économie africaine de demain
-        IMPAXIS a une présence géographique à Dakar, à Abidjan et à Dubaï avec un champ d’action couvrant l’Afrique avec un focus sur l’Afrique Francophone (régions UEMOA et CEMAC)
+        IMPAXIS est une banque d’affaires panafricaine indépendante, fondée en 2003 par une équipe de banquiers seniors chevronnés, dotés d’une expérience couvrant l’Afrique subsaharienne, l’Europe et le Moyen-Orient.
+        Elle a pour vision d’accompagner ses clients stratégiques en leur proposant des solutions financières et de conseil sur mesure, leur permettant d’atteindre leurs objectifs tout en contribuant à la structuration de l’économie africaine de demain.
+        IMPAXIS est présente à Dakar, Abidjan et Dubaï, avec un champ d’action couvrant l’ensemble du continent africain, et un focus particulier sur l’Afrique francophone (zones UEMOA et CEMAC).
         <br> <br>
         IMPAXIS bénéficie de la licence SGI de l’AMF-UMOA (l’Autorité Régionale du MFR) lui permettant d’intervenir sur toutes les opérations de marché.
     </p>
@@ -217,7 +217,7 @@
         <div class="col-md-4">
             <div class="card custom-card">
                 <div class="triangle-icon"></div>
-                <h3 class="card-title">IMPAXIS ASSET MANAGEMENT<br>EST AFRICA</h3>
+                <h3 class="card-title">IMPAXIS ASSET MANAGEMENT<br>WEST AFRICA</h3>
                 <p class="card-text">
                     Dédiée à la création et la gestion d'OPCVM (Fonds Communs de Placement, SICAV) 
                     ainsi qu'à la gestion de fonds d'investissements et au conseil dans les discussions avec ces fonds.
@@ -248,9 +248,6 @@
                         <p class="title-role">Président Directeur Général</p>
                         <p class="experience">23 ans d'expérience</p>
                     </div>
-                    <style>
-                    
-                    </style>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
