@@ -5,105 +5,110 @@
 @push('styles')
 <style>
     .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px; /* Espacement entre les cartes */
-            justify-content: center;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px; /* Espacement entre les cartes */
+        justify-content: center;
+    }
 
-        .card {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            width: 18%; /* Largeur de chaque carte pour s'assurer qu'elles soient bien alignées */
-            text-align: center;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-            color: white;
-            box-sizing: border-box;
-        }
+    .card {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        width: 18%; /* Largeur de chaque carte pour s'assurer qu'elles soient bien alignées */
+        text-align: center;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+        color: white;
+        box-sizing: border-box;
+    }
 
-        .card:hover {
-            transform: scale(1.05); /* Légère animation au survol */
-        }
+    .card:hover {
+        transform: scale(1.05); /* Légère animation au survol */
+    }
 
-        .card h3 {
-            font-size: 18px;
-            color: white;
-        }
+    .card h3 {
+        font-size: 18px;
+        color: white;
+     }
 
-        .card p {
-            font-size: 14px;
-            color: white;
-            margin-top: 10px;
-        }
+    .card p {
+        font-size: 14px;
+        color: white;
+        margin-top: 10px;
+    }
 
-        .slider-container {
-            position: relative;
-            width: 100vw;
-            height: 90vh;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-            height: 100%;
-        }
-        .slide {
-            min-width: 100%;
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            color: white;
-            padding-left: 50px;
-        }
-        .video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        .bg-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    .slider-container {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .slide {
+        min-width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
+        padding-left: 50px;
+    }
+    
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    .bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        }
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    .indicator.active {
+        background: #F2920E;
+    }
 
-        .content {
-            position: relative;
-            z-index: 2;
 
-        }
-        .indicators {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-        }
-        .indicator {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background: white;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .indicator.active {
-            background: #F2920E;
-        }
-
-
-        @keyframes fadeInUp {
+    @keyframes fadeInUp {
         from {
             opacity: 0;
             transform: translateY(50px);
@@ -160,7 +165,7 @@
 @section('content')
 <div class="slider-container">
     <div class="slides">
-        {{-- <div class="slide active" style=" background:#767677B7;">
+        <div class="slide active" style=" background:#767677B7;">
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
                     <source src="{{asset('assets/image/slide_1.mp4')}}" type="video/mp4">
@@ -214,7 +219,7 @@
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
-        </div> --}}
+        </div>
         <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_4.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
 
             <!-- Superposition noire à 50% -->
@@ -224,54 +229,54 @@
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
                 <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff">Nos métiers</h1><br>
 
-                <div class="row">
-                    <div class="col-md-2 card border-0 text-white" style="font-size: 14px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d;">
+                <div class="row" style="margin-bottom: 20px; padding: 0;">
+                    <div class="col-md-2 card border-0 text-white" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Investment Banking</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">
                         <!-- Liste à puces -->
-                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Strategic Financing Advisory</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Project Finance</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">M&A</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">IPO / ECM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">DCM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Structured & Leveraged Finance</li>
+                        <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Conseil Financier Stratégique</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Conseil Financier Stratégique</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Strategic Financing Advisory</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Project Finance</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">M&A</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">IPO / ECM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">DCM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 0px;">Structured & Leveraged Finance</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Markets <br><br></h3>
                         <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Sales & Trading</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Primaire & Secondaire</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">FX & Commodities/Hedging</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Produits structurés</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Custody</li>
+                        <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Sales & Trading</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Primaire & Secondaire</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">FX & Commodities/Hedging</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits structurés</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Custody</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous encourageons l'innovation.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Multi-Asset Management</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Private Equity</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">SGO/AM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Private Banking</li>
+                        <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Private Equity</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">SGO/AM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Private Banking</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Global Research</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
-                        <ul class="list-group" style="background-color: transparent; color: white; border: none;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Global Macro Economy (Monde / Régions / Pays)</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Global Equity / FI / Benchmarks</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Secteurs</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Produits : Equity / FI</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Illiquid assets</li>
+                        <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Global Macro Economy (Monde / Régions / Pays)</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Global Equity / FI / Benchmarks</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Secteurs</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits : Equity / FI</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Illiquid assets</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p> --}}
                     </div>
