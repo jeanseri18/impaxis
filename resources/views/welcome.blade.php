@@ -160,7 +160,7 @@
 @section('content')
 <div class="slider-container">
     <div class="slides">
-        <div class="slide active" style=" background:#767677B7;">
+        {{-- <div class="slide active" style=" background:#767677B7;">
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
                     <source src="{{asset('assets/image/slide_1.mp4')}}" type="video/mp4">
@@ -195,7 +195,7 @@
                 <h1 class="display-1" style="color: #ffffff">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
+                    Faire de l’innovation financière et l’excellence opérationnelle des leviers alternatifs de développement de l’Afrique
                 </p><br>
 
             </div>
@@ -210,12 +210,11 @@
                 <h1 class="display-1" style="color: #ffffff">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    {{-- Être reconnue comme La Banque d’Affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable. --}}
-                    La mission c’est faire de l’innovation financière et l’excellence opérationnelle des leviers alternatifs de développement de l’Afrique.
+                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
-        </div>
+        </div> --}}
         <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_4.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
 
             <!-- Superposition noire à 50% -->
@@ -226,7 +225,7 @@
                 <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff">Nos métiers</h1><br>
 
                 <div class="row">
-                    <div class="col-md-2 card border-0 text-white" style="font-size: 15px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d;">
+                    <div class="col-md-2 card border-0 text-white" style="font-size: 14px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d;">
                         <h3 style="font-size:25px;">Investment Banking</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">
                         <!-- Liste à puces -->
@@ -243,7 +242,7 @@
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
-                        <h3 style="font-size:25px;">Markets</h3>
+                        <h3 style="font-size:25px;">Markets <br><br></h3>
                         <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
                         <ul class="list-group" style="background-color: transparent; color: white; border: none;">
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none;">Sales & Trading</li>
