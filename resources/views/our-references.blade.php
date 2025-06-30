@@ -79,13 +79,13 @@
         color: #555; /* Couleur de texte légèrement plus claire pour les descriptions */
     }
     .financial-item .title {
-        font-size: 1.25rem; /* Taille du titre */
+        font-size: 1.0rem; /* Taille du titre */
         font-weight: bold;
         margin-bottom: 10px;
         color: #343a40; /* Couleur du titre */
     }
     .financial-item .amount {
-        font-size: 2.5rem; /* Grande taille pour le montant */
+        font-size: 1.5rem; /* Grande taille pour le montant */
         font-weight: bold;
         color: #343a40;
         margin-top: 20px; /* Espace au-dessus du montant */
@@ -578,19 +578,24 @@
                                 <p class="year">en 2014</p>
                                 {{-- <div class="separator-line"></div> 
                             </div> --}}
-                            <div class="card mb-4">
-                                <div class="logo-container">
-                                <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                </div>
-                                <div class="financial-item">
-                                    <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
-                                    <p>6,8% 2016-2023​</p>
-                                    <p class="title">ARRANGEUR CHEF DE FILE</p>
-                                    <p class="amount">3,8 milliards​ F CFA</p>
-                                    <p class="year">en 2016</p>
-                                    {{-- <div class="separator-line"></div> --}}
+                            <div class="row mb-4">
+                                <div class="col-md-3 card offset-md-3">
+                                    <div class="">
+                                        <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        </div>
+                                        <div class="financial-item">
+                                            <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
+                                            <p>6,8% 2016-2023​</p>
+                                            <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                            <p class="amount">3,8 milliards​ F CFA</p>
+                                            <p class="year">en 2016</p>
+                                            {{-- <div class="separator-line"></div> --}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            
                             
 
                         </div>
