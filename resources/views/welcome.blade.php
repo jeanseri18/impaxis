@@ -190,10 +190,17 @@
                     onmouseout="this.style.border='none'">En savoir plus</a><br><br>
             </div>
         </div>
-        <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
+        {{-- <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;"> --}}
+        <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
 
             <!-- Superposition noire -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
+            <div class="video-container">
+                <video autoplay muted loop class="bg-video">
+                    <source src="{{asset('assets/videos/mission-impaxis.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
