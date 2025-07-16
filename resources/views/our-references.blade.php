@@ -276,7 +276,8 @@
                             <div class="row mb-4">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        {{-- <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener"> --}}
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
@@ -398,6 +399,19 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
+                                        <p>6,8% 2016-2023​</p>
+                                        <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                        <p class="amount">3,8 milliards​ F CFA</p>
+                                        <p class="year">en 2016</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
@@ -418,19 +432,6 @@
                                         <p>6,50% 2014-2021​</p>
                                         <p class="title">CO-ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">119 milliards F CFA</p>
-                                        <p class="year">en 2014</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
-                                        <p> 2014-2021​​</p>
-                                        <p class="title">AGENT PLACEUR </p>
-                                        <p class="amount">50 milliards F CFA</p>
                                         <p class="year">en 2014</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
@@ -579,19 +580,17 @@
                                 {{-- <div class="separator-line"></div> 
                             </div> --}}
                             <div class="row mb-4">
-                                <div class="col-md-3 card offset-md-3">
-                                    <div class="">
-                                        <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                        </div>
-                                        <div class="financial-item">
-                                            <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
-                                            <p>6,8% 2016-2023​</p>
-                                            <p class="title">ARRANGEUR CHEF DE FILE</p>
-                                            <p class="amount">3,8 milliards​ F CFA</p>
-                                            <p class="year">en 2016</p>
-                                            {{-- <div class="separator-line"></div> --}}
-                                        </div>
+                                <div class="col-md-3 card">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
+                                        <p> 2014-2021​​</p>
+                                        <p class="title">AGENT PLACEUR </p>
+                                        <p class="amount">50 milliards F CFA</p>
+                                        <p class="year">en 2014</p>
+                                        {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
                             </div>
