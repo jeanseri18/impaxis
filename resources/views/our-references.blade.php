@@ -119,6 +119,7 @@
         transform: translateY(-5px); /* Légère élévation au survol */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+        border: 2px solid #ff9900; /* Bordure orange au survol */
     }
 
     .animated-fadeInR {
