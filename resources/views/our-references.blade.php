@@ -115,12 +115,12 @@
         margin-bottom: 20px; /* Espace sous le logo */
     }
 
-    .card-animated:hover {
-        transform: translateY(-5px); /* Légère élévation au survol */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
-        border: 2px solid #ff9900; /* Bordure orange au survol */
-    }
+    /* .card-animated:hover {
+        transform: translateY(-5px); Légère élévation au survol
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Ombre douce
+        transition: transform 0.3s ease, box-shadow 0.3s ease; Transition douce
+        border: 2px solid #ff9900; Bordure orange au survol
+    } */
 
     .animated-fadeInR {
         animation: fadeInRight 1s ease forwards;
@@ -244,22 +244,19 @@
 
                             <div class="row mb-4">
                                 <div class="col-md-3 card card-animated" style="padding: 20px;" >
-                                    
+                                    <div class="logo-container">
                                         <div class="logo-container">
-                                            <div class="logo-container">
-                                                <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                            </div>
+                                            <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
                                         </div>
-                                        <div class="financial-item">
-                                            <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
-                                            <p>7,25% 2024 – 2029</p>
-                                            <p class="title">ARRANGEUR CHEF DE FILE</p>
-                                            <p class="amount">20 milliards F CFA</p>
-                                            <p class="year">en 2025</p>
-                                            {{-- <div class="separator-line"></div> --}}
-                                        </div>
-                                    
-                                    
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
+                                        <p>7,25% 2024 – 2029</p>
+                                        <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                        <p class="amount">20 milliards F CFA</p>
+                                        <p class="year">en 2025</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
                                 </div>
                                 <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
