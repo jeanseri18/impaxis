@@ -409,7 +409,7 @@
                             el.classList.add('animated-hr');
                         }
                     });
-                }, 100); // Petit délai pour un effet fluide
+                }, 70); // Petit délai pour un effet fluide
 
             } else {
                 slide.classList.remove('active');
