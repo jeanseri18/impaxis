@@ -43,6 +43,7 @@
     }
     .custom-card:hover{
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+        border: 2px solid #ff9900 ; /* Bordure bleue au survol */
     }
     .custom-card h2 {
         font-size: 1.8rem;

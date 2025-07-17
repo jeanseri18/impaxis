@@ -114,6 +114,29 @@
         max-height: 150px; /* Hauteur automatique pour conserver les proportions */
         margin-bottom: 20px; /* Espace sous le logo */
     }
+
+    .card-animated:hover {
+        transform: translateY(-5px); /* Légère élévation au survol */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+    }
+
+    .animated-fadeInR {
+        animation: fadeInRight 1s ease forwards;
+        opacity: 0;
+        will-change: opacity, transform;
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }    
 </style>
 @endpush
 
@@ -219,20 +242,25 @@
                         <div class="container mb-5">
 
                             <div class="row mb-4">
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
-                                        <p>7,25% 2024 – 2029</p>
-                                        <p class="title">ARRANGEUR CHEF DE FILE</p>
-                                        <p class="amount">20 milliards F CFA</p>
-                                        <p class="year">en 2025</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
+                                <div class="col-md-3 card card-animated" style="padding: 20px;" >
+                                    
+                                        <div class="logo-container">
+                                            <div class="logo-container">
+                                                <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                            </div>
+                                        </div>
+                                        <div class="financial-item">
+                                            <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
+                                            <p>7,25% 2024 – 2029</p>
+                                            <p class="title">ARRANGEUR CHEF DE FILE</p>
+                                            <p class="amount">20 milliards F CFA</p>
+                                            <p class="year">en 2025</p>
+                                            {{-- <div class="separator-line"></div> --}}
+                                        </div>
+                                    
+                                    
                                 </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
+                                <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/kf_titrisation.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
@@ -245,7 +273,7 @@
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
+                                <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
@@ -258,7 +286,7 @@
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
+                                <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/fidelis-finance.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
@@ -273,7 +301,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animated animated-fadeInR">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         {{-- <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener"> --}}
@@ -437,6 +465,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-4">
+                                <div class="col-md-3 card">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
+                                        <p> 2014-2021​​</p>
+                                        <p class="title">AGENT PLACEUR </p>
+                                        <p class="amount">50 milliards F CFA</p>
+                                        <p class="year">en 2014</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                            </div>
 
 
                             {{-- <div class="logo-container">
@@ -579,23 +622,6 @@
                                 <p class="year">en 2014</p>
                                 {{-- <div class="separator-line"></div> 
                             </div> --}}
-                            <div class="row mb-4">
-                                <div class="col-md-3 card">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
-                                        <p> 2014-2021​​</p>
-                                        <p class="title">AGENT PLACEUR </p>
-                                        <p class="amount">50 milliards F CFA</p>
-                                        <p class="year">en 2014</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
 
                         </div>
                     </section>
@@ -690,7 +716,7 @@
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION DE 700 MINI BUS</p>
                                         <p class="title">ARRANGEUR</p>
-                                        <p class="amount">160 milliards F CFA</p>
+                                        <p class="amount">160 milliards F CFA< p>
                                         <p class="year">CHINA EXIM BANK</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
@@ -976,6 +1002,30 @@
             // mais c'est une bonne pratique si tu veux une logique d'initialisation en JS.
             // Par défaut, nous avons déjà configuré le premier onglet en HTML.
         });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const animatedCards = document.querySelectorAll('.animated');
+            animatedCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                card.classList.add('animated-fadeInR');
+            } else {
+                card.classList.remove('animated-fadeInR');
+            }
+            });
+        });
+        //     const animatedCards = document.querySelectorAll('.animated');
+        //     animatedCards.forEach(card => {
+        //         const rect = card.getBoundingClientRect();
+        //         if (rect.top < window.innerHeight && rect.bottom > 0) {
+        //             card.classList.add('animated-fadeInR');
+        //         }
+        //     });
+        // });
+        // Supprimer l'ajout automatique de l'animation au chargement
+        // L'animation ne sera déclenchée que lors du scroll
     </script>
 
 @endpush
