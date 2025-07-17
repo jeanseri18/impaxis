@@ -437,7 +437,7 @@
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlidePosition();
-    }, 10000);
+    }, 6000);
 
     // Appliquer les animations sur la première slide au chargement
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
