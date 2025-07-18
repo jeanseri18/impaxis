@@ -110,9 +110,9 @@
 
     .logo-partener {
         width: auto; /* Largeur maximale du logo */
-        height: 100px; /* Hauteur fixe pour les logos */
-        max-height: 150px; /* Hauteur automatique pour conserver les proportions */
-        margin-bottom: 20px; /* Espace sous le logo */
+        height: 70px; /* Hauteur fixe pour les logos */
+        max-height: 100px; /* Hauteur automatique pour conserver les proportions */
+        margin-bottom: 8px; /* Espace sous le logo */
     }
 
     /* .card-animated:hover {
@@ -242,11 +242,11 @@
                     <section class="financial-section">
                         <div class="container mb-5">
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card card-animated" style="padding: 20px;" >
                                     <div class="logo-container">
                                         <div class="logo-container">
-                                            <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                            <img src="{{ asset('/assets/image/logo-partners/nourmony_logo.png') }}" alt="Mourmony Logo" class="logo-partener">
                                         </div>
                                     </div>
                                     <div class="financial-item">
@@ -260,7 +260,7 @@
                                 </div>
                                 <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/kf_titrisation.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
@@ -272,8 +272,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 card card-animated" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                    <div class="logo-container"> <!-- style="width: 246px; height: 72px" -->
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="bidc-ebid Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - GSS Bond BIDC - EBID</p>
@@ -286,7 +286,7 @@
                                 </div>
                                 <div class="col-md-3 card card-animated" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/fidelis-finance.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/fidelis-finance-logo.jpg') }}" alt="Fidelis finance Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - FIDELIS FINANCE CAP25</p>
@@ -299,11 +299,11 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4 animated animated-fadeInR">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        {{-- <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="Mourmony Logo" class="logo-partener"> --}}
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        {{-- <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" style="width: auto; height: 80px;"alt="Mourmony Logo" class="logo-partener"> --}}
+                                        <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="BAOD Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
@@ -316,7 +316,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="bidc-ebid" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
@@ -329,7 +329,8 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        {{-- <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener"> --}}
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
@@ -342,7 +343,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Bidc-ebid" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
@@ -354,10 +355,10 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/sonatel.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/sonatel_logo.png') }}" style="height: 60px;" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SONATEL</p>
@@ -370,7 +371,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/BHS.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/bhs-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">1er DIASPORA BONDS DE LA RÉGION​ - BHS</p>
@@ -409,7 +410,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -463,10 +464,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/boad.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
@@ -631,7 +632,7 @@
                     <section class="financial-section">
                         <div class="container">
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/hopital-international-dakar.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
@@ -682,7 +683,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/aire-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -732,7 +733,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/sar.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -783,7 +784,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-4">
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="RTS Logo" class="logo-partener">
@@ -1004,7 +1005,7 @@
 
     <script>
         window.addEventListener('scroll', function() {
-            const animatedCards = document.querySelectorAll('.animated');
+            const animatedCards = document.querySelectorAll('.animatedInRight');
             animatedCards.forEach(card => {
             const rect = card.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -1014,16 +1015,6 @@
             }
             });
         });
-        //     const animatedCards = document.querySelectorAll('.animated');
-        //     animatedCards.forEach(card => {
-        //         const rect = card.getBoundingClientRect();
-        //         if (rect.top < window.innerHeight && rect.bottom > 0) {
-        //             card.classList.add('animated-fadeInR');
-        //         }
-        //     });
-        // });
-        // Supprimer l'ajout automatique de l'animation au chargement
-        // L'animation ne sera déclenchée que lors du scroll
     </script>
 
 @endpush
