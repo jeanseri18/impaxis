@@ -635,7 +635,7 @@
                             <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/hopital-international-dakar.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/hopital-gen-dakar.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">STRUCTURATION ET LEVÉE DE FONDS POUR CONSTRUCTION HÔPITAL AMBULATOIRE</p>
@@ -647,7 +647,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/aeroport-intenational-dakar.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/ads_aeroport-senegal.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">FINANCEMENT</p>
