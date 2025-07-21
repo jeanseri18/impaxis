@@ -75,7 +75,7 @@
     <main>
         <nav class="navbar navbar-dark navbar-expand-lg px-3">
             <a class="navbar-brand" href="{{ route('front.welcome') }}">
-                <img src="assets/logos.png" alt="Logo">
+                <img src="{{ asset('assets/logos.png') }}" alt="Logo">
             </a>
             <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
                 {{-- ☰ --}}<i class="bi bi-list"></i>
@@ -94,7 +94,7 @@
                 <a href="#"> Notre équipe</a>
                 <a href="{{ route('front.our-references') }}"> Références</a>
                 <a href="{{ route('front.our-jobs') }}"> Nos métiers</a>
-                <a href="#"> Actualité</a>
+                <a href="{{ route('front.actualities') }}"> Actualité</a>
                 <a href="#"> Contact</a>
             </div>
         </div>

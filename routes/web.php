@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActualityController;
 use App\Http\Controllers\ManagerController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +22,7 @@ Route::name('front.')->group(function () {
     Route::get('/a-propos', [ManagerController::class, 'About'])->name('about');
     Route::get('/nos-metiers', [ManagerController::class, 'OurJobs'])->name('our-jobs');
     Route::get('/nos-references', [ManagerController::class, 'OurReferences'])->name('our-references');
+    Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
+    Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
 });
 
