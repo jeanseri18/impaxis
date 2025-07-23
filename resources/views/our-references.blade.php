@@ -343,21 +343,6 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Bidc-ebid" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
-                                        <p>5,90% 2022-2029​</p>
-                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
-                                        <p class="amount">120 milliards F CFA</p>
-                                        <p class="year">en 2021</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-4 animatedInRight">
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/sonatel_logo.png') }}" style="height: 60px;" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
@@ -368,7 +353,20 @@
                                         <p class="year">en 2020</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
+                                    {{-- <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Bidc-ebid" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
+                                        <p>5,90% 2022-2029​</p>
+                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
+                                        <p class="amount">120 milliards F CFA</p>
+                                        <p class="year">en 2021</p>
+                                    </div> --}}
                                 </div>
+                            </div>
+
+                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/bhs-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -392,6 +390,18 @@
                                         <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                         <p class="amount">38 milliards F CFA</p>
                                         <p class="year">en 2018</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6% 2016-2026​</p>
+                                        <p class="title">CO-CHEF DE FILE </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2016</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -411,19 +421,6 @@
                             </div>
 
                             <div class="row mb-4 animatedInRight">
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6% 2016-2026​</p>
-                                        <p class="title">CO-CHEF DE FILE </p>
-                                        <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2016</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -463,9 +460,7 @@
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row mb-4 animatedInRight">
-                                <div class="col-md-3 card">
+                                <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
@@ -479,7 +474,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             {{-- <div class="logo-container">
                                 <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -659,7 +653,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/aire-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/senegal-airlines-corporate.jpg') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">FINANCEMENT</p>
@@ -686,19 +680,19 @@
                             <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/aire-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/senbus-industries.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">RESTRUCTURATION DE DETTE</p>
                                         <p class="title">CO-CHEF DE FILE</p>
                                         <p class="amount">4 milliards F CFA</p>
-                                        <p class="year">AIR SENEGAL</p>
+                                        <p class="year">SENBUS INDUSTRIES</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/aftu.jpeg') }}" alt="Mourmony Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/aftu-logo.png') }}" style="width: 100%; height: 45px;" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION DE 700 MINI BUS</p>
@@ -715,7 +709,7 @@
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION DE 700 MINI BUS</p>
                                         <p class="title">ARRANGEUR</p>
-                                        <p class="amount">160 milliards F CFA< p>
+                                        <p class="amount">160 milliards F CFA</p>
                                         <p class="year">CHINA EXIM BANK</p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
@@ -748,7 +742,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/rts.png') }}" alt="RTS Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/rts_sn_logo.png') }}" alt="RTS Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION ÉQUIPEMENT AUDIOVISUEL</p>
@@ -760,7 +754,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/engen-guinee-bissau.png') }}" alt="RTS Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/engen-guinee-bissau.jpg') }}" alt="RTS Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION FINANCEMENT D’ENGEN GUINÉE-BISSAU​</p>
@@ -772,7 +766,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/essarts-participations.png') }}" alt="RTS Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/sunu-bt-logo.jpg') }}" alt="RTS Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">ACQUISITION DE BUHAN & TEISSEIRE PAR ESSARTS PARTICIPATIONS​</p>
@@ -787,7 +781,7 @@
                             <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" alt="RTS Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/sifi-logo.png') }}" alt="RTS Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">LBO 100% DE SIFI, HOLDING DE ELTON OIL ET SENBUS INDUSTRIES​​</p>
@@ -810,7 +804,7 @@
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/vacap-world.png') }}" alt="RTS Logo" class="logo-partener">
+                                        <img src="{{ asset('/assets/image/logo-partners/vacap-world.jpg') }}" alt="RTS Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">LBO, ACQUISITION SSRT POUR VACAP​</p>

@@ -229,7 +229,7 @@
                 <h1 class="display-1" style="color: #ffffff">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
-                    Apporter des solutions financières innovantes à nos clients stratégiques pour structurer de manière durable l’économie africaine de demain.
+                    Être reconnue comme La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>

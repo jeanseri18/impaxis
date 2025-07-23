@@ -262,9 +262,9 @@
 
                 <div class="col-md-4 col-sm-12">
                     <div class="team-member-card team-member-animated">
-                        <img src="{{ asset('/assets/image/equipes/romaric-socia.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
-                        <h3>Romaric SOCIA</h3>
-                        <p class="title-role">Senior Associate</p>
+                        <img src="{{ asset('/assets/image/equipes/marieme-youm-kobar.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
+                        <h3>Marième Youm KOBAR</h3>
+                        <p class="title-role">CEO / Directrice Générale Impaxis Asset Management West Africa</p>
                         <p class="experience">5 années d'expérience</p>
                     </div>
                 </div>
