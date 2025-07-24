@@ -10,22 +10,18 @@ class ActualityController extends Controller
     //
     public function showActuality($item_id, $slug)
     {
-        $actuality = Actuality::where('id', $item_id)->where('slug', $slug)->firstOrFail();
-        // dd($actuality);
-        // Here you would typically fetch the actuality by its ID and slug
-        // For example:
-        // $actuality = Actuality::where('id', $item_id)->where('slug', $slug)->firstOrFail();
-        
-        // For now, just return the view
-        // return view('actuality.show', compact('actuality'));
-        
-        // Placeholder for the actual view rendering
-        // You can replace 'actuality.show' with the actual view file you want to render
-        // and pass the fetched actuality data to it.
-        // For example:
-        // return view('actuality.show', ['actuality' => $actuality]);
-        // For now, just return the view without any data  
+        $item = Actuality::where('id', $item_id)->where('slug', $slug)->firstOrFail();
+        // Check if the item is published
+        if (!$item->is_published) {
+            abort(404); // Not found if the item is not published
+        }
+        // recuperer les 5 derniers articles
+        $recentActualities = Actuality::where('is_published', true)
+            ->where('id', '!=', $item_id) // Exclude the current item
+            ->orderBy('created_at', 'desc')
+            ->take(4) // Limit to 4 recent articles
+            ->get();
     
-        return view('actuality.show', compact('actuality'));
+        return view('actuality.show', compact('item', 'recentActualities'));
     }
 }

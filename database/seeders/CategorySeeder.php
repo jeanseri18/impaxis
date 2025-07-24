@@ -16,8 +16,8 @@ class CategorySeeder extends Seeder
         //
         $categories = [
             ['title' => 'Finance', 'slug' => 'finance', 'description' => 'Financial news and updates', 'created_by' => 1],
-            ['title' => 'Technology', 'slug' => 'technology', 'description' => 'Latest in technology', 'created_by' => 1],
-            ['title' => 'Health', 'slug' => 'health', 'description' => 'Health and wellness tips', 'created_by' => 1],
+            ['title' => 'Technologie', 'slug' => 'technologie', 'description' => 'Latest in technology', 'created_by' => 1],
+            ['title' => 'Santé', 'slug' => 'sante', 'description' => 'Health and wellness tips', 'created_by' => 1],
         ];
 
         foreach ($categories as $category) {

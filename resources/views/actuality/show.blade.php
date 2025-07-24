@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('{{ $actuality->getCoverFullUrl() }}'); /* remplace par ton image */
+        background-image: url('{{ $item->getCoverFullUrl() }}'); /* remplace par ton image */
         background-size: cover;
         background-position: center;
         height: 60vh; /* ou 100vh pour plein écran */
@@ -72,15 +72,46 @@
 
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-md-12">
-                <h1>{{ $actuality->title }}</h1>
-                <p class="text-justify">
-                    {{ $actuality->content }}
+            <div class="col-md-8">
+                <h1>{{ $item->title }}</h1>
+                <p class="text-justify" style="color: #787878; font-size: 16px;">
+                    {!! $item->content !!}
                 </p>
-                <p class="text-muted" style="color: #787878; font-size: 14px; font-style: italic; float: right;">
-                    <i class="bi bi-clock"></i> {{ $actuality->created_at->format('D d M Y à H:i') }}
-                </p>
-                {{-- <a href="{{ route('front.actualities') }}" class="btn-read-more text-decoration-none mt-5">Retour aux actualités</a> --}}
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div style="color: #787878; font-size: 14px; font-style: italic;">
+                        <a href="{{ route('front.actualities') }}" class="text-decoration-none mt-5"><i class="bi bi-arrow-left"></i> Tous les articles </a>
+                    </div>
+                    <div style="color: #787878; font-size: 14px; font-style: italic;">
+                        <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <h3>Articles récents</h3>
+                @if ($recentActualities->isEmpty())
+                    <p style="color: #919191">Aucun article récent disponible.</p>
+                @endif
+                {{-- Affichage des articles récents --}}
+                @foreach ($recentActualities as $item)
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 1em">
+                            <a class="text-decoration-none" href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug ]) }}">
+                                {{ Str::limit($item->title, 80, '...') }}
+                            </a> 
+                        </h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div style="color: #919191; font-size: 12px;">
+                                <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                            </div>
+                            <div>
+                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-link" style="float: right">Lire plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

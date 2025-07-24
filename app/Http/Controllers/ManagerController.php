@@ -30,11 +30,10 @@ class ManagerController extends Controller
 
     public function showActualities()
     {
-        // $actualities = Actuality::where('is_published', true)
-        //     ->orderBy('published_at', 'desc')
-        //     ->get();
-        $actualities = Actuality::all();
-        // dd($actualities);
+        $actualities = Actuality::orderBy('created_at', 'desc')
+            ->where('is_published', true)
+            ->paginate(9);
+            
         return view('actualities', compact('actualities'));
     }
 }

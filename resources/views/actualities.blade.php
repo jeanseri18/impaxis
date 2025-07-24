@@ -72,10 +72,10 @@
 
     <div class="container mt-5 mb-5">
         <div class="row">
-            @foreach ($actualities as $item)
+            @forelse ($actualities as $item)
             <div class="col-md-4 mb-5">
                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
-                    <div class="card" style="width: 21rem;">
+                    <div class="card" style="width: 100%;">
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
@@ -87,7 +87,8 @@
                             <div class="flex">
                                 <p class="card-text">
                                     <small class="text-muted" style="color: #919191; float: left;">
-                                        <i class="bi bi-clock"></i> Il y a {{ str_replace('ago', '', $item->created_at->diffForHumans(['locale' => 'fr'])) }}
+                                        {{-- <i class="bi bi-clock"></i> Il y a {{ str_replace('ago', '', $item->created_at->diffForHumans(['locale' => 'fr'])) }} --}}
+                                        <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
                                     </small>
                                 </p>
                                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
@@ -95,8 +96,22 @@
                         </div>
                     </div>
                 </a>
-            </div>  
-            @endforeach
+            </div>
+            @empty
+            <div class="row">
+                <div class="col-12 text-center mb-4" style="color: #8d8d8c; font-size: 1.2em;">
+                    <p>Aucune actualité disponible pour le moment.</p>
+                </div>
+            </div>
+            @endforelse
+
+            @if (!empty($actualities))
+                <div class="col-lg-12" style="margin-top: 30px;">
+                    <div>
+                        {{ $actualities->links('vendor.pagination.bootstrap-5-fr') }}
+                    </div>
+                </div>
+            @endif
             
         </div>
     </div>

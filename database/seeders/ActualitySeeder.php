@@ -22,6 +22,8 @@ class ActualitySeeder extends Seeder
                                 IMPAXIS dispose d’une importante base d’investisseurs favorisant la distribution maximale de ses opérations.',
                 'category_id' => 1, // Assuming category_id 1 exists
                 'created_by' => 1,
+                'is_published' => true,
+                'published_at' => now(),
                 // 'actu_cover' => public_path() . '/assets/images/cover_actu.jpg', // Assuming you have a cover image'',
             ],
             [
@@ -31,6 +33,8 @@ class ActualitySeeder extends Seeder
                                 Le Social Bond de CRRH-UEMOA offre un rendement attractif et un impact réel sur l’accès au logement dans l’UEMOA.', 
                 'category_id' => 1, // Assuming category_id 1 exists
                 'created_by' => 1,
+                'is_published' => true,
+                'published_at' => now(),
                 // 'actu_cover' => public_path() . '/assets/images/cover_actu.jpg', // Assuming you have a cover image
             ],
             [
@@ -41,6 +45,8 @@ class ActualitySeeder extends Seeder
                                 Dynamisons nos PME avec des financements solides et innovants !',
                 'category_id' => 1, // Assuming category_id 1 exists
                 'created_by' => 1,
+                'is_published' => true,
+                'published_at' => now(),
                 // 'actu_cover' => public_path() . '/assets/images/cover_actu.jpg', // Assuming you have a cover image
             ],
             [
@@ -50,6 +56,8 @@ class ActualitySeeder extends Seeder
                                 La période de souscription s’étend du 22 août 2024 à 09h00 GMT au 06 septembre 2024 à 17h GMT avec possibilité de clôture anticipée.',
                 'category_id' => 1, // Assuming category_id 1 exists
                 'created_by' => 1,
+                'is_published' => true,
+                'published_at' => now(),
                 // 'actu_cover' => public_path() . '/assets/images/cover_actu.jpg', 
             ],
         ];
@@ -60,6 +68,9 @@ class ActualitySeeder extends Seeder
                 'slug' => $actuality['slug'],
                 'content' => $actuality['content'],
                 'created_by' => $actuality['created_by'],
+                'category_id' => $actuality['category_id'],
+                'is_published' => $actuality['is_published'],
+                'published_at' => $actuality['published_at'],
             ]);
 
             // $actu->addMedia($actuality['actu_cover'])

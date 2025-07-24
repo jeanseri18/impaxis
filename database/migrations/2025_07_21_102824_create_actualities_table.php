@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->string('actu_cover')->nullable();
+            // $table->string('actu_cover')->nullable();
             $table->string('slug')->unique();
             $table->boolean('is_published')->default(false);
             $table->dateTime('published_at')->nullable();

@@ -94,7 +94,7 @@
                 <a href="#"> Notre équipe</a>
                 <a href="{{ route('front.our-references') }}"> Références</a>
                 <a href="{{ route('front.our-jobs') }}"> Nos métiers</a>
-                <a href="{{ route('front.actualities') }}"> Actualité</a>
+                <a href="{{ route('front.actualities') }}"> Actualités</a>
                 <a href="#"> Contact</a>
             </div>
         </div>
@@ -111,7 +111,7 @@
             <div class="col-xl-6 col-lg-12 col-md-7 col-12">
                 <div class="d-flex flex-column gap-4">
                     <div>
-                        <img src="{{ asset('assets/_ALLO-SERVICES-LOGO-BLANC 1.png') }}" alt="Geeks logo"  width="100"/>
+                        <img src="{{-- asset('assets/_ALLO-SERVICES-LOGO-BLANC 1.png') --}}" alt="Geeks logo"  width="100"/>
                     </div>
                     <p class="mb-0">Découvrez et connectez-vous avec les entreprises et professionnels de la Côte d'Ivoire sur notre plateforme dédiée.
                     Notre objectif est construit sur la base du jobbing, un modèle économique entre particuliers. C'est avant tout une mise en relation entre les besoins d'une personne ou une entreprise et la compétence d'une autre.Nous proposons des jobbers aux compétences confirmées aux personnes ou aux entreprises dans le besoin.</p>
@@ -137,8 +137,8 @@
                         <li><a href="" class="nav-link">Professionel</a></li>
                         <li><a href="" class="nav-link">Entreprise </a></li>
                     </ul>
-                        <a href="#"><img src="{{ asset('assets/images/svg/appstore.svg') }}" alt="" class="img-fluid" /></a>
-                        <a href="#"><img src="{{ asset('assets/images/svg/playstore.svg') }}" alt="" class="img-fluid" /></a>
+                        <a href="#"><img src="{{-- asset('assets/images/svg/appstore.svg') --}}" alt="" class="img-fluid" /></a>
+                        <a href="#"><img src="{{-- asset('assets/images/svg/playstore.svg') --}}" alt="" class="img-fluid" /></a>
                 </div>
             </div>
 
