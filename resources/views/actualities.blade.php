@@ -75,7 +75,7 @@
             @forelse ($actualities as $item)
             <div class="col-md-4 mb-5">
                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
-                    <div class="card" style="width: 100%; height: 34em; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card" style="width: 100%; height: 35em; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
