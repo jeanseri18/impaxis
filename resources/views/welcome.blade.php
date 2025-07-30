@@ -197,7 +197,7 @@
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
-                    <source src="{{asset('assets/videos/mission-impaxis.mp4')}}" type="video/mp4">
+                    <source src="{{asset('assets/videos/notre-mission.mp4')}}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -377,7 +377,7 @@
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlidePosition();
-    }, 6000);
+    }, 8000);
 
     // Appliquer les animations sur la première slide au chargement
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
