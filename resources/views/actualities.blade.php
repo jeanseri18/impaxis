@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <div class="card-footer" style="background-color: #f8f9fa; border-top: 0.5px solid #dee2e6; position:absolute; bottom: 0;">
+                        <div class="card-footer" style="background-color: #f8f9fa; border-top: 0.5px solid #dee2e6; bottom: 0px; position: relative;">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div class="">
                                     <small class="text-muted" style="color: #919191; float: left;">
