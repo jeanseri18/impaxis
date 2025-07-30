@@ -83,7 +83,19 @@
                                 {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
                             </p>
                         </div>
-                        <div class="" style="padding: 15px 25px 15px 25px; position: absolute; z-index: 1000; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
+                        {{-- <div class="" style="padding: 15px 25px 15px 25px; position: absolute; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div class="">
+                                    <small class="text-muted" style="color: #919191; float: left;">
+                                        <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                                    </small>
+                                </div>
+                                <div>
+                                    <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="card-footer" style="background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div class="">
                                     <small class="text-muted" style="color: #919191; float: left;">
