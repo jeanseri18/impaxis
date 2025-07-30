@@ -83,7 +83,7 @@
                                 {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
                             </p>
                         </div>
-                        <div class="" style="padding: 15px 25px 15px 25px; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6; position: absolue;">
+                        <div class="" style="padding: 15px 25px 15px 25px; position: fixed; z-index: 1000; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div class="">
                                     <small class="text-muted" style="color: #919191; float: left;">
