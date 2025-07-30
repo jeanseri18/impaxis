@@ -75,7 +75,7 @@
             @forelse ($actualities as $item)
             <div class="col-md-4 mb-5">
                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
-                    <div class="card" style="width: 100%; height: 36em; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card" style="width: 100%; height: 33em; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
@@ -83,14 +83,16 @@
                                 {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
                             </p>
                         </div>
-                        <div class="card-body" style="margin-top: 0px">
-                            <div class="flex">
-                                <p class="card-text">
+                        <div class="card-footer" style="margin-top: 0px">
+                            <div class="" style="display: flex; justify-content: space-between; align-items: center;">
+                                <div class="">
                                     <small class="text-muted" style="color: #919191; float: left;">
                                         <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
                                     </small>
-                                </p>
-                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                                </div>
+                                <div>
+                                    <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                                </div>
                             </div>
                         </div>
                     </div>
