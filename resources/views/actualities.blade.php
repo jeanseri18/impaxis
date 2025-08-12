@@ -95,14 +95,14 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <div class="card-footer" style="background-color: #f8f9fa; border-top: 0.5px solid #dee2e6; bottom: 0px; position: relative;">
+                        <div class="card-footer card-footer-fixed">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div class="">
-                                    <small class="text-muted" style="color: #919191; float: left;">
+                                <div class="" style="background-color: #ff9900">
+                                    <small class="text-muted" style="color: #919191;">
                                         <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
                                     </small>
                                 </div>
-                                <div>
+                                <div class="">
                                     <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
                                 </div>
                             </div>
