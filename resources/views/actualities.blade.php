@@ -76,7 +76,6 @@
             <div class="col-md-4 mb-5">
                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
                     <div class="card" style="width: 100%; height: 100%; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
-                        {{-- <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="..."> --}}
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
                         <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
                             <div class="card-body">
@@ -98,19 +97,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        {{-- <div class="card-footer card-footer-fixed">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div class="" style="background-color: #ff9900">
-                                    <small class="text-muted" style="color: #919191;">
-                                        <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
-                                    </small>
-                                </div>
-                                <div class="">
-                                    <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </a>
             </div>
