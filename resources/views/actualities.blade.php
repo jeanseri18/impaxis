@@ -75,26 +75,30 @@
             @forelse ($actualities as $item)
             <div class="col-md-4 mb-5">
                 <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
-                    <div class="card" style="width: 100%; height: 100%; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card" style="width: 100%; height: 100%; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
+                        {{-- <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="..."> --}}
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
-                            <p class="card-text">
-                                {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
-                            </p>
-                        </div>
-                        <div class="" style="padding: 15px 25px 15px 25px; position: relative; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div class="">
-                                    <small class="text-muted" style="color: #919191; float: left;">
-                                        <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
-                                    </small>
-                                </div>
-                                <div>
-                                    <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
+                                <p class="card-text">
+                                    {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
+                                </p>
+                            </div>
+                            <div class="" style="padding: 15px 25px 15px 25px; position: relative; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="">
+                                        <small class="text-muted" style="color: #919191; float: left;">
+                                            <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
                         {{-- <div class="card-footer card-footer-fixed">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div class="" style="background-color: #ff9900">
