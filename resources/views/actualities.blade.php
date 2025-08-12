@@ -78,7 +78,7 @@
                     <div class="card" style="width: 100%; height: 100%; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
                         {{-- <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="..."> --}}
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
-                        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
                                 <p class="card-text">
