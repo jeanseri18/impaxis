@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('title', 'A propos | ')
 
@@ -169,11 +169,14 @@
 
 <div class="container">
     <p class="mt-6 text-justify" style="">
-        IMPAXIS est une banque d’affaires panafricaine indépendante, fondée en 2003 par une équipe de banquiers seniors chevronnés, dotés d’une expérience couvrant l’Afrique subsaharienne, l’Europe et le Moyen-Orient.
-        Elle a pour vision d’accompagner ses clients stratégiques en leur proposant des solutions financières et de conseil sur mesure, leur permettant d’atteindre leurs objectifs tout en contribuant à la structuration de l’économie africaine de demain.
+        IMPAXIS est une banque d’affaires panafricaine indépendante, fondée en 2003 par une équipe de banquiers seniors chevronnés, dotés d’une expérience couvrant l’Afrique subsaharienne, l’Europe et le Moyen-Orient. 
+        Notre vision est d’offrir aux acteurs économiques africains des solutions financières de classe mondiale, leur permettant de concrétiser leurs ambitions tout en contribuant à la structuration de l’économie africaine de demain. 
         IMPAXIS est présente à Dakar, Abidjan et Dubaï, avec un champ d’action couvrant l’ensemble du continent africain, et un focus particulier sur l’Afrique francophone (zones UEMOA et CEMAC).
         <br> <br>
-        IMPAXIS bénéficie de la licence SGI de l’AMF-UMOA (l’Autorité Régionale du MFR) lui permettant d’intervenir sur toutes les opérations de marché.
+        Née au cœur de l’Afrique de l’Ouest, notre identité est profondément africaine au-delà de notre implantation. Nous comprenons les dynamiques locales, parlons le langage des marchés africains, 
+        et transformons cette proximité en opportunités de croissance. Notre force réside dans l’alliance entre excellence internationale et ancrage africain.
+        <br> <br>
+        IMPAXIS bénéficie de la licence SGI de l’AMF-UMOA (l’Autorité́ Régionale du MFR) lui permettant d’intervenir sur toutes les opérations de marché.
     </p>
 
     <div class="text-center mb-6 mt-6">
@@ -186,8 +189,8 @@
                 <div class="triangle-icon"></div>
                 <h3 class="card-title">IMPAXIS<br>SECURITIES</h3>
                 <p class="card-text">
-                    Focalisée sur les marchés de capitaux, les introductions en bourse, le courtage actions
-                    et produits de taux, la structuration et le placement de titres, ainsi que les produits
+                    Focalisée sur les marchés de capitaux, les introductions en bourse, le courtage actions 
+                    et produits de taux, la structuration et le placement de titres, ainsi que les produits 
                     de couverture (commodities, FX).
                 </p>
                 <a href="#" class="read-more">
@@ -247,7 +250,7 @@
                         <img src="{{ asset('/assets/image/equipes/momar-ndour.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Momar NDOUR</h3>
                         <p class="title-role">Président Directeur Général</p>
-                        <p class="experience">23 ans d'expérience</p>
+                        <p class="experience">+30 ans d'expérience</p>
                     </div>
                 </div>
 
@@ -256,7 +259,7 @@
                         <img src="{{ asset('/assets/image/equipes/aboubacar-diaw.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Aboubacar DIAW</h3>
                         <p class="title-role">Administrateur Directeur Général<br>d'Impaxis Securities</p>
-                        <p class="experience">12 ans d'expérience</p>
+                        <p class="experience">+20 ans d'expérience</p>
                     </div>
                 </div>
 
@@ -265,7 +268,7 @@
                         <img src="{{ asset('/assets/image/equipes/marieme-youm-kobar.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                         <h3>Marième Youm KOBAR</h3>
                         <p class="title-role">CEO / Directrice Générale Impaxis Asset Management West Africa</p>
-                        <p class="experience">5 années d'expérience</p>
+                        <p class="experience">+20 années d'expérience</p>
                     </div>
                 </div>
             </div>

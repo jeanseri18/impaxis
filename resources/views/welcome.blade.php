@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('title', 'Welcome | ')
 
@@ -208,6 +208,8 @@
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
                     Faire de l’innovation financière et l’excellence opérationnelle des leviers alternatifs de développement de l’Afrique
+                    <br><br>
+                    Bâtir l’Afrique de demain par l’excellence et l’innovation financière
                 </p><br>
 
             </div>
@@ -230,6 +232,8 @@
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
                     Être reconnue comme La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
+                    <br><br>
+                    La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
@@ -257,13 +261,13 @@
                         <!-- Liste à puces -->
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Strategic Financing Advisory</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Project Finance</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">M&A</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">IPO / ECM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">DCM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 0px;">Structured & Leveraged Finance</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Financement de projet</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Fusion-Acquisition</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Introduction en bourse </li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Levée de fonds sur le marché des capitaux</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Financement structuré</li>
+                            {{-- <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">DCM</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 0px;">Structured & Leveraged Finance</li> --}}
                         </ul>
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
@@ -272,20 +276,20 @@
                         <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Sales & Trading</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Primaire & Secondaire</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">FX & Commodities/Hedging</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits structurés</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Custody</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">FX & Commodities/ Hedging </li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits structurés et dérivés</li>
+                            {{-- <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits structurés</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Custody</li> --}}
                         </ul>
                         {{-- <p style="font-size:18px;">Nous encourageons l'innovation.</p> --}}
                     </div>
                     <div class="col-md-2 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d;">
-                        <h3 style="font-size:25px;">Multi-Asset Management</h3>
+                        <h3 style="font-size:25px;">Gestion d’actifs</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Private Equity</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">SGO/AM</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Private Banking</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Opcvm et Fonds dédiés</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Gestion sous mandat</li>
+                            {{-- <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Private Banking</li> --}}
                         </ul>
                         {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>

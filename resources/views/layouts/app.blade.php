@@ -103,54 +103,54 @@
         @yield('content')
         <!-- Trusted -->
     </main>
-<!-- Footer -->
-<!-- Footer
-<footer class="footer bg-dark-stable py-8" style="background:#023252">
-    <div class="container">
-        <div class="row gy-6 gy-xl-0 pb-8">
-            <div class="col-xl-6 col-lg-12 col-md-7 col-12">
-                <div class="d-flex flex-column gap-4">
-                    <div>
-                        <img src="{{-- asset('assets/_ALLO-SERVICES-LOGO-BLANC 1.png') --}}" alt="Geeks logo"  width="100"/>
+    <!-- Footer -->
+    <!-- Footer -->
+    {{-- <footer class="footer bg-dark-stable py-8" style="background:#023252">
+        <div class="container">
+            <div class="row gy-6 gy-xl-0 pb-8">
+                <div class="col-xl-6 col-lg-12 col-md-7 col-12">
+                    <div class="d-flex flex-column gap-4">
+                        <div>
+                            <img src="{{ asset('assets/_ALLO-SERVICES-LOGO-BLANC 1.png') }}" alt="Geeks logo"  width="100"/>
+                        </div>
+                        <p class="mb-0">Découvrez et connectez-vous avec les entreprises et professionnels de la Côte d'Ivoire sur notre plateforme dédiée.
+                        Notre objectif est construit sur la base du jobbing, un modèle économique entre particuliers. C'est avant tout une mise en relation entre les besoins d'une personne ou une entreprise et la compétence d'une autre.Nous proposons des jobbers aux compétences confirmées aux personnes ou aux entreprises dans le besoin.</p>
+
                     </div>
-                    <p class="mb-0">Découvrez et connectez-vous avec les entreprises et professionnels de la Côte d'Ivoire sur notre plateforme dédiée.
-                    Notre objectif est construit sur la base du jobbing, un modèle économique entre particuliers. C'est avant tout une mise en relation entre les besoins d'une personne ou une entreprise et la compétence d'une autre.Nous proposons des jobbers aux compétences confirmées aux personnes ou aux entreprises dans le besoin.</p>
-
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-12">
-                <div class="d-flex flex-column gap-4">
-                    <span class="text-white-stable">Pages</span>
-                    <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                        <li><a href="#" class="nav-link">Accueil</a></li>
-                        <li><a href="#" class="nav-link">Creation de compte</a></li>
-                        <li><a href="#" class="nav-link">Connexion</a></li>
-                        <li><a href="" class="nav-link">Annuaire</a></li>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="d-flex flex-column gap-4">
+                        <span class="text-white-stable">Pages</span>
+                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
+                            <li><a href="#" class="nav-link">Accueil</a></li>
+                            <li><a href="#" class="nav-link">Creation de compte</a></li>
+                            <li><a href="#" class="nav-link">Connexion</a></li>
+                            <li><a href="" class="nav-link">Annuaire</a></li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-3 col-6">
-                <div class="d-flex flex-column gap-3">
-                    <span class="text-white-stable"></span>
-                    <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                        <li><a href="" class="nav-link">Professionel</a></li>
-                        <li><a href="" class="nav-link">Entreprise </a></li>
-                    </ul>
-                        <a href="#"><img src="{{-- asset('assets/images/svg/appstore.svg') --}}" alt="" class="img-fluid" /></a>
-                        <a href="#"><img src="{{-- asset('assets/images/svg/playstore.svg') --}}" alt="" class="img-fluid" /></a>
+                <div class="col-xl-3 col-md-3 col-6">
+                    <div class="d-flex flex-column gap-3">
+                        <span class="text-white-stable"></span>
+                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
+                            <li><a href="" class="nav-link">Professionel</a></li>
+                            <li><a href="" class="nav-link">Entreprise </a></li>
+                        </ul>
+                            <a href="#"><img src="{{ asset('assets/images/svg/appstore.svg') }}" alt="" class="img-fluid" /></a>
+                            <a href="#"><img src="{{ asset('assets/images/svg/playstore.svg') }}" alt="" class="img-fluid" /></a>
+                    </div>
                 </div>
+
+
             </div>
-
-
-        </div>
-        <div class="py-4" style="background:#023252">
-            <div class="container text-center">
-                <span class="text-white">© 2024 Allo services Tous droits réservés.</span>
+            <div class="py-4" style="background:#023252">
+                <div class="container text-center">
+                    <span class="text-white">© 2024 Allo services Tous droits réservés.</span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer> --}}
 
 
 
@@ -180,3 +180,42 @@
     
 </body>
 </html>
+
+
+
+{{-- <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100">
+            @include('layouts.navigation')
+
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="bg-white shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
+
+            <!-- Page Content -->
+            <main>
+                {{ $slot }}
+            </main>
+        </div>
+    </body>
+</html> --}}

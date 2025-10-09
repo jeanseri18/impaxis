@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\ActualityController;
@@ -24,5 +25,61 @@ Route::name('front.')->group(function () {
     Route::get('/nos-references', [ManagerController::class, 'OurReferences'])->name('our-references');
     Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
     Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
-});
+})->middleware('web');
 
+
+// // Define a route group for the admin panel
+// Route::middleware('auth')->name('admin.')->group(function () {
+//     Route::get('/dashboard', function () {
+//         // return view('admin.index');
+//         return 'Admin Dashboard';
+//     })->name('index');
+    
+//     // Actuality management routes
+//     Route::get('/actualities', [ActualityController::class, 'index'])->name('actualities.index');
+//     Route::get('/actualities/create', [ActualityController::class, 'create'])->name('actualities.create');
+//     Route::post('/actualities', [ActualityController::class, 'store'])->name('actualities.store');
+//     Route::get('/actualities/{id}/edit', [ActualityController::class, 'edit'])->name('actualities.edit');
+//     Route::put('/actualities/{id}', [ActualityController::class, 'update'])->name('actualities.update');
+//     Route::delete('/actualities/{id}', [ActualityController::class, 'destroy'])->name('actualities.destroy');
+// });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard')->prefix('admin');
+
+
+
+
+
+// <?php
+
+// use App\Http\Controllers\ProfileController;
+// use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
+
+require __DIR__.'/auth.php';
