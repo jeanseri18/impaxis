@@ -25,6 +25,7 @@ Route::name('front.')->group(function () {
     Route::get('/nos-references', [ManagerController::class, 'OurReferences'])->name('our-references');
     Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
     Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
+    Route::get('/contact', [ManagerController::class, 'Contact'])->name('contact');
 })->middleware('web');
 
 

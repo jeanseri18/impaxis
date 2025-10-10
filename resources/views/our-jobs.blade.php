@@ -118,23 +118,23 @@
                             <h3>Conseil Financier Stratégique</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Strategic Financing Advisory</h3>
+                            <h3>Financement de projet</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Project Finance</h3>
+                            <h3>Fusion-Acquisition</h3>
                         </div>
                         <div class="service-group">
-                            <h3>M&A</h3>
+                            <h3>Introduction en bourse </h3>
                         </div>
                         <div class="service-group">
-                            <h3>IPO / ECM</h3>
+                            <h3>Levée de fonds sur le marché des capitaux</h3>
                         </div>
                         <div class="service-group">
-                            <h3>DCM</h3>
+                            <h3>Financement structuré</h3>
                         </div>
-                        <div class="service-group">
+                        {{-- <div class="service-group">
                             <h3>Structured & Leveraged Finance</h3>
-                        </div>
+                        </div> --}}
                     </div>
                 </section>
             </div>
@@ -159,22 +159,22 @@
                             </div>
 
                             <div class="service-group">
-                                <h3>Primaire & Secondaire</h3>
+                                <h3>FX & Commodities/ Hedging </h3>
                             </div>
 
                             <div class="service-group">
-                                <h3>FX & Commodities/Hedging</h3>
+                                <h3>Produits structurés et dérivés</h3>
                                 <ul>
                                     <li>Realationship Mgt</li>
                                     <li>Sales</li>
                                 </ul>
                             </div>
-                            <div class="service-group">
+                            {{-- <div class="service-group">
                                 <h3>Produits structurés</h3>
                             </div>
                             <div class="service-group">
                                 <h3>Custody</h3>
-                            </div>
+                            </div> --}}
                         </div>
                     </section>
                 </div>
@@ -193,7 +193,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="d-flex align-items-center justify-content-center h-100">
-                    <h1 class="service-title">Multi-Asset Management </h1>
+                    <h1 class="service-title">Gestion d’actifs </h1>
                 </div>
             </div>
             <div class="col-md-7">
@@ -202,30 +202,30 @@
                         <div class="orange-line"></div>
 
                         <div class="service-group">
-                            <h3>Private Equity</h3>
-                            <ul>
+                            <h3>Opcvm et Fonds dédiés</h3>
+                            {{-- <ul>
                                 <li>Shariah Compliant</li>
                                 <li>PE « classique »</li>
                                 <li>Principal Investments</li>
                                 <li>Private Banking</li>
-                            </ul>
+                            </ul> --}}
                         </div>
 
                         <div class="service-group">
-                            <h3>SGO / AM</h3>
-                            <ul>
+                            <h3>Gestion sous mandat</h3>
+                            {{-- <ul>
                                 <li>Listed Securities</li>
                                 <li>Non-Listed Securities</li>
-                            </ul>
+                            </ul> --}}
                         </div>
 
-                        <div class="service-group">
+                        {{-- <div class="service-group">
                             <h3>Private Banking</h3>
                             <ul>
                                 <li>Realationship Mgt</li>
                                 <li>Sales</li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </section>
             </div>

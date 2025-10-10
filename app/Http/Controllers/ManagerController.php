@@ -36,4 +36,9 @@ class ManagerController extends Controller
             
         return view('actualities', compact('actualities'));
     }
+
+    public function Contact()
+    {
+        return view('contact');
+    }
 }
