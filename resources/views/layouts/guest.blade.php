@@ -95,7 +95,7 @@
                 <a href="{{ route('front.our-references') }}"> Références</a>
                 <a href="{{ route('front.our-jobs') }}"> Nos métiers</a>
                 <a href="{{ route('front.actualities') }}"> Actualités</a>
-                <a href="#"> Contact</a>
+                <a href="{{ route('front.contact') }}"> Contact</a>
             </div>
         </div>
 
