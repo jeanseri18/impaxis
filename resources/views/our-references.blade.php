@@ -4,6 +4,38 @@
 
 @push('styles')
 <style>
+    .hero-section {
+        background-image: url('/assets/image/references_2.jpg'); /* remplace par ton image */
+        background-size: cover;
+        background-position: center;
+        height: 60vh; /* ou 100vh pour plein écran */
+        position: relative;
+    }
+
+    .hero-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* effet foncé sur l'image */
+        z-index: 1;
+    }
+
+    .hero-section .container {
+        z-index: 2;
+    }
+
+    .page-title {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 10vh;
+    }
+
+
+
+
+    /* Styles pour la section des onglets */
     .tab-section {
         padding: 30px 0;
     }
@@ -142,89 +174,26 @@
 @endpush
 
 @section('content')
-    <div class="container">
+    <div class="slider-container">
+        <!-- Hero Section / Slide -->
+        <section class="hero-section d-flex align-items-center justify-content-center text-white">
+            <div class="overlay"></div>
+            <div class="container "> {{-- position-relative --}}
+                <h1 class="display-3 fw-bold page-title">Nos références</h1>
+            </div>
+        </section>
+    </div>
+    {{-- <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="my-5">Références</h1>
             </div>
         </div>
-    </div>
-
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Références - Marché Financier</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Références - Corporate Finance</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTab">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Références - Marché Financier</div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Références - Corporate Finance</div>
-                </div>
-
-                <center>*********************</center>
-
-                <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-                </div>
-            </div>
-        </div>
     </div> --}}
 
 
-    {{-- <section class="tab-section">
-        <div class="container">
-            <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Onglet 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Onglet 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Onglet 3</a>
-                </li>
-            </ul>
-
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h4>Contenu de l'Onglet 1</h4>
-                    <p>Ceci est le contenu de l'onglet numéro un. Vous pouvez y mettre du texte, des images, d'autres composants Bootstrap, etc.</p>
-                    <p>Il est important de noter que Bootstrap gère l'affichage/masquage du contenu de manière dynamique grâce au JavaScript.</p>
-                </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h4>Contenu de l'Onglet 2</h4>
-                    <p>Voici le contenu de l'onglet numéro deux. Chaque onglet a un ID unique (`#profile`) qui correspond au `href` de son `nav-link`.</p>
-                    <p>Assurez-vous que l'attribut `aria-labelledby` dans le `tab-pane` correspond à l'ID de l'onglet correspondant (`id="profile-tab"`).</p>
-                </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <h4>Contenu de l'Onglet 3</h4>
-                    <p>Ceci est le troisième et dernier onglet. L'attribut `data-toggle="tab"` sur les liens est crucial pour activer le comportement d'onglet de Bootstrap.</p>
-                    <p>Le premier onglet a les classes `active` et `show` pour être visible au chargement de la page.</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     
-    <section class="tab-section">
+    <section class="tab-section" style="margin-top: 3em">
         <div class="container">
             <ul class="nav nav-tabs custom-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -264,10 +233,10 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
-                                        <p>9,5% 2024-2031</p>
+                                        <p>6,10% – 9,50% 2024-2031</p>
                                         <p class="title">CO-CHEF DE FILE</p>
-                                        <p class="amount">160 milliards F CFA</p>
-                                        <p class="year">en 2024</p>
+                                        <p class="amount">310 milliards F CFA</p>
+                                        <p class="year"></p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -277,10 +246,10 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - GSS Bond BIDC - EBID</p>
-                                        <p>6,50% 2024-2031</p>
+                                        <p>5,90% - 6,50% 2021 - 2029</p>
                                         <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE</p>
-                                        <p class="amount">70 milliards F CFA</p>
-                                        <p class="year">en 2024</p>
+                                        <p class="amount">240 milliards F CFA</p>
+                                        <p class="year"></p>
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -290,7 +259,7 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - FIDELIS FINANCE CAP25</p>
-                                        <p>7% 2023-2030</p>
+                                        <p>7,00% 2023-2030</p>
                                         <p class="title">ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">15 milliards F CFA</p>
                                         <p class="year">en 2023</p>
@@ -302,47 +271,6 @@
                             <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
-                                        {{-- <img src="{{ asset('/assets/image/logo-partners/default-logo.png') }}" style="width: auto; height: 80px;"alt="Mourmony Logo" class="logo-partener"> --}}
-                                        <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="BAOD Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
-                                        <p>6,10% 2023-2030</p>
-                                        <p class="title">CO-CHEF DE FILE</p>
-                                        <p class="amount">150 milliards F CFA</p>
-                                        <p class="year">en 2023</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="bidc-ebid" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
-                                        <p>5,90% 2022-2029​</p>
-                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
-                                        <p class="amount">120 milliards F CFA</p>
-                                        <p class="year">en 2022</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        {{-- <img src="{{ asset('/assets/image/logo-partners/bidc-ebid.jpg') }}" alt="Mourmony Logo" class="logo-partener"> --}}
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
-                                        <p>6,50% 2021-2028​</p>
-                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE  </p>
-                                        <p class="amount">50 milliards F CFA</p>
-                                        <p class="year">en 2022</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/sonatel_logo.png') }}" style="height: 60px;" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
@@ -351,22 +279,8 @@
                                         <p class="title">ARRANGEUR CHEF DE FILE  </p>
                                         <p class="amount">100 milliards F CFA</p>
                                         <p class="year">en 2020</p>
-                                        {{-- <div class="separator-line"></div> --}}
                                     </div>
-                                    {{-- <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/bidc-ebid_logo.png') }}" alt="Bidc-ebid" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BIDC</p>
-                                        <p>5,90% 2022-2029​</p>
-                                        <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE </p>
-                                        <p class="amount">120 milliards F CFA</p>
-                                        <p class="year">en 2021</p>
-                                    </div> --}}
                                 </div>
-                            </div>
-
-                            <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/bhs-logo.png') }}" alt="Mourmony Logo" class="logo-partener">
@@ -386,7 +300,7 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SENELEC</p>
-                                        <p>6,5% 2018-2025​​</p>
+                                        <p>6,50% 2018-2025​​</p>
                                         <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                         <p class="amount">38 milliards F CFA</p>
                                         <p class="year">en 2018</p>
@@ -398,20 +312,7 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6% 2016-2026​</p>
-                                        <p class="title">CO-CHEF DE FILE </p>
-                                        <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2016</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6% 2016-2026​</p>
+                                        <p>6,00% 2016-2026​</p>
                                         <p class="title">CO-CHEF DE FILE </p>
                                         <p class="amount">100 milliards F CFA</p>
                                         <p class="year">en 2016</p>
@@ -423,11 +324,24 @@
                             <div class="row mb-4 animatedInRight">
                                 <div class="col-md-3 card" style="padding: 20px;">
                                     <div class="logo-container">
+                                        <img src="{{ asset('/assets/image/logo-partners/sukuk-etat-du-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
+                                    </div>
+                                    <div class="financial-item">
+                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
+                                        <p>6,00% 2016-2026​</p>
+                                        <p class="title">CO-CHEF DE FILE </p>
+                                        <p class="amount">100 milliards F CFA</p>
+                                        <p class="year">en 2016</p>
+                                        {{-- <div class="separator-line"></div> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 card" style="padding: 20px;">
+                                    <div class="logo-container">
                                         <img src="{{ asset('/assets/image/logo-partners/microcred-senegal.png') }}" alt="Mourmony Logo" class="logo-partener">
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
-                                        <p>6,8% 2016-2023​</p>
+                                        <p>6,80% 2016-2023​</p>
                                         <p class="title">ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">3,8 milliards​ F CFA</p>
                                         <p class="year">en 2016</p>
@@ -460,20 +374,9 @@
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
-                                <div class="col-md-3 card" style="padding: 20px;">
-                                    <div class="logo-container">
-                                        <img src="{{ asset('/assets/image/logo-partners/boad_logo.jpg') }}" alt="Mourmony Logo" class="logo-partener">
-                                    </div>
-                                    <div class="financial-item">
-                                        <p class="title">APPEL PUBLIC À L’ÉPARGNE - BONS BOAD</p>
-                                        <p> 2014-2021​​</p>
-                                        <p class="title">AGENT PLACEUR </p>
-                                        <p class="amount">50 milliards F CFA</p>
-                                        <p class="year">en 2014</p>
-                                        {{-- <div class="separator-line"></div> --}}
-                                    </div>
-                                </div>
                             </div>
+
+                            
 
                             {{-- <div class="logo-container">
                                 <img src="{{ asset('/assets/image/logo-partners/nourmony.png') }}" alt="Mourmony Logo" class="logo-partener">

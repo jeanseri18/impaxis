@@ -53,7 +53,7 @@
         margin-bottom: 20px; /* Espace entre les groupes de services */
     }
     .service-group h3 {
-        font-size: 1.2rem; /* Taille du titre */
+        font-size: 1.0rem; /* Taille du titre */
         font-weight: bold;
         /* color: #fff; */
         margin-bottom: 15px;
@@ -69,18 +69,18 @@
         padding-left: 0; /* Supprime le padding par défaut des listes */
     }
     .service-group ul li {
-        font-size: 1.2rem; /* Taille du texte des éléments de liste */
+        font-size: 1.0rem; /* Taille du texte des éléments de liste */
         /* color: #1a1a1a; Couleur du texte */
         margin-bottom: 8px; /* Espace entre les éléments de liste */
     }
     .service-group ul li::before {
         content: '• '; /* Ajoute une puce personnalisée (rond) */
         /* color: #fff; Couleur de la puce */
-        font-size: 1.2rem; /* Taille de la puce */
+        font-size: 0.1rem; /* Taille de la puce */
         margin-right: 10px;
     }
     .service-title {
-        font-size: 4.0rem; /* Taille du titre */
+        font-size: 1.8rem; /* Taille du titre */
         font-weight: bold;
         margin-bottom: 20px; /* Espace sous le titre */
     }
@@ -103,12 +103,12 @@
     <div class="container">
         {{-- 1er --}}
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="d-flex align-items-center justify-content-center h-100">
                     <h1 class="service-title">Investment Banking </h1>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <section class="services-section">
                     <div class="container">
                         {{-- Ligne orange --}}
