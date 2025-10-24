@@ -220,10 +220,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - NOURMONY</p>
-                                        <p>7,25% 2024 – 2029</p>
+                                        <p>7,25% </p>
+                                        {{-- 2024 – 2029 --}}
                                         <p class="title">ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">20 milliards F CFA</p>
-                                        <p class="year">en 2025</p>
+                                        {{-- <p class="year">en 2025</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -233,7 +234,8 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">TITRISATION DES CRÉANCES SOUVERAINES PAR APE - FCTC DOLI-P</p>
-                                        <p>6,10% – 9,50% 2024-2031</p>
+                                        <p>6,10% – 9,50% </p>
+                                        {{-- 2024-2031 --}}
                                         <p class="title">CO-CHEF DE FILE</p>
                                         <p class="amount">310 milliards F CFA</p>
                                         <p class="year"></p>
@@ -246,7 +248,8 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - GSS Bond BIDC - EBID</p>
-                                        <p>5,90% - 6,50% 2021 - 2029</p>
+                                        <p>5,90% - 6,50%</p>
+                                        {{-- 2021 - 2029 --}}
                                         <p class="title">ARRANGEUR PRINCIPAL CHEF DE FILE</p>
                                         <p class="amount">240 milliards F CFA</p>
                                         <p class="year"></p>
@@ -259,10 +262,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L'ÉPARGNE - FIDELIS FINANCE CAP25</p>
-                                        <p>7,00% 2023-2030</p>
+                                        <p>7,00% </p>
+                                        {{-- 2023-2030 --}}
                                         <p class="title">ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">15 milliards F CFA</p>
-                                        <p class="year">en 2023</p>
+                                        {{-- <p class="year">en 2023</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -275,10 +279,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SONATEL</p>
-                                        <p>6,50% 2020-2027​​</p>
+                                        <p>6,50% ​​</p>
+                                        {{-- 2020-2027 --}}
                                         <p class="title">ARRANGEUR CHEF DE FILE  </p>
                                         <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2020</p>
+                                        {{-- <p class="year">en 2020</p> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
@@ -287,10 +292,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">1er DIASPORA BONDS DE LA RÉGION​ - BHS</p>
-                                        <p>6,25% 2019-2023​​</p>
+                                        <p>6,25% ​​</p>
+                                        {{-- 2019-2023 --}}
                                         <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                         <p class="amount">20 milliards F CFA</p>
-                                        <p class="year">en 2019</p>
+                                        {{-- <p class="year">en 2019</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -300,10 +306,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SENELEC</p>
-                                        <p>6,50% 2018-2025​​</p>
+                                        <p>6,50% ​</p>
+                                        {{-- 2018-2025​ --}}
                                         <p class="title">ARRANGEUR CO-CHEF DE FILE </p>
                                         <p class="amount">38 milliards F CFA</p>
-                                        <p class="year">en 2018</p>
+                                        {{-- <p class="year">en 2018</p> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-3 card" style="padding: 20px;">
@@ -312,10 +319,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6,00% 2016-2026​</p>
+                                        <p>6,00% ​</p>
+                                        {{-- 2016-2026 --}}
                                         <p class="title">CO-CHEF DE FILE </p>
                                         <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2016</p>
+                                        {{-- <p class="year">en 2016</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -328,10 +336,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6,00% 2016-2026​</p>
+                                        <p>6,00% ​</p>
+                                        {{-- 2016-2026 --}}
                                         <p class="title">CO-CHEF DE FILE </p>
                                         <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2016</p>
+                                        {{-- <p class="year">en 2016</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -341,10 +350,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">PLACEMENT PRIVÉ - MICROCRED SÉNÉGAL</p>
-                                        <p>6,80% 2016-2023​</p>
+                                        <p>6,80% ​</p>
+                                        {{-- 2016-2023 --}}
                                         <p class="title">ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">3,8 milliards​ F CFA</p>
-                                        <p class="year">en 2016</p>
+                                        {{-- <p class="year">en 2016</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -354,10 +364,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6,30% 2015-2025​</p>
+                                        <p>6,30% ​</p>
+                                        {{-- 2015-2025 --}}
                                         <p class="title">CO-ARRANGEUR CHEF DE FILE </p>
                                         <p class="amount">100 milliards F CFA</p>
-                                        <p class="year">en 2015</p>
+                                        {{-- <p class="year">en 2015</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>
@@ -367,10 +378,11 @@
                                     </div>
                                     <div class="financial-item">
                                         <p class="title">APPEL PUBLIC À L’ÉPARGNE - SUKUK ETAT DU SÉNÉGAL</p>
-                                        <p>6,50% 2014-2021​</p>
+                                        <p>6,50%​</p>
+                                         {{-- 2014-2021 --}}
                                         <p class="title">CO-ARRANGEUR CHEF DE FILE</p>
                                         <p class="amount">119 milliards F CFA</p>
-                                        <p class="year">en 2014</p>
+                                        {{-- <p class="year">en 2014</p> --}}
                                         {{-- <div class="separator-line"></div> --}}
                                     </div>
                                 </div>

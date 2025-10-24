@@ -5,9 +5,10 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/contact-bg-1.jpg'); /* remplace par ton image */
+        background-image: url('/assets/image/contact-bg-2.jpg'); /* remplace par ton image */
         background-size: cover;
-        background-position: center;
+        /* background-position: center; */
+        background-position: top;
         height: 60vh; /* ou 100vh pour plein écran */
         position: relative;
     }
@@ -144,24 +145,44 @@
             <div class="col-md-6">
                 <h2>Envoyez-nous un message</h2>
 
-                <form action="">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                <form action="" class="row mt-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom Prénom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Votre nom & prénom">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tel" class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" id="tel" placeholder="(+221) 00 0000 0000">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Votre email">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Votre email">
+                            </div>
+                        </div>
                     </div>
-                    {{-- <div class="mb-3">
-                        <label for="email" class="form-label">Téléphone</label>
-                        <input type="tel" class="form-control" id="tel" placeholder="Votre téléphone">
-                    </div> --}}
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-block btn-primary">Envoyer</button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary" type="button">Button</button>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -169,7 +190,6 @@
     
     <div class="row">
         <div class="col-md-12">
-            {{-- <h2 class="text-center" style="margin-bottom: 1em;">Notre localisation</h2> --}}
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.279877085147!2d-17.470906298920998!3d14.696758304031952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a8afb3b95%3A0xdc352c7b6f794677!2sFann%20R%C3%A9sidence%2C%20170%20Av.%20des%20Ambassadeurs%2C%20Dakar%2010700%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1760378963450!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>

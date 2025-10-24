@@ -155,6 +155,21 @@
         animation: fadeIn 1s ease-in-out forwards;
     }
 
+    .btn-read-more {
+        border:#fff 2px solid;
+        background-color: transparent;
+        color: #fff;
+        transition: all 0.3s ease;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    
+    .btn-read-more:hover {
+        border: 2px solid #F2920E;
+        color: #FFF;
+        background-color: #F2920E;
+    }
     /* .border-white {
         border: 2px solid #fff !important;
     } */
@@ -173,12 +188,16 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E">IMPAXIS  <span style="font-size: 36px; color: #fff"> - Ancrée en Afrique, connectée au monde.</span></h1>
+                <h1 class="display-1 animated-text" style="color: #F2920E">IMPAXIS  <span style="font-size: 36px; color: #fff"></span></h1>
+                <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5 animated-text">
+                    Ancrée en Afrique, connectée au monde. <br>
                     La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
-                    <a href="#" class="btn btn-lg"
+                    <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
+                    {{-- <a href="#" class="btn btn-lg"
                     style="
-                        border: none;
+                        /* border: none; */
+                        border:#fff 2px solid;
                         background-color: transparent;
                         color: #fff;
                         transition: all 0.3s ease;
@@ -187,7 +206,7 @@
                         text-transform: uppercase;
                     "
                     onmouseover="this.style.border='2px solid #F2920E'"
-                    onmouseout="this.style.border='none'">En savoir plus</a><br><br>
+                    onmouseout="this.style.border='none'">En savoir plus</a><br><br> --}}
             </div>
         </div>
         {{-- <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;"> --}}
