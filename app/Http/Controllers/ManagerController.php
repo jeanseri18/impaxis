@@ -4,26 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Actuality;
+use App\Models\TeamMember;
 
 class ManagerController extends Controller
 {
     //
-    public function Welcome()
+    public function welcome()
     {
         return view('welcome');
     }
 
-    public function About()
+    public function about()
     {
-        return view('about');
+        $teams = TeamMember::all();
+        return view('about', compact('teams'));
     }
 
-    public function OurJobs()
+    public function ourJobs()
     {
         return view('our-jobs');
     }
     
-    public function OurReferences()
+    public function ourReferences()
     {
         return view('our-references');
     }
@@ -37,8 +39,13 @@ class ManagerController extends Controller
         return view('actualities', compact('actualities'));
     }
 
-    public function Contact()
+    public function contact()
     {
         return view('contact');
+    }
+
+    public function getPersonBiographie($item_id, $slug) {
+        $item = TeamMember::where('id', $item_id)->where('slug', $slug)->first();
+        return view('team-detail', compact('item'));
     }
 }

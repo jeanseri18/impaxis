@@ -245,6 +245,22 @@
             </div>
 
             <div class="row">
+                @foreach ($teams as $item)
+                    <div class="col-md-4 col-sm-12">
+                        <div class="team-member-card team-member-animated">
+                            <img src="{{ $item->getAvatarFullUrl() }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
+                            <h3>{{ $item->name }}</h3>
+                            <p class="title-role">{{ $item->role }}</p>
+                            <p class="experience">{{ $item->experience }} ans d'expérience</p>
+                            <a href="{{ route('front.person-biographie', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-outline-light mt-3">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- <div class="row">
                 <div class="col-md-4 col-sm-12">
                     <div class="team-member-card team-member-animated">
                         <img src="{{ asset('/assets/image/equipes/momar-ndour.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
@@ -254,37 +270,6 @@
                         <a href="#" class="btn btn-outline-light mt-3">
                             En savoir plus
                         </a>
-                        {{-- <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#bioMomarModal">
-                            En savoir plus
-                        </a> --}}
-
-                        {{-- <!-- Modal -->
-                        <div class="modal fade" id="bioMomarModal" tabindex="-1" aria-labelledby="bioMomarModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header bg-dark text-white">
-                                <h5 class="modal-title" id="bioMomarModalLabel">Momar NDOUR — Biographie</h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>
-                                  Momar NDOUR est un banquier d’affaires senior avec plus de 30 ans d’expérience sur les marchés africains,
-                                  européens et du Moyen‑Orient. Il a accompagné de nombreuses opérations de financement, d’introductions en
-                                  bourse et de fusions‑acquisitions, en mettant l’accent sur la structuration de transactions adaptées aux
-                                  spécificités du continent. Son parcours combine expertise transactionnelle, développement commercial et
-                                  gouvernance d’entreprise.
-                                </p>
-                                <p>
-                                  Il est reconnu pour sa capacité à fédérer des équipes multiculturelles et à concevoir des solutions financières
-                                  sur mesure qui soutiennent la croissance des entreprises africaines.
-                                </p>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div> --}}
                     </div>
                 </div>
 
@@ -311,7 +296,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 

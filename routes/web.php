@@ -19,10 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 // Define a route group for the frontend 
 Route::name('front.')->group(function () {
-    Route::get('/', [ManagerController::class, 'Welcome'])->name('welcome');
-    Route::get('/a-propos', [ManagerController::class, 'About'])->name('about');
-    Route::get('/nos-metiers', [ManagerController::class, 'OurJobs'])->name('our-jobs');
-    Route::get('/nos-references', [ManagerController::class, 'OurReferences'])->name('our-references');
+    Route::get('/', [ManagerController::class, 'welcome'])->name('welcome');
+    Route::get('/a-propos', [ManagerController::class, 'about'])->name('about');
+    Route::get('/equipes/{item_id}/biographie/{slug}', [ManagerController::class, 'getPersonBiographie'])->name('person-biographie');
+    Route::get('/nos-metiers', [ManagerController::class, 'ourJobs'])->name('our-jobs');
+    Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
     Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
     Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
     Route::get('/contact', [ManagerController::class, 'Contact'])->name('contact');
