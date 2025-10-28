@@ -209,6 +209,51 @@
                     onmouseout="this.style.border='none'">En savoir plus</a><br><br> --}}
             </div>
         </div>
+
+        <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
+
+            <!-- Superposition noire -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
+            <div class="video-container">
+                <video autoplay muted loop class="bg-video">
+                    <source src="{{asset('assets/videos/01_HD.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Contenu au-dessus de l’overlay -->
+            <div class="container position-relative z-2 text-white">
+                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Titre Slide 1</h1>
+                <hr style="border: 0.5px solid #F2920E; width: 100%;">
+                <p class="display-5" style="color: #fff">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                </p><br>
+            </div>
+            
+        </div>
+
+        <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
+
+            <!-- Superposition noire -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
+            <div class="video-container">
+                <video autoplay muted loop class="bg-video">
+                    <source src="{{asset('assets/videos/02_HD.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Contenu au-dessus de l’overlay -->
+            <div class="container position-relative z-2 text-white">
+                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Titre slide 2</h1>
+                <hr style="border: 0.5px solid #F2920E; width: 100%;">
+                <p class="display-5" style="color: #fff">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                </p><br>
+            </div>
+            
+        </div>
+
         {{-- <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;"> --}}
         <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
 
@@ -228,8 +273,8 @@
                 <p class="display-5" style="color: #fff">
                     Bâtir l’Afrique de demain par l’excellence et l’innovation financière
                 </p><br>
-
             </div>
+            
         </div>
         {{-- <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_3.jpg') }}'); background-size: cover; background-position: center; height: 100vh;"> --}}
         <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
@@ -329,6 +374,8 @@
         <div class="indicator" data-index="1"></div>
         <div class="indicator" data-index="2"></div>
         <div class="indicator" data-index="3"></div>
+        <div class="indicator" data-index="4"></div>
+        <div class="indicator" data-index="5"></div>
     </div>
 </div>
 
