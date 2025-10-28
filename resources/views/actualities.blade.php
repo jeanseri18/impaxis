@@ -131,7 +131,7 @@
             <div class="row mx-auto mt-4" style="">
                 <div class="col-md-4 text-center">
                     <div class="card" style="height: 60px; justify-content: center; align-items: center; display: flex; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: none;">
-                        <a href="{{ asset('/assets/doc/macros/Macro du Soir 22.10.2025.pdf') }}" download="{{ asset('/assets/doc/macros/Macro du Soir 22.10.2025.pdf') }}" style="display: flex">
+                        <a href="{{ asset('/assets/doc/macros/Macro du Soir 22.10.2025.pdf') }}" target="_blank" style="display: flex">
                             <i class="bi bi-download icon-macro"></i> <h3 style="color: #4f4f4f;">Macro du Soir: 22 Oct. 2025</h3>
                         </a>
                     </div>

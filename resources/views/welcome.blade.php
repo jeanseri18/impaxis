@@ -211,7 +211,6 @@
         </div>
 
         <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
-
             <!-- Superposition noire -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
             <div class="video-container">
@@ -220,20 +219,17 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-
-            <!-- Contenu au-dessus de l’overlay -->
-            <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Titre Slide 1</h1>
+            <div class="container content">
+                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                </p><br>
+                <p class="display-5 animated-text">
+                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
+                    La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
+                    <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
-            
         </div>
 
         <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
-
             <!-- Superposition noire -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
             <div class="video-container">
@@ -242,16 +238,14 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-
-            <!-- Contenu au-dessus de l’overlay -->
-            <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Titre slide 2</h1>
+            <div class="container content">
+                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                </p><br>
+                <p class="display-5 animated-text">
+                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
+                    La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
+                    <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
-            
         </div>
 
         {{-- <div class="slide position-relative" style="background-image: url('{{ asset('assets/image/slide_2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;"> --}}
@@ -434,11 +428,11 @@
         });
     });
 
-    // Changement automatique des slides toutes les 8 secondes
+    // Changement automatique des slides toutes les 10 secondes
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlidePosition();
-    }, 8000);
+    }, 10000);
 
     // Appliquer les animations sur la première slide au chargement
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
