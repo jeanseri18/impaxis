@@ -188,10 +188,10 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E">IMPAXIS  <span style="font-size: 36px; color: #fff"></span></h1>
+                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5 animated-text">
-                    Ancrée en Afrique, connectée au monde. <br>
+                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
                     La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
                     <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
                     {{-- <a href="#" class="btn btn-lg"
@@ -223,7 +223,7 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff">Notre mission</h1>
+                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
                     Bâtir l’Afrique de demain par l’excellence et l’innovation financière
@@ -245,7 +245,7 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff">Notre vision</h1>
+                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5" style="color: #fff">
                     La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
@@ -267,7 +267,7 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
-                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff">Nos métiers</h1><br>
+                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff; font-size: 45px">Nos métiers</h1><br>
 
                 <div class="row" style="margin-bottom: 20px; padding: 0;">
                     <div class="col-md-3 card border-0 text-white" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
