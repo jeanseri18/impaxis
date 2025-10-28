@@ -81,7 +81,7 @@
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size: 1.4em">{{ Str::limit($item->title, 45, '...') }}</h5>
                                 <p class="card-text">
-                                    {{ Str::limit($item->content, 100, '...') }} {{-- Limite le contenu à 100 caractères --}}
+                                    {!! Str::limit($item->content, 100, '...') !!} {{-- Limite le contenu à 100 caractères --}}
                                 </p>
                             </div>
                             <div class="" style="padding: 15px 25px 15px 25px; position: relative; bottom: 0; width: 100%; background-color: #f8f9fa; border-top: 0.5px solid #dee2e6;">
