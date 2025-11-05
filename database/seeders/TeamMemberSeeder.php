@@ -23,7 +23,7 @@ class TeamMemberSeeder extends Seeder
                 'experience' => '+30',
                 'avatar' => public_path() . '/assets/image/equipes/momar-ndour.jpeg',
                 'bio' => "
-                    +25 ans d’expérience en tant que banquier d’affaires senior
+                    +30 ans d’expérience en tant que banquier d’affaires senior
                     Avant de fonder IMPAXIS Capital, Momar a été Directeur au sein du Département Afrique de la Citibank à Johannesburg (Afrique du Sud). Il dirigeait le département couvrant 18 pays d’Afrique occidentale et centrale
                     Il a également travaillé dans le département de recherche de la Caisse des Dépôts et Consignations (CDC) à Paris
                     Au cours de sa carrière, Momar a participé, dirigé et finalisé de nombreuses opérations d’émissions obligataires, de financements structurés, de structuration de capital, de restructuration de dette, de LBOs, de rachats d'entreprises et de mandats de conseil en Afrique de l'Ouest et Centrale

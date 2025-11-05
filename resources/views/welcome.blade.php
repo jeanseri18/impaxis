@@ -180,6 +180,7 @@
 @section('content')
 <div class="slider-container">
     <div class="slides">
+        {{--
         <div class="slide active" style=" background:#767677B7;">
             <div class="video-container">
                 <video autoplay muted loop class="bg-video">
@@ -191,10 +192,9 @@
                 <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5 animated-text">
-                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
                     La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
                     <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
-                    {{-- <a href="#" class="btn btn-lg"
+                    <a href="#" class="btn btn-lg"
                     style="
                         /* border: none; */
                         border:#fff 2px solid;
@@ -206,11 +206,11 @@
                         text-transform: uppercase;
                     "
                     onmouseover="this.style.border='2px solid #F2920E'"
-                    onmouseout="this.style.border='none'">En savoir plus</a><br><br> --}}
+                    onmouseout="this.style.border='none'">En savoir plus</a><br><br> 
             </div>
-        </div>
+        </div> --}}
 
-        <div class="slide position-relative" style="background-size: cover; background-position: center; height: 100vh;">
+        <div class="slide active position-relative" style="background-size: cover; background-position: center; height: 100vh;">
             <!-- Superposition noire -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: 1;"></div>
             <div class="video-container">
@@ -225,7 +225,7 @@
                 <p class="display-5 animated-text">
                     {{-- Ancrée en Afrique, connectée au monde. <br> --}}
                     La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
-                    <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
+                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
         </div>
 
@@ -243,8 +243,8 @@
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
                 <p class="display-5 animated-text">
                     {{-- Ancrée en Afrique, connectée au monde. <br> --}}
-                    La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
-                    <a href="#" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
+                    Financer l’avenir pour bâtir le progrès</p><br>
+                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
         </div>
 
@@ -369,7 +369,6 @@
         <div class="indicator" data-index="2"></div>
         <div class="indicator" data-index="3"></div>
         <div class="indicator" data-index="4"></div>
-        <div class="indicator" data-index="5"></div>
     </div>
 </div>
 
