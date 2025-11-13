@@ -220,11 +220,11 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
+                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 40px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5 animated-text">
-                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
-                    La banque d’affaires dédiée à la structuration et au financement des économies africaines</p><br>
+                <p class="display-5 animated-text" style="font-size: 30px">
+                    La banque d’affaires dédiée à la structuration et au financement des économies africaines
+                </p><br>
                     <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
         </div>
@@ -239,11 +239,11 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 45px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
+                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 40px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5 animated-text">
-                    {{-- Ancrée en Afrique, connectée au monde. <br> --}}
-                    Financer l’avenir pour bâtir le progrès</p><br>
+                <p class="display-5 animated-text" style="font-size: 30px">
+                    Financer l’avenir pour bâtir le progrès
+                </p><br>
                     <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
             </div>
         </div>
@@ -262,9 +262,9 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Notre mission</h1>
+                <h1 class="display-1" style="color: #F2920E; font-size: 40px">Notre mission</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">
+                <p class="display-5" style="color: #fff; font-size: 30px">
                     Bâtir l’Afrique de demain par l’excellence et l’innovation financière
                 </p><br>
             </div>
@@ -284,9 +284,9 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #ffffff; font-size: 45px">Notre vision</h1>
+                <h1 class="display-1" style="color: #F2920E; font-size: 40px">Notre vision</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff">
+                <p class="display-5" style="color: #fff; font-size: 30px">
                     La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
@@ -306,7 +306,7 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
-                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #ffffff; font-size: 45px">Nos métiers</h1><br>
+                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #F2920E; font-size: 40px">Nos métiers</h1><br>
 
                 <div class="row" style="margin-bottom: 20px; padding: 0;">
                     <div class="col-md-3 card border-0 text-white" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
@@ -324,7 +324,7 @@
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
                     <div class="col-md-3 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
-                        <h3 style="font-size:25px;">Markets <br><br></h3>
+                        <h3 style="font-size:25px;">Markets </h3>
                         <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Sales & Trading</li>
@@ -431,7 +431,7 @@
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlidePosition();
-    }, 10000);
+    }, 14000);
 
     // Appliquer les animations sur la première slide au chargement
     document.addEventListener("DOMContentLoaded", updateSlidePosition);
