@@ -339,7 +339,7 @@
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Opcvm et Fonds dédiés</li>
                             <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Gestion sous mandat</li>
-                        </ul>
+                        </ul> 
                         {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>
                     <div class="col-md-3 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
