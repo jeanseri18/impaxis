@@ -32,11 +32,11 @@ class TeamMemberSeeder extends Seeder
                 ",
             ],
             [
-                'name' => 'Aboubacar DIAW',
-                'slug' => Str::slug('Aboubacar DIAW'),
+                'name' => 'Ababacar DIAW',
+                'slug' => Str::slug('Ababacar DIAW'),
                 'role' => 'Administrateur Directeur Général d\'Impaxis Securities',
                 'experience' => '+20',
-                'avatar' => public_path() . '/assets/image/equipes/aboubacar-diaw.jpeg',
+                'avatar' => public_path() . '/assets/image/equipes/ababacar-diaw.jpeg',
                 'bio' => "
                     20 ans d'expérience comme banquier d‘affaires avec une expertise en M&A incluant de solides références dans des processus de cession et d’acquisition achevés et des opérations DCM dans la région UEMOA
                     Avant de rejoindre le Groupe IMPAXIS, Ababacar était un banquier d‘affaires dans le département M&A de HSBC à Paris avec une zone d’intervention couvrant l’Europe, le MENA et l’Afrique Sub-Saharienne
