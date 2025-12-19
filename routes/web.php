@@ -2,6 +2,7 @@
 <?php
 
 use App\Http\Controllers\ActualityController;
+use App\Http\Controllers\ContactManager;
 use App\Http\Controllers\ManagerController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +27,12 @@ Route::name('front.')->group(function () {
     Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
     Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
     Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
-    Route::get('/contact', [ManagerController::class, 'Contact'])->name('contact');
+    Route::get('/contact', [ManagerController::class, 'contact'])->name('contact');
+    Route::post('/contact/sendMail', [ContactManager::class, 'sendMailContactForm'])->name('contact.send-mail');
+
+    Route::get('formulaire', function () {
+        return view('emails.contact_form_send');
+    });
 })->middleware('web');
 
 

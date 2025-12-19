@@ -145,18 +145,25 @@
             <div class="col-md-6">
                 <h2>Envoyez-nous un message</h2>
 
-                <form action="" class="row mt-2">
+                <div id="globalResponseMessage" class="mt-3"></div>
+
+                <form method="POST" action="{{ route('front.contact.send-mail') }}" class="row mt-2" id="contactForm">
+                    
+                    @csrf
+                    
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Nom Prénom</label>
-                                <input type="text" class="form-control" id="name" placeholder="Votre nom & prénom">
+                                <label for="fullname" class="form-label">Nom Prénom</label>
+                                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Votre nom & prénom">
+                                <div class="invalid-feedback" id="fullname-error"></div> 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="tel" class="form-label">Téléphone</label>
-                                <input type="tel" class="form-control" id="tel" placeholder="(+221) 00 0000 0000">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" name="phone" class="form-control" id="phone" placeholder="(+221) 00 0000 0000">
+                                <div class="invalid-feedback" id="phone-error"></div>
                             </div>
                         </div>
                     </div>
@@ -164,7 +171,8 @@
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Votre email">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="exemple@domaine.tld">
+                                <div class="invalid-feedback" id="email-error"></div>
                             </div>
                         </div>
                     </div>
@@ -172,18 +180,21 @@
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+                                <textarea name="messageContent" class="form-control" id="message" rows="4" placeholder="Ecrivez votre message ici ..."></textarea>
+                                <div class="invalid-feedback" id="messageContent-error"></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary" type="button">Button</button>
+                                <button type="submit" class="btn btn-primary" id="submitBtn">Envoyer</button> 
                             </div>
                         </div>
                     </div>
                 </form>
+
+
             </div>
         </div>
     </div>
@@ -200,5 +211,81 @@
 
 
 @push('scripts')
+<script>
+$(document).ready(function() {
+    // Fonction utilitaire pour réinitialiser l'état d'affichage des erreurs
+    function clearFormErrors() {
+        // Supprime la classe 'is-invalid' de tous les champs
+        $('#contactForm').find('input, textarea, select').removeClass('is-invalid');
+        // Vide tous les messages d'erreur spécifiques
+        $('#contactForm').find('.invalid-feedback').empty();
+        // Vide la zone de message globale
+        $('#globalResponseMessage').empty();
+    }
+
+    // Interception de la soumission du formulaire
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault(); // Empêche la soumission traditionnelle (rechargement)
+
+        let $form = $(this);
+        let $submitBtn = $('#submitBtn');
+        let actionUrl = $form.attr('action');
+        let formData = $form.serialize(); 
+
+        // 1. Nettoyage et préparation
+        clearFormErrors();
+
+        // $submitBtn.prop('disabled', true).text('Envoi en cours...');
+
+        // 2. Requête AJAX
+        $.ajax({
+            type: 'POST',
+            url: actionUrl,
+            data: formData,
+            dataType: 'json',
+            beforeSend: function() {
+                $submitBtn.prop('disabled', true).text('Envoi en cours...');
+            },
+            
+            success: function(response) {
+                
+                console.log(response);
+
+                if (response.errors) {
+                    // Itération sur les erreurs champ par champ
+                    $.each(response.errors, function(field, messages) {
+                        let $input = $('[name="' + field + '"]');
+                            
+                        // Ajout de la classe Bootstrap pour l'affichage rouge
+                        $input.addClass('is-invalid');
+                            
+                        // Affichage du message d'erreur spécifique au champ
+                        $('#' + field + '-error').text(messages[0]); 
+                    });
+                } 
+
+                if (response.status === 'success') {
+                    // Succès : Affichage du message en haut
+                    $('#globalResponseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
+
+                    // Réinitialisation du formulaire
+                    $form[0].reset();
+                }
+            },
+            
+            error: function(xhr, status, error) {
+                // Autres erreurs (500, 403, etc.)
+                let errorMsg = xhr.responseJSON.message || 'Une erreur inattendue est survenue. Veuillez réessayer.';
+                $('#globalResponseMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
+            },
+            
+            complete: function() {
+                // Réactiver le bouton
+                $submitBtn.prop('disabled', false).text('Envoyer');
+            }
+        });
+    });
+});
+</script>
 
 @endpush
