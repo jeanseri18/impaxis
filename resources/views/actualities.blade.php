@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/bg-actualities.jpg'); /* remplace par ton image */
+        background-image: url('/assets/image/actualities-bg-3.png'); /* remplace par ton image */
         background-size: cover;
         background-position: center;
         height: 60vh; /* ou 100vh pour plein écran */
@@ -31,7 +31,6 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         font-size: 10vh;
     }
-
 
     .btn-read-more {
         background-color: #fff; /* Couleur de fond */

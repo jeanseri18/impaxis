@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/contact-bg-2.jpg'); /* remplace par ton image */
+        background-image: url('/assets/image/contact-bg-3.png'); /* remplace par ton image */
         background-size: cover;
         /* background-position: center; */
         background-position: top;
@@ -212,80 +212,80 @@
 
 @push('scripts')
 <script>
-$(document).ready(function() {
-    // Fonction utilitaire pour réinitialiser l'état d'affichage des erreurs
-    function clearFormErrors() {
-        // Supprime la classe 'is-invalid' de tous les champs
-        $('#contactForm').find('input, textarea, select').removeClass('is-invalid');
-        // Vide tous les messages d'erreur spécifiques
-        $('#contactForm').find('.invalid-feedback').empty();
-        // Vide la zone de message globale
-        $('#globalResponseMessage').empty();
-    }
+    $(document).ready(function() {
+        // Fonction utilitaire pour réinitialiser l'état d'affichage des erreurs
+        function clearFormErrors() {
+            // Supprime la classe 'is-invalid' de tous les champs
+            $('#contactForm').find('input, textarea, select').removeClass('is-invalid');
+            // Vide tous les messages d'erreur spécifiques
+            $('#contactForm').find('.invalid-feedback').empty();
+            // Vide la zone de message globale
+            $('#globalResponseMessage').empty();
+        }
 
-    // Interception de la soumission du formulaire
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault(); // Empêche la soumission traditionnelle (rechargement)
+        // Interception de la soumission du formulaire
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault(); // Empêche la soumission traditionnelle (rechargement)
 
-        let $form = $(this);
-        let $submitBtn = $('#submitBtn');
-        let actionUrl = $form.attr('action');
-        let formData = $form.serialize(); 
+            let $form = $(this);
+            let $submitBtn = $('#submitBtn');
+            let actionUrl = $form.attr('action');
+            let formData = $form.serialize(); 
 
-        // 1. Nettoyage et préparation
-        clearFormErrors();
+            // 1. Nettoyage et préparation
+            clearFormErrors();
 
-        // $submitBtn.prop('disabled', true).text('Envoi en cours...');
+            // $submitBtn.prop('disabled', true).text('Envoi en cours...');
 
-        // 2. Requête AJAX
-        $.ajax({
-            type: 'POST',
-            url: actionUrl,
-            data: formData,
-            dataType: 'json',
-            beforeSend: function() {
-                $submitBtn.prop('disabled', true).text('Envoi en cours...');
-            },
-            
-            success: function(response) {
+            // 2. Requête AJAX
+            $.ajax({
+                type: 'POST',
+                url: actionUrl,
+                data: formData,
+                dataType: 'json',
+                beforeSend: function() {
+                    $submitBtn.prop('disabled', true).text('Envoi en cours...');
+                },
                 
-                console.log(response);
+                success: function(response) {
+                    
+                    console.log(response);
 
-                if (response.errors) {
-                    // Itération sur les erreurs champ par champ
-                    $.each(response.errors, function(field, messages) {
-                        let $input = $('[name="' + field + '"]');
-                            
-                        // Ajout de la classe Bootstrap pour l'affichage rouge
-                        $input.addClass('is-invalid');
-                            
-                        // Affichage du message d'erreur spécifique au champ
-                        $('#' + field + '-error').text(messages[0]); 
-                    });
-                } 
+                    if (response.errors) {
+                        // Itération sur les erreurs champ par champ
+                        $.each(response.errors, function(field, messages) {
+                            let $input = $('[name="' + field + '"]');
+                                
+                            // Ajout de la classe Bootstrap pour l'affichage rouge
+                            $input.addClass('is-invalid');
+                                
+                            // Affichage du message d'erreur spécifique au champ
+                            $('#' + field + '-error').text(messages[0]); 
+                        });
+                    } 
 
-                if (response.status === 'success') {
-                    // Succès : Affichage du message en haut
-                    $('#globalResponseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
+                    if (response.status === 'success') {
+                        // Succès : Affichage du message en haut
+                        $('#globalResponseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
 
-                    // Réinitialisation du formulaire
-                    $form[0].reset();
+                        // Réinitialisation du formulaire
+                        $form[0].reset();
+                    }
+                },
+                
+                error: function(xhr, status, error) {
+                    // Autres erreurs (500, 403, etc.)
+                    let errorMsg = xhr.responseJSON.message || 'Une erreur inattendue est survenue. Veuillez réessayer.';
+                    $('#globalResponseMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
+                },
+                
+                complete: function() {
+                    // Réactiver le bouton
+                    $submitBtn.prop('disabled', false).text('Envoyer');
                 }
-            },
-            
-            error: function(xhr, status, error) {
-                // Autres erreurs (500, 403, etc.)
-                let errorMsg = xhr.responseJSON.message || 'Une erreur inattendue est survenue. Veuillez réessayer.';
-                $('#globalResponseMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
-            },
-            
-            complete: function() {
-                // Réactiver le bouton
-                $submitBtn.prop('disabled', false).text('Envoyer');
-            }
+            });
         });
     });
-});
 </script>
 
 @endpush
