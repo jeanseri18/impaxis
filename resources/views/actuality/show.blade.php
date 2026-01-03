@@ -55,6 +55,15 @@
         color: inherit;
     }
 
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 40vh; /* Ajuste la hauteur pour les petits écrans */
+        }
+
+        .page-title {
+            font-size: 6vh;
+        }
+    }
 
 </style>
 @endpush
