@@ -39,6 +39,7 @@
     .tab-section {
         padding: 30px 0;
     }
+
     /* Styles des onglets (similaires à la version Bootstrap) */
     .custom-tabs .nav-link {
         /* color: #fff; */
@@ -50,10 +51,12 @@
         cursor: pointer; /* Indique que c'est cliquable */
         transition: all 0.3s ease;
     }
+
     .custom-tabs .nav-link:hover {
         color: #ff9900;
         border-bottom-color: #ff9900;
     }
+
     .custom-tabs .nav-link.active {
         color: #ff9900;
         background-color: transparent;
@@ -70,23 +73,28 @@
         margin-top: -1px;
         border-top: 1.5px solid #e3e3e3; /* Ligne de séparation en haut */
     }
+
     .tab-content h4 {
         color: #fff;
         margin-bottom: 15px;
         font-size: 1.5rem;
     }
+
     /* Cache les panneaux de contenu par défaut, sauf celui qui est actif */
     .tab-pane {
         display: none;
     }
+
     .tab-pane.active {
         display: block; /* Affiche le panneau actif */
     }
+
     /* Pour l'animation de fondu (optionnel, nécessite plus de CSS/JS pour être parfait) */
     .tab-pane.fade {
         opacity: 0;
         transition: opacity 0.15s linear;
     }
+
     .tab-pane.fade.active.show {
         opacity: 1;
     }
@@ -98,24 +106,29 @@
         padding: 20px 0;
         background-color: #f8f9fa; /* S'assurer que le fond de la section est clair */
     }
+
     .financial-item {
         text-align: center;
         margin-bottom: 50px; /* Espace entre chaque bloc d'information */
     }
+
     .financial-item:last-child {
         margin-bottom: 0; /* Pas de marge en bas pour le dernier élément */
     }
+
     .financial-item p {
         margin-bottom: 5px; /* Espace réduit sous les paragraphes */
         font-size: 1.1rem;
         color: #555; /* Couleur de texte légèrement plus claire pour les descriptions */
     }
+
     .financial-item .title {
         font-size: 1.0rem; /* Taille du titre */
         font-weight: bold;
         margin-bottom: 10px;
         color: #343a40; /* Couleur du titre */
     }
+
     .financial-item .amount {
         font-size: 1.5rem; /* Grande taille pour le montant */
         font-weight: bold;
@@ -123,11 +136,13 @@
         margin-top: 20px; /* Espace au-dessus du montant */
         margin-bottom: 5px; /* Espace sous le montant */
     }
+
     .financial-item .year {
         font-size: 1rem;
         color: #6c757d; /* Couleur de texte pour l'année */
         margin-bottom: 20px; /* Espace sous l'année */
     }
+
     .financial-item .separator-line {
         width: 150px; /* Largeur de la ligne */
         height: 2px;
@@ -169,7 +184,13 @@
             opacity: 1;
             transform: translateX(0);
         }
-    }    
+    }   
+    
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: 6vh;
+        }
+    }
 </style>
 @endpush
 

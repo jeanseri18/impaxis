@@ -38,14 +38,17 @@
         margin-bottom: 0px;
         font-size: 16px;
     }
+
     .contact-info i {
         color: #ffffff; /* Couleur orange pour les icônes */
         margin-right: 10px;
     }
+
     .contact-info a {
         color: #007bff; /* #007bff; Couleur bleue pour les liens */
         text-decoration: none;
     }
+
     .contact-info a:hover {
         text-decoration: underline;
     }
@@ -78,6 +81,15 @@
         align-items: center;
     }
 
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 40vh; /* Ajuste la hauteur pour les petits écrans */
+        }
+
+        .page-title {
+            font-size: 6vh;
+        }
+    }
 
 </style>
 @endpush

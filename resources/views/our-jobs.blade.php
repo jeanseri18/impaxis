@@ -39,9 +39,11 @@
     .services-section {
         padding: 20px 0; /* Padding interne pour la section */
     }
+
     .services-section .container {
         max-width: 800px; /* Limite la largeur du contenu pour une meilleure lisibilité */
     }
+
     .orange-line {
         height: 3px;
         background-color: #ff9900; /* Couleur orange */
@@ -49,42 +51,58 @@
         margin-top: 50px; /* Espace au dessus de la ligne */
         margin-bottom: 25px; /* Espace sous la ligne */
     }
+
     .service-group {
         margin-bottom: 20px; /* Espace entre les groupes de services */
     }
+
     .service-group h3 {
         font-size: 1.0rem; /* Taille du titre */
         font-weight: bold;
         /* color: #fff; */
         margin-bottom: 15px;
     }
+
     /* Pour le symbole étoile, nous allons le mettre en CSS ou directement dans le HTML */
     .service-group h3::before {
         content: '* '; /* Ajoute l'étoile avant le texte */
         /* color: #fff; Couleur de l'étoile */
         margin-right: 5px;
     }
+
     .service-group ul {
         list-style: none; /* Supprime les puces par défaut */
         padding-left: 0; /* Supprime le padding par défaut des listes */
     }
+
     .service-group ul li {
         font-size: 1.0rem; /* Taille du texte des éléments de liste */
         /* color: #1a1a1a; Couleur du texte */
         margin-bottom: 8px; /* Espace entre les éléments de liste */
     }
+
     .service-group ul li::before {
         content: '• '; /* Ajoute une puce personnalisée (rond) */
         /* color: #fff; Couleur de la puce */
         font-size: 0.1rem; /* Taille de la puce */
         margin-right: 10px;
     }
+
     .service-title {
         font-size: 1.8rem; /* Taille du titre */
         font-weight: bold;
         margin-bottom: 20px; /* Espace sous le titre */
     }
 
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 40vh; /* Ajuste la hauteur pour les petits écrans */
+        }
+
+        .page-title {
+            font-size: 6vh;
+        }
+    }
 
 </style>
 @endpush

@@ -37,26 +37,31 @@
         border-radius: 15px; /* Bordures arrondies */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
         max-width: 400px; /* Largeur maximale du card */
+        height: 100%;
         padding: 30px;
         position: relative;
         overflow: hidden; /* Pour que le triangle ne dépasse pas */
     }
+
     .custom-card:hover{
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
         border: 2px solid #ff9900 ; /* Bordure bleue au survol */
     }
+
     .custom-card h2 {
         font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 15px;
         color: #343a40;
     }
+
     .custom-card p {
         font-size: 1rem;
         line-height: 1.6;
         color: #6c757d;
         margin-bottom: 25px;
     }
+
     .custom-card .read-more {
         font-weight: bold;
         color: #007bff; /* Couleur du lien Bootstrap */
@@ -64,15 +69,18 @@
         display: inline-flex;
         align-items: center;
     }
+
     .custom-card .read-more:hover {
         text-decoration: underline;
     }
+
     .custom-card .read-more svg {
         margin-left: 8px;
         width: 12px;
         height: 12px;
         fill: #007bff;
     }
+
     .triangle-icon {
         position: absolute;
         top: 25px; /* Ajuster la position verticale */
@@ -89,49 +97,58 @@
     .team-section {
         padding: 50px 20px;
     }
+
     .section-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
     }
+
     .section-header h2 {
         font-size: 2.2rem;
         font-weight: bold;
         margin-bottom: 0;
     }
+
     .section-header .see-more {
         color: #fff;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1rem;
     }
+
     .section-header .see-more:hover {
         text-decoration: underline;
     }
+
     .team-member-card {
         background-color: #000; /* Le fond reste noir pour le card */
         border: none; /* Pas de bordure pour le card */
         text-align: left;
         padding: 0; /* Pas de padding par défaut pour le card */
     }
+
     .team-member-card img {
         width: 100%;
         height: auto;
         display: block; /* Supprime l'espace sous l'image */
         margin-bottom: 20px; /* Espace sous l'image */
     }
+
     .team-member-card h3 {
         font-size: 1.4rem;
         font-weight: bold;
         margin-bottom: 5px;
         color: #fff;
     }
+
     .team-member-card .title-role {
         font-size: 1rem;
         color: #f0f0f0; /* Légèrement plus clair que le gris */
         margin-bottom: 3px;
     }
+
     .team-member-card .experience {
         font-size: 0.9rem;
         color: #ccc; /* Couleur légèrement plus claire pour l'expérience */
@@ -141,6 +158,7 @@
     .team-member-animated {
         transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
     }
+
     .team-member-animated:hover {
         transform: translateY(-10px) scale(1.04) rotate(-1deg);
         box-shadow: 0 12px 32px rgba(0,0,0,0.25);
@@ -150,6 +168,19 @@
     @media (max-width: 767.98px) {
         .team-member-card {
             margin-bottom: 30px; /* Espace entre les cards sur mobile */
+        }
+
+        .custom-card {
+            max-width: 100%; /* Les cards prennent toute la largeur sur les petits écrans */
+            margin-bottom: 30px; /* Espace entre les cards sur mobile */
+        }
+
+        .hero-section {
+            height: 40vh; /* Hauteur réduite sur mobile */
+        }
+
+        .page-title {
+            font-size: 6vh; /* Taille de police réduite sur mobile */
         }
     }
     

@@ -174,6 +174,45 @@
         border: 2px solid #fff !important;
     } */
 
+
+    @media (max-width: 768px) {
+        .slide {
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .slide .content h1 {
+            font-size: 24px;
+        }
+
+        .slide .content p {
+            font-size: 16px;
+        }
+
+        .card {
+            width: 45%; /* Ajuste la largeur des cartes sur les petits écrans */
+        }
+
+        .mobile {
+            margin: 0 20px !important;
+            overflow: auto;
+            height: 80vh;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            width: 100%; /* Les cartes prennent toute la largeur sur les très petits écrans */
+        }
+
+        /* .mobile {
+            margin: 0 20px !important;
+            overflow: scroll;
+        } */
+    }
+
 </style>
 @endpush
 
@@ -308,7 +347,7 @@
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
                 <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #F2920E; font-size: 40px">Nos métiers</h1><br>
 
-                <div class="row" style="margin-bottom: 20px; padding: 0;">
+                <div class="row mobile" style="margin-bottom: 20px; padding: 0;">
                     <div class="col-md-3 card border-0 text-white" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
                         <h3 style="font-size:25px;">Investment Banking</h3>
                         <hr style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">

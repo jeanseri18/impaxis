@@ -67,6 +67,25 @@
         padding: 20px;
         border: 1.5px solid #f0f0f0;
     }
+
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: 6vh;
+        }
+
+        .block-bio-member {
+            flex-direction: column;
+        }
+
+        .photo-bio {
+            height: 40vh;
+            margin-bottom: 20px;
+        }
+
+        .mr-20 {
+            margin-left: 0;
+        }
+    }
 </style>
 @endpush
 
