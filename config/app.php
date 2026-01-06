@@ -98,6 +98,18 @@ return [
 
     'fallback_locale' => 'en',
 
+    /*|--------------------------------------------------------------------------
+    | Available Locales
+    |--------------------------------------------------------------------------
+    | Here you may specify the locales that your application supports.
+    | This can be used to populate language switchers or for validation.
+    |*/
+
+    'available_locales' => [
+        'fr' => 'Français',
+        'en' => 'English',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Faker Locale

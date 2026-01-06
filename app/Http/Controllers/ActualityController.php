@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Actuality;
 
 class ActualityController extends Controller
 {
     //
-    public function showActuality($item_id, $slug)
+    public function showActuality($locale, $item_id, $slug)
     {
         $item = Actuality::where('id', $item_id)->where('slug', $slug)->firstOrFail();
         // Check if the item is published

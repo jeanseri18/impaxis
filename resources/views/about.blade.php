@@ -192,40 +192,31 @@
     <!-- Hero Section / Slide -->
     <section class="hero-section d-flex align-items-center justify-content-center text-white">
         <div class="overlay"></div>
-        <div class="container "> {{-- position-relative --}}
-            <h1 class="display-3 fw-bold page-title">À propos du <br><span class="fst-italic">groupe Impaxis</span></h1>
+        <div class="container "> 
+            <h1 class="display-3 fw-bold page-title">{!! __('about.page-title') !!}</h1>
         </div>
     </section>
 </div>
 
 <div class="container">
     <p class="mt-6 text-justify" style="">
-        IMPAXIS est une banque d’affaires panafricaine indépendante, fondée en 2003 par une équipe de banquiers seniors chevronnés, dotés d’une expérience couvrant l’Afrique subsaharienne, l’Europe et le Moyen-Orient. 
-        Notre vision est d’offrir aux acteurs économiques africains des solutions financières de classe mondiale, leur permettant de concrétiser leurs ambitions tout en contribuant à la structuration de l’économie africaine de demain. 
-        IMPAXIS est présente à Dakar, Abidjan et Dubaï, avec un champ d’action couvrant l’ensemble du continent africain, et un focus particulier sur l’Afrique francophone (zones UEMOA et CEMAC).
-        <br> <br>
-        Née au cœur de l’Afrique de l’Ouest, notre identité est profondément africaine au-delà de notre implantation. Nous comprenons les dynamiques locales, parlons le langage des marchés africains, 
-        et transformons cette proximité en opportunités de croissance. Notre force réside dans l’alliance entre excellence internationale et ancrage africain.
-        <br> <br>
-        IMPAXIS bénéficie de la licence SGI de l’AMF-UMOA (l’Autorité́ Régionale du MFR) lui permettant d’intervenir sur toutes les opérations de marché.
+        {!! __('about.intro-paragraph') !!}
     </p>
 
     <div class="text-center mb-6 mt-6">
-        <h2>Le Groupe Impaxis est structuré autour de trois filiales principales, <br>chacune spécialisée dans des services spécifiques :</h2>
+        <h2> {!! __('about.title-2') !!} </h2>
     </div>
 
     <div class="row">
         <div class="col-md-4">
             <div class="card custom-card">
                 <div class="triangle-icon"></div>
-                <h3 class="card-title">IMPAXIS<br>SECURITIES</h3>
+                <h3 class="card-title"> IMPAXIS<br>SECURITIES</h3>
                 <p class="card-text">
-                    Focalisée sur les marchés de capitaux, les introductions en bourse, le courtage actions 
-                    et produits de taux, la structuration et le placement de titres, ainsi que les produits 
-                    de couverture (commodities, FX).
+                    {!! __('about.filiale-1-description') !!}
                 </p>
                 <a href="#" class="read-more">
-                    En savoir plus
+                    {{ __('about.read-more') }}
                     <svg viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
@@ -237,12 +228,11 @@
                 <div class="triangle-icon"></div>
                 <h3 class="card-title">IMPAXIS<br>CAPITAL</h3>
                 <p class="card-text">
-                    Spécialisée en conseil stratégique, financement structuré, 
-                    fusions & acquisitions, et analyse financière.
+                    {{ __('about.filiale-2-description') }}
                 </p>
                 <br><br>
                 <a href="#" class="read-more">
-                    En savoir plus
+                     {{ __('about.read-more') }}
                     <svg viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
@@ -254,11 +244,10 @@
                 <div class="triangle-icon"></div>
                 <h3 class="card-title">IMPAXIS ASSET MANAGEMENT<br>WEST AFRICA</h3>
                 <p class="card-text">
-                    Dédiée à la création et la gestion d'OPCVM (Fonds Communs de Placement, SICAV) 
-                    ainsi qu'à la gestion de fonds d'investissements et au conseil dans les discussions avec ces fonds.
+                    {{ __('about.filiale-3-description') }}
                 </p>
                 <a href="#" class="read-more">
-                    En savoir plus
+                    {{ __('about.read-more') }}
                     <svg viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
@@ -271,8 +260,8 @@
 <section class="team-section" style="background-color: #000; color: #fff; margin-top: 50px; padding: 50px 0;">
         <div class="container">
             <div class="section-header">
-                <h2 style="color: white">Notre équipe dirigeante</h2>
-                <a href="#" class="see-more">Voir plus</a>
+                <h2 style="color: white">{{ __('about.title-team') }}</h2>
+                <a href="#" class="see-more">{{ __('about.voir-plus') }}</a>
             </div>
 
             <div class="row">
@@ -282,52 +271,15 @@
                             <img src="{{ $item->getAvatarFullUrl() }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
                             <h3>{{ $item->name }}</h3>
                             <p class="title-role">{{ $item->role }}</p>
-                            <p class="experience">{{ $item->experience }} ans d'expérience</p>
+                            <p class="experience">{{ $item->experience }} {{ __('about.experience') }} </p>
                             <a href="{{ route('front.person-biographie', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-outline-light mt-3">
-                                En savoir plus
+                                {{ __('about.read-more') }}
                             </a>
                         </div>
                     </div>
                 @endforeach
             </div>
 
-            {{-- <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card team-member-animated">
-                        <img src="{{ asset('/assets/image/equipes/momar-ndour.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
-                        <h3>Momar NDOUR</h3>
-                        <p class="title-role">Président Directeur Général</p>
-                        <p class="experience">+30 ans d'expérience</p>
-                        <a href="#" class="btn btn-outline-light mt-3">
-                            En savoir plus
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card team-member-animated">
-                        <img src="{{ asset('/assets/image/equipes/aboubacar-diaw.jpeg') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
-                        <h3>Aboubacar DIAW</h3>
-                        <p class="title-role">Administrateur Directeur Général<br>d'Impaxis Securities</p>
-                        <p class="experience">+20 ans d'expérience</p>
-                        <a href="#" class="btn btn-outline-light mt-3">
-                            En savoir plus
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12">
-                    <div class="team-member-card team-member-animated">
-                        <img src="{{ asset('/assets/image/equipes/marieme-youm-kobar.png') }}" style="height: 70%; width: 90%; border-radius: 10px" alt="">
-                        <h3>Marième Youm KOBAR</h3>
-                        <p class="title-role">CEO / Directrice Générale Impaxis Asset Management West Africa</p>
-                        <p class="experience">+20 années d'expérience</p>
-                        <a href="#" class="btn btn-outline-light mt-3">
-                            En savoir plus
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </section>
 

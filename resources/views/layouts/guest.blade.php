@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Codescandy" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}" />
@@ -24,13 +25,16 @@
         .navbar {
             background-color: #232324FF;
         }
+
         .navbar-brand img {
             height: 40px;
         }
+        
         .offcanvas {
             background-color: #1E1E1FFF;
             color: white;
         }
+        
         .offcanvas a {
             color: white;
             text-decoration: none;
@@ -60,10 +64,25 @@
             width: 100%; /* Animation du soulignement */
         }
 
-
         .btn:hover {
             background-color: #F2920E; /* Changez cette couleur selon vos besoins */
             color: #011F48FF; /* Changez cette couleur selon vos besoins */
+        }
+
+        .translate {
+            margin-right: 5px;
+            font-size: 14px;
+            color: rgb(219, 219, 219);
+            /* cursor: pointer; */
+        }
+
+        .lang {
+            margin-right: 10px;
+            font-size: 16px;
+            color: rgb(219, 219, 219);
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 12px;
         }
 
     </style>
@@ -73,13 +92,27 @@
 
 <body class="bg-white">
     <main>
-        <nav class="navbar navbar-dark navbar-expand-lg px-3">
-            <a class="navbar-brand" href="{{ route('front.welcome') }}">
-                <img src="{{ asset('assets/logos.png') }}" alt="Logo">
-            </a>
-            <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
-                {{-- ☰ --}}<i class="bi bi-list"></i>
-            </button>
+        <nav class="navbar navbar-dark navbar-expand-lg px-3" style="justify-content: space-between">
+            <div>
+                <a class="navbar-brand" href="{{ route('front.welcome') }}">
+                    <img src="{{ asset('assets/logos.png') }}" alt="Logo">
+                </a>
+            </div>
+            <div>
+                <span class="translate"><i class="bi bi-translate"></i></span>
+                @if (app()->getLocale() == 'fr')
+                    <a class="lang" href="{{ route(Route::currentRouteName(), array_merge(Route::current()->parameters(), ['locale' => 'en'])) }}">
+                        EN
+                    </a>
+                @else
+                    <a class="lang" href="{{ route(Route::currentRouteName(), array_merge(Route::current()->parameters(), ['locale' => 'fr'])) }}">
+                        FR
+                    </a>
+                @endif
+                <button class="btn ms-auto" style="color: white; border: 1px solid white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
         </nav>
 
         <!-- Menu Offcanvas -->
@@ -89,13 +122,13 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <a href="{{ route('front.welcome') }}"> Accueil</a>
-                <a href="{{ route('front.about') }}"> A propos</a>
+                <a href="{{ route('front.welcome') }}">{{ __('welcome.home') }}</a>
+                <a href="{{ route('front.about') }}">{{ __('welcome.about-us') }}</a>
                 {{-- <a href="#"> Notre équipe</a> --}}
-                <a href="{{ route('front.our-references') }}"> Références</a>
-                <a href="{{ route('front.our-jobs') }}"> Nos métiers</a>
-                <a href="{{ route('front.actualities') }}"> Actualités</a>
-                <a href="{{ route('front.contact') }}"> Contact</a>
+                <a href="{{ route('front.our-references') }}">{{ __('welcome.our-references') }}</a>
+                <a href="{{ route('front.our-jobs') }}">{{ __('welcome.our-jobs') }}</a>
+                <a href="{{ route('front.actualities') }}">{{ __('welcome.actualities') }}</a>
+                <a href="{{ route('front.contact') }}">{{ __('welcome.contact-us') }}</a>
             </div>
         </div>
 
@@ -151,7 +184,7 @@
             </div>
         </div>
     </footer> --}}
-
+    <!-- Footer End -->
 
 
     <!-- Scroll top -->

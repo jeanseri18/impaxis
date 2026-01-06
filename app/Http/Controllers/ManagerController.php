@@ -44,7 +44,7 @@ class ManagerController extends Controller
         return view('contact');
     }
 
-    public function getPersonBiographie($item_id, $slug) {
+    public function getPersonBiographie($locale, $item_id, $slug) {
         $item = TeamMember::where('id', $item_id)->where('slug', $slug)->first();
         return view('team-detail', compact('item'));
     }

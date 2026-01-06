@@ -78,8 +78,8 @@
         <!-- Hero Section / Slide -->
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
-            <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Actualités</h1>
+            <div class="container "> 
+                <h1 class="display-3 fw-bold page-title"> {{ __('welcome.actu-page-title') }} </h1>
             </div>
         </section>
     </div>
@@ -102,11 +102,11 @@
                                 <div style="display: flex; justify-content: space-between; align-items: center;">
                                     <div class="">
                                         <small class="text-muted" style="color: #919191; float: left;">
-                                            <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                                            <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => app()->getLocale()]) }}
                                         </small>
                                     </div>
                                     <div>
-                                        <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">Lire plus</a>
+                                        <a href="{{ route('front.actuality.show', ['locale' => app()->getLocale(), 'item_id' => $item->id, 'slug' => $item->slug]) }}" class="card-link btn-read-more">{{ __('welcome.actu-read-more') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
             @empty
             <div class="row">
                 <div class="col-12 text-center mb-4" style="color: #8d8d8c; font-size: 1.2em;">
-                    <p>Aucune actualité disponible pour le moment.</p>
+                    <p>{{ __('welcome.actu-anavailable') }}</p>
                 </div>
             </div>
             @endforelse
@@ -136,7 +136,7 @@
     
     <div class="pt-5 pb-5" style="background-color: #f8f9fa">
         <div class="container">
-            <h1>Les Macro du soir</h1>
+            <h1> {{ __('welcome.macro-title') }} </h1>
             <div class="row mx-auto mt-4" style="">
                 <div class="col-md-4 text-center">
                     <div class="card" style="height: 60px; justify-content: center; align-items: center; display: flex; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: none;">

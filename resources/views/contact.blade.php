@@ -99,8 +99,8 @@
         <!-- Hero Section / Slide -->
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
-            <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Contact</h1>
+            <div class="container "> 
+                <h1 class="display-3 fw-bold page-title">{{ __('contact.page-title') }}</h1>
             </div>
         </section>
     </div>
@@ -108,10 +108,10 @@
     <div class="container">
         <div class="row" style="margin-top: 4em; margin-bottom: 4em;">
             <div class="col-md-6">
-                <h2>Nos contacts</h2>
+                <h2>{{ __('contact.title-1') }}</h2>
                 <div class="card">
                     <div class="card-body">
-                        <h4>Siège Groupe</h4>
+                        <h4>{{ __('contact.siege-groupe') }}</h4>
                         <div class="contact-info">
                             <p class="">
                                 <div class="info-inline ">
@@ -135,7 +135,7 @@
                     </div>
                     <center><hr class="my-0" style="border-top: 1px solid #e4e4e4; justify-content: center; width: 90%;"></center>
                     <div class="card-body">
-                        <h4>Bureaux régionaux & représentations internationales</h4>
+                        <h4>{{ __('contact.bureau') }}</h4>
                         <div class="contact-info">
                             <p class="">
                                 <div class="info-inline ">
@@ -155,7 +155,7 @@
             </div>
 
             <div class="col-md-6">
-                <h2>Envoyez-nous un message</h2>
+                <h2>{{ __('contact.title-2') }}</h2>
 
                 <div id="globalResponseMessage" class="mt-3"></div>
 
@@ -166,14 +166,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="fullname" class="form-label">Nom Prénom</label>
-                                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Votre nom & prénom">
+                                <label for="fullname" class="form-label">{{ __('contact.fullname') }}</label>
+                                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="{{ __('contact.fullname') }}">
                                 <div class="invalid-feedback" id="fullname-error"></div> 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Téléphone</label>
+                                <label for="phone" class="form-label">{{ __('contact.tel') }}</label>
                                 <input type="tel" name="phone" class="form-control" id="phone" placeholder="(+221) 00 0000 0000">
                                 <div class="invalid-feedback" id="phone-error"></div>
                             </div>
@@ -192,7 +192,7 @@
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea name="messageContent" class="form-control" id="message" rows="4" placeholder="Ecrivez votre message ici ..."></textarea>
+                                <textarea name="messageContent" class="form-control" id="message" rows="4" placeholder="{{ __('contact.message-text') }}"></textarea>
                                 <div class="invalid-feedback" id="messageContent-error"></div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary" id="submitBtn">Envoyer</button> 
+                                <button type="submit" class="btn btn-primary" id="submitBtn">{{ __('contact.btn-send') }}</button> 
                             </div>
                         </div>
                     </div>
@@ -250,6 +250,11 @@
             // $submitBtn.prop('disabled', true).text('Envoi en cours...');
 
             // 2. Requête AJAX
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $.ajax({
                 type: 'POST',
                 url: actionUrl,

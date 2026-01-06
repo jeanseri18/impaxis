@@ -17,23 +17,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Redirection automatique de la racine vers le français
+Route::get('/', function () {
+    return redirect('/fr');
+});
 
 // Define a route group for the frontend 
-Route::name('front.')->group(function () {
-    Route::get('/', [ManagerController::class, 'welcome'])->name('welcome');
-    Route::get('/a-propos', [ManagerController::class, 'about'])->name('about');
-    Route::get('/equipes/{item_id}/biographie/{slug}', [ManagerController::class, 'getPersonBiographie'])->name('person-biographie');
-    Route::get('/nos-metiers', [ManagerController::class, 'ourJobs'])->name('our-jobs');
-    Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
-    Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
-    Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
-    Route::get('/contact', [ManagerController::class, 'contact'])->name('contact');
-    Route::post('/contact/sendMail', [ContactManager::class, 'sendMailContactForm'])->name('contact.send-mail');
+Route::prefix('{locale}')
+    ->where(['locale' => 'fr|en'])
+    ->middleware(['web', \App\Http\Middleware\SetLocale::class])
+    ->group(function () {
 
-    Route::get('formulaire', function () {
-        return view('emails.contact_form_send');
+    Route::name('front.')->group(function () {
+        Route::get('/', [ManagerController::class, 'welcome'])->name('welcome');
+        Route::get('/a-propos', [ManagerController::class, 'about'])->name('about');
+        Route::get('/equipes/{item_id}/biographie/{slug}', [ManagerController::class, 'getPersonBiographie'])->name('person-biographie');
+        Route::get('/nos-metiers', [ManagerController::class, 'ourJobs'])->name('our-jobs');
+        Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
+        Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
+        Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
+        Route::get('/contact', [ManagerController::class, 'contact'])->name('contact');
+        Route::post('/contact/sendMail', [ContactManager::class, 'sendMailContactForm'])->name('contact.send-mail');
     });
-})->middleware('web');
+    
+});
 
 
 // // Define a route group for the admin panel

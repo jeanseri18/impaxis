@@ -74,7 +74,7 @@
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
             <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Actualité</h1>
+                <h1 class="display-3 fw-bold page-title">{{ __('welcome.actu-page-title') }}</h1>
             </div>
         </section>
     </div>
@@ -97,7 +97,7 @@
                 
             </div>
             <div class="col-md-4">
-                <h3>Articles récents</h3>
+                <h3>{{ __('welcome.actu-recents') }}</h3>
                 @if ($recentActualities->isEmpty())
                     <p style="color: #919191">Aucun article récent disponible.</p>
                 @endif
@@ -115,7 +115,7 @@
                                 <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
                             </div>
                             <div>
-                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-link" style="float: right">Lire plus</a>
+                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-link" style="float: right">{{ __('welcome.actu-read-more') }} </a>
                             </div>
                         </div>
                     </div>

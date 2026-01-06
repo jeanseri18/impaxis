@@ -112,8 +112,8 @@
         <!-- Hero Section / Slide -->
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
-            <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Nos métiers</h1>
+            <div class="container ">
+                <h1 class="display-3 fw-bold page-title">{{ __('welcome.job-page-title') }} </h1>
             </div>
         </section>
     </div>
@@ -133,22 +133,22 @@
                         <div class="orange-line"></div>
 
                         <div class="service-group">
-                            <h3>Conseil Financier Stratégique</h3>
+                            <h3>{{ __('welcome.invest-1') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Financement de projet</h3>
+                            <h3>{{ __('welcome.invest-2') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Fusion-Acquisition</h3>
+                            <h3>{{ __('welcome.invest-3') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Introduction en bourse </h3>
+                            <h3>{{ __('welcome.invest-4') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Levée de fonds sur le marché des capitaux</h3>
+                            <h3>{{ __('welcome.invest-5') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Financement structuré</h3>
+                            <h3>{{ __('welcome.invest-6') }}</h3>
                         </div>
                         {{-- <div class="service-group">
                             <h3>Structured & Leveraged Finance</h3>
@@ -169,7 +169,7 @@
                             <div class="orange-line"></div>
 
                             <div class="service-group">
-                                <h3>Sales & Trading</h3>
+                                <h3>{{ __('welcome.market-1') }}</h3>
                                 <ul>
                                     <li>Equities</li>
                                     <li>Fixed income</li>
@@ -177,22 +177,16 @@
                             </div>
 
                             <div class="service-group">
-                                <h3>FX & Commodities/ Hedging </h3>
+                                <h3>{{ __('welcome.market-2') }}</h3>
                             </div>
 
                             <div class="service-group">
-                                <h3>Produits structurés et dérivés</h3>
+                                <h3>{{ __('welcome.market-3') }}</h3>
                                 <ul>
                                     <li>Realationship Mgt</li>
                                     <li>Sales</li>
                                 </ul>
                             </div>
-                            {{-- <div class="service-group">
-                                <h3>Produits structurés</h3>
-                            </div>
-                            <div class="service-group">
-                                <h3>Custody</h3>
-                            </div> --}}
                         </div>
                     </section>
                 </div>
@@ -211,7 +205,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="d-flex align-items-center justify-content-center h-100">
-                    <h1 class="service-title">Gestion d’actifs </h1>
+                    <h1 class="service-title">{{ __('welcome.gestion') }} </h1>
                 </div>
             </div>
             <div class="col-md-7">
@@ -220,30 +214,16 @@
                         <div class="orange-line"></div>
 
                         <div class="service-group">
-                            <h3>Opcvm et Fonds dédiés</h3>
-                            {{-- <ul>
-                                <li>Shariah Compliant</li>
-                                <li>PE « classique »</li>
-                                <li>Principal Investments</li>
-                                <li>Private Banking</li>
-                            </ul> --}}
+                            <h3>{{ __('welcome.gestion-1') }}Opcvm et Fonds dédiés</h3>
                         </div>
 
                         <div class="service-group">
-                            <h3>Gestion sous mandat</h3>
+                            <h3>{{ __('welcome.gestion-2') }}</h3>
                             {{-- <ul>
                                 <li>Listed Securities</li>
                                 <li>Non-Listed Securities</li>
                             </ul> --}}
                         </div>
-
-                        {{-- <div class="service-group">
-                            <h3>Private Banking</h3>
-                            <ul>
-                                <li>Realationship Mgt</li>
-                                <li>Sales</li>
-                            </ul>
-                        </div> --}}
                     </div>
                 </section>
             </div>
@@ -260,22 +240,22 @@
                         <div class="orange-line"></div>
 
                         <div class="service-group">
-                            <h3>Global Macro Economy (Monde / Régions / Pays)</h3>
+                            <h3>{{ __('welcome.global-1') }}</h3>
                         </div>
 
                         <div class="service-group">
-                            <h3>Global Equity / FI / Benchmarks</h3>
+                            <h3>{{ __('welcome.global-2') }}</h3>
                         </div>
 
                         <div class="service-group">
-                            <h3>Secteurs</h3>
+                            <h3>{{ __('welcome.global-3') }}</h3>
                         </div>
 
                         <div class="service-group">
-                            <h3>Produits : Equity / FI</h3>
+                            <h3>{{ __('welcome.global-4') }}</h3>
                         </div>
                         <div class="service-group">
-                            <h3>Illiquid assets</h3>
+                            <h3>{{ __('welcome.global-5') }}</h3>
                         </div>
                     </div>
                 </section>

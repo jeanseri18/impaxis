@@ -170,24 +170,50 @@
         color: #FFF;
         background-color: #F2920E;
     }
-    /* .border-white {
-        border: 2px solid #fff !important;
-    } */
 
+    .title {
+        font-size: 40px; 
+    }
+
+    h3.subtitle {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 30px;
+    }
 
     @media (max-width: 768px) {
         .slide {
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
-        .slide .content h1 {
-            font-size: 24px;
+        .slide .content h1.title {
+            font-size: 35px;
         }
 
-        .slide .content p {
-            font-size: 16px;
+        .slide .content p.description {
+            font-size: 25px;
+        }
+
+        .list-group-flush {
+            display: none;
+        }
+
+        .d-none-mobile {
+            display: none;
+        }
+
+        h3.subtitle {
+            font-size: 20px;
+        }
+
+        .block-service {
+            min-width: 80vh;
+            margin-bottom: 10px;
         }
 
         .card {
@@ -206,11 +232,6 @@
         .card {
             width: 100%; /* Les cartes prennent toute la largeur sur les très petits écrans */
         }
-
-        /* .mobile {
-            margin: 0 20px !important;
-            overflow: scroll;
-        } */
     }
 
 </style>
@@ -259,12 +280,12 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 40px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
+                <h1 class="display-1 animated-text title" style="color: #F2920E;">IMPAXIS - {{ __('welcome.slide1') }}</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5 animated-text" style="font-size: 30px">
-                    La banque d’affaires dédiée à la structuration et au financement des économies africaines
+                <p class="display-5 animated-text description" style="">
+                    {{ __('welcome.description1') }}
                 </p><br>
-                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
+                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">{{ __('welcome.btn-read-more') }}</a><br><br>
             </div>
         </div>
 
@@ -278,12 +299,12 @@
                 </video>
             </div>
             <div class="container content">
-                <h1 class="display-1 animated-text" style="color: #F2920E; font-size: 40px">IMPAXIS - Ancrée en Afrique, connectée au monde.</h1>
+                <h1 class="display-1 animated-text title" style="color: #F2920E; ">IMPAXIS - {{ __('welcome.slide2') }}</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5 animated-text" style="font-size: 30px">
-                    Financer l’avenir pour bâtir le progrès
+                <p class="display-5 animated-text description" style="font-size: 30px">
+                    {{ __('welcome.description2') }} 
                 </p><br>
-                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">En savoir plus</a><br><br>
+                    <a href="{{ route('front.about') }}" class="btn btn-lg btn-read-more">{{ __('welcome.btn-read-more') }}</a><br><br>
             </div>
         </div>
 
@@ -301,10 +322,10 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #F2920E; font-size: 40px">Notre mission</h1>
+                <h1 class="display-1 title" style="color: #F2920E; ">{{ __('welcome.notre-mission') }}</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff; font-size: 30px">
-                    Bâtir l’Afrique de demain par l’excellence et l’innovation financière
+                <p class="display-5 description" style="color: #fff; font-size: 30px">
+                    {{ __('welcome.description3') }}
                 </p><br>
             </div>
             
@@ -323,10 +344,10 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white">
-                <h1 class="display-1" style="color: #F2920E; font-size: 40px">Notre vision</h1>
+                <h1 class="display-1 title" style="color: #F2920E; ">{{ __('welcome.notre-vision') }}</h1>
                 <hr style="border: 0.5px solid #F2920E; width: 100%;">
-                <p class="display-5" style="color: #fff; font-size: 30px">
-                    La Banque d’affaires de référence de l’Afrique, meilleure place pour travailler et qui génère une rentabilité durable.
+                <p class="display-5 description" style="color: #fff; font-size: 30px">
+                    {{ __('welcome.description4') }} 
                 </p><br>
                 <!-- <a href="#" class="btn btn-lg btn-primary">En savoir plus</a><br><br> -->
             </div>
@@ -345,51 +366,51 @@
 
             <!-- Contenu au-dessus de l’overlay -->
             <div class="container position-relative z-2 text-white" style="margin: 0 50px;">
-                <h1 class="display-1" style="font-family: 'Roboto', sans-serif; color: #F2920E; font-size: 40px">Nos métiers</h1><br>
+                <h1 class="display-1 title" style="font-family: 'Roboto', sans-serif; color: #F2920E; ">{{ __('welcome.nos-metiers') }}</h1><br>
 
                 <div class="row mobile" style="margin-bottom: 20px; padding: 0;">
-                    <div class="col-md-3 card border-0 text-white" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
-                        <h3 style="font-size:25px;">Investment Banking</h3>
-                        <hr style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">
+                    <div class="col-md-3 card border-0 text-white block-service" style="font-size: 16px; font-family: 'Roboto', sans-serif; border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
+                        <h3 class="subtitle">Investment Banking</h3>
+                        <hr class="d-none-mobile" style="border: 0.5px solid #F2920E;width: 100%; margin: 20px auto;">
                         <!-- Liste à puces -->
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Conseil Financier Stratégique</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Financement de projet</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Fusion-Acquisition</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Introduction en bourse </li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Levée de fonds sur le marché des capitaux</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">Financement structuré</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-1') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-2') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-3') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-4') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-5') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 2px;">{{ __('welcome.invest-6') }}</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous nous efforçons d'atteindre l'excellence.</p> --}}
                     </div>
-                    <div class="col-md-3 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
-                        <h3 style="font-size:25px;">Markets </h3>
-                        <hr style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
+                    <div class="col-md-3 card border-0 text-white block-service" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
+                        <h3 class="subtitle">Markets </h3>
+                        <hr class="d-none-mobile" style="border: 0.5px solid #F2920E; width: 100%; margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Sales & Trading</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">FX & Commodities/ Hedging </li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits structurés et dérivés</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.market-1') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.market-2') }} </li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.market-3') }}</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous encourageons l'innovation.</p> --}}
                     </div>
-                    <div class="col-md-3 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
-                        <h3 style="font-size:25px;">Gestion d’actifs</h3>
-                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                    <div class="col-md-3 card border-0 text-white block-service" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
+                        <h3 class="subtitle">{{ __('welcome.gestion') }}</h3>
+                        <hr class="d-none-mobile" style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Opcvm et Fonds dédiés</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Gestion sous mandat</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.gestion-1') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.gestion-2') }}</li>
                         </ul> 
                         {{-- <p style="font-size:18px;">Nous croyons en la valeur du partage.</p> --}}
                     </div>
-                    <div class="col-md-3 card border-0 text-white" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
-                        <h3 style="font-size:25px;">Global Research</h3>
-                        <hr style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
+                    <div class="col-md-3 card border-0 text-white block-service" style="border: 1px solid #fff !important; background-color: #0000008d; min-width: 22%;">
+                        <h3 class="subtitle">Global Research</h3>
+                        <hr class="d-none-mobile" style="border: 0.5px solid #F2920E;width: 100%;margin: 20px auto;">
                         <ul class="list-group-flush" style="background-color: transparent; color: white; border: none; text-align: left;">
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Global Macro Economy (Monde / Régions / Pays)</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Global Equity / FI / Benchmarks</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Secteurs</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Produits : Equity / FI</li>
-                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">Illiquid assets</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.global-1') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.global-2') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.global-3') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.global-4') }}</li>
+                            <li class="list-group-item" style="background-color: transparent; color: white; border: none; margin-bottom: 8px;">{{ __('welcome.global-5') }}</li>
                         </ul>
                         {{-- <p style="font-size:18px;">Nous adhérons aux normes éthiques.</p> --}}
                     </div>

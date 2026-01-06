@@ -199,29 +199,20 @@
         <!-- Hero Section / Slide -->
         <section class="hero-section d-flex align-items-center justify-content-center text-white">
             <div class="overlay"></div>
-            <div class="container "> {{-- position-relative --}}
-                <h1 class="display-3 fw-bold page-title">Nos références</h1>
+            <div class="container "> 
+                <h1 class="display-3 fw-bold page-title">{{ __('references.page-title') }}</h1>
             </div>
         </section>
     </div>
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="my-5">Références</h1>
-            </div>
-        </div>
-    </div> --}}
-
-
     
     <section class="tab-section" style="margin-top: 3em">
         <div class="container">
             <ul class="nav nav-tabs custom-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-tab-target="#home" role="tab" aria-controls="home" aria-selected="true">Références - Marché Financier</a>
+                    <a class="nav-link active" id="home-tab" data-tab-target="#home" role="tab" aria-controls="home" aria-selected="true">{{ __('references.market-1') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-tab-target="#profile" role="tab" aria-controls="profile" aria-selected="false">Références - Corporate Finance</a>
+                    <a class="nav-link" id="profile-tab" data-tab-target="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ __('references.market-2') }}</a>
                 </li>
             </ul>
 
