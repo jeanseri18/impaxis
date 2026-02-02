@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/actualities-bg-3.png'); /* remplace par ton image */
+        background-image: url('/assets/image/actualities-bg.png'); /* remplace par ton image */
         background-size: cover;
         background-position: center;
         height: 60vh; /* ou 100vh pour plein écran */

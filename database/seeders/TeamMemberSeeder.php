@@ -14,14 +14,14 @@ class TeamMemberSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // 
         $teams = [
             [
                 'name' => 'Momar NDOUR',
                 'slug' => Str::slug('Momar NDOUR'),
                 'role' => 'Président Directeur Général',
                 'experience' => '+30',
-                'avatar' => public_path() . '/assets/image/equipes/momar-ndour.jpeg',
+                'avatar' => public_path() . '/assets/image/equipes/momar-ndour.png',
                 'bio' => "
                     +30 ans d’expérience en tant que banquier d’affaires senior
                     Avant de fonder IMPAXIS Capital, Momar a été Directeur au sein du Département Afrique de la Citibank à Johannesburg (Afrique du Sud). Il dirigeait le département couvrant 18 pays d’Afrique occidentale et centrale
@@ -36,7 +36,7 @@ class TeamMemberSeeder extends Seeder
                 'slug' => Str::slug('Ababacar DIAW'),
                 'role' => 'Administrateur Directeur Général d\'Impaxis Securities',
                 'experience' => '+20',
-                'avatar' => public_path() . '/assets/image/equipes/ababacar-diaw.jpeg',
+                'avatar' => public_path() . '/assets/image/equipes/ababacar-diaw.png',
                 'bio' => "
                     20 ans d'expérience comme banquier d‘affaires avec une expertise en M&A incluant de solides références dans des processus de cession et d’acquisition achevés et des opérations DCM dans la région UEMOA
                     Avant de rejoindre le Groupe IMPAXIS, Ababacar était un banquier d‘affaires dans le département M&A de HSBC à Paris avec une zone d’intervention couvrant l’Europe, le MENA et l’Afrique Sub-Saharienne

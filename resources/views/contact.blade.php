@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/contact-bg-3.png'); /* remplace par ton image */
+        background-image: url('/assets/image/contact-bg.png'); /* remplace par ton image */
         background-size: cover;
         /* background-position: center; */
         background-position: top;
