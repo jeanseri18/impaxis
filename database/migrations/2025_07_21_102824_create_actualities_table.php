@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('content');
             // $table->string('actu_cover')->nullable();
             $table->string('slug')->unique();
+            $table->string('lang', 5)->default('fr'); // For language support
             $table->boolean('is_published')->default(false);
             $table->dateTime('published_at')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();

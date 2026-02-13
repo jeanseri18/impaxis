@@ -14,9 +14,10 @@ class ManagerController extends Controller
         return view('welcome');
     }
 
-    public function about()
+    public function about($locale)
     {
-        $teams = TeamMember::all();
+        $teams = TeamMember::where('lang', $locale)->get();
+        
         return view('about', compact('teams'));
     }
 
@@ -30,9 +31,10 @@ class ManagerController extends Controller
         return view('our-references');
     }
 
-    public function showActualities()
+    public function showActualities($locale)
     {
         $actualities = Actuality::orderBy('created_at', 'desc')
+            ->where('lang', $locale)
             ->where('is_published', true)
             ->paginate(9);
             
@@ -45,7 +47,14 @@ class ManagerController extends Controller
     }
 
     public function getPersonBiographie($locale, $item_id, $slug) {
-        $item = TeamMember::where('id', $item_id)->where('slug', $slug)->first();
+        $item = TeamMember::where('id', $item_id)
+            ->where('lang', $locale)
+            ->where('slug', $slug)
+            ->first();
+            if (!$item) {
+                abort(404);
+            }
+
         return view('team-detail', compact('item'));
     }
 }

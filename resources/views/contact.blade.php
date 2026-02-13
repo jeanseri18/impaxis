@@ -5,7 +5,7 @@
 @push('styles')
 <style>
     .hero-section {
-        background-image: url('/assets/image/contact-bg.png'); /* remplace par ton image */
+        background-image: url('/assets/image/contact-impaxis-head-bg.jpg'); /* remplace par ton image */
         background-size: cover;
         /* background-position: center; */
         background-position: top;
@@ -105,6 +105,12 @@
         </section>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.279877085147!2d-17.470906298920998!3d14.696758304031952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a8afb3b95%3A0xdc352c7b6f794677!2sFann%20R%C3%A9sidence%2C%20170%20Av.%20des%20Ambassadeurs%2C%20Dakar%2010700%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1760378963450!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row" style="margin-top: 4em; margin-bottom: 4em;">
             <div class="col-md-6">
@@ -122,7 +128,7 @@
                             <p>
                                 <div class="info-inline ">
                                     <div class="icon"><i class="bi bi-phone" style="margin-left: 10px"></i></div>
-                                    <div class="text-5"><a href="tel:+221338693140">(+221) 338693140</a></div>
+                                    <div class="text-5"><a href="tel:+221338693140">(+221) 33 869 3140</a></div>
                                 </div>
                             </p>
                             <p>
@@ -211,98 +217,10 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.279877085147!2d-17.470906298920998!3d14.696758304031952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a8afb3b95%3A0xdc352c7b6f794677!2sFann%20R%C3%A9sidence%2C%20170%20Av.%20des%20Ambassadeurs%2C%20Dakar%2010700%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1760378963450!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-
     @include('layouts.partials.footer')
 
 @endsection
 
 
 @push('scripts')
-<script>
-    $(document).ready(function() {
-        // Fonction utilitaire pour réinitialiser l'état d'affichage des erreurs
-        function clearFormErrors() {
-            // Supprime la classe 'is-invalid' de tous les champs
-            $('#contactForm').find('input, textarea, select').removeClass('is-invalid');
-            // Vide tous les messages d'erreur spécifiques
-            $('#contactForm').find('.invalid-feedback').empty();
-            // Vide la zone de message globale
-            $('#globalResponseMessage').empty();
-        }
-
-        // Interception de la soumission du formulaire
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault(); // Empêche la soumission traditionnelle (rechargement)
-
-            let $form = $(this);
-            let $submitBtn = $('#submitBtn');
-            let actionUrl = $form.attr('action');
-            let formData = $form.serialize(); 
-
-            // 1. Nettoyage et préparation
-            clearFormErrors();
-
-            // $submitBtn.prop('disabled', true).text('Envoi en cours...');
-
-            // 2. Requête AJAX
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-                type: 'POST',
-                url: actionUrl,
-                data: formData,
-                dataType: 'json',
-                beforeSend: function() {
-                    $submitBtn.prop('disabled', true).text('Envoi en cours...');
-                },
-                
-                success: function(response) {
-                    
-                    console.log(response);
-
-                    if (response.errors) {
-                        // Itération sur les erreurs champ par champ
-                        $.each(response.errors, function(field, messages) {
-                            let $input = $('[name="' + field + '"]');
-                                
-                            // Ajout de la classe Bootstrap pour l'affichage rouge
-                            $input.addClass('is-invalid');
-                                
-                            // Affichage du message d'erreur spécifique au champ
-                            $('#' + field + '-error').text(messages[0]); 
-                        });
-                    } 
-
-                    if (response.status === 'success') {
-                        // Succès : Affichage du message en haut
-                        $('#globalResponseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
-
-                        // Réinitialisation du formulaire
-                        $form[0].reset();
-                    }
-                },
-                
-                error: function(xhr, status, error) {
-                    // Autres erreurs (500, 403, etc.)
-                    let errorMsg = xhr.responseJSON.message || 'Une erreur inattendue est survenue. Veuillez réessayer.';
-                    $('#globalResponseMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
-                },
-                
-                complete: function() {
-                    // Réactiver le bouton
-                    $submitBtn.prop('disabled', false).text('Envoyer');
-                }
-            });
-        });
-    });
-</script>
-
 @endpush

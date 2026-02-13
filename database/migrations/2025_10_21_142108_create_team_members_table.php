@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('role');
-            // $table->string('photo')->nullable();
+            $table->string('lang')->default('fr');
             $table->string('linkedin')->nullable();
             $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();

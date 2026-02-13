@@ -55,9 +55,19 @@ return [
     */
     'actu-page-title' => 'Actualités',
     'actu-macro-title' => 'Les Macros du Soir',
+    'actu-macro-item' => 'Macro du Soir',
     'actu-anavailable' => 'Aucune actualité disponible pour le moment.',
     'actu-recents' => 'Articles récents',
     'actu-read-more' => 'Lire plus',
+    'actu-popup-content' => 'Pour plus d\'informations sur nos actualités, veuillez consulter notre <a class="link-popup" href="https://www.linkedin.com/company/10577254/admin/page-posts/published/" target="_blank">page LinkedIn</a>.',
+
+    /*
+    |---------------------------------------------------------------------------
+    | Actualité detail page                                                           |
+    |---------------------------------------------------------------------------
+    */
+    'actu-detail-all-article' => 'Tous les articles',
+    'actu-no-article-availaible' => 'Aucun article disponible pour le moment.',
 
     /*
     |---------------------------------------------------------------------------

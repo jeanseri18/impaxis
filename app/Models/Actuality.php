@@ -16,6 +16,7 @@ class Actuality extends Model implements HasMedia
         'slug',
         'content',
         'category_id',
+        'lang',
         'created_by',
     ];
 

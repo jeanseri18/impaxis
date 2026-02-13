@@ -70,6 +70,14 @@
         }
     }
 
+    .link-popup {
+        color: #F2920E; /* Couleur du lien */
+        text-decoration: none; /* Supprime le soulignement */
+    }
+
+    .link-popup:hover {
+        text-decoration: underline; /* Soulignement au survol */
+    }
 </style>
 @endpush
 
@@ -88,7 +96,7 @@
         <div class="row">
             @forelse ($actualities as $item)
             <div class="col-md-4 mb-5">
-                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="text-decoration-none">
+                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug], app()->getLocale()) }}" class="text-decoration-none">
                     <div class="card" style="width: 100%; height: 100%; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
                         <img src="{{ $item->getCoverFullUrl() }}" class="card-img-top" alt="...">
                         <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
@@ -136,15 +144,37 @@
     
     <div class="pt-5 pb-5" style="background-color: #f8f9fa">
         <div class="container">
-            <h1> {{ __('welcome.macro-title') }} </h1>
+            <h1> {{ __('welcome.actu-macro-title') }} </h1>
             <div class="row mx-auto mt-4" style="">
                 <div class="col-md-4 text-center">
                     <div class="card" style="height: 60px; justify-content: center; align-items: center; display: flex; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: none;">
                         <a href="{{ asset('/assets/doc/macros/Macro du Soir 22.10.2025.pdf') }}" target="_blank" style="display: flex">
-                            <i class="bi bi-download icon-macro"></i> <h3 style="color: #4f4f4f;">Macro du Soir: 22 Oct. 2025</h3>
+                            <i class="bi bi-download icon-macro"></i> <h3 style="color: #4f4f4f;">{{ __('welcome.actu-macro-item') }} : 22 Oct. 2025</h3>
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap Modal Popup -->
+    <div class="modal fade" id="contactPopup" tabindex="-1" aria-labelledby="popupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                {{-- <div class="modal-header">
+                    <h5 class="modal-title" id="popupLabel">Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> --}}
+                <div class="modal-body">
+                    {!! __('welcome.actu-popup-content') !!}
+                    {{-- Pour plus d'informations sur nos actualités, veuillez consulter notre
+                    <a class="link-popup" href="https://www.linkedin.com/company/10577254/admin/page-posts/published/" target="_blank">page LinkedIn</a>. --}}
+                </div>
+                {{-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -155,5 +185,11 @@
 
 
 @push('scripts')
-
+<script>
+    $(document).ready(function() {
+        // Afficher le popup au chargement de la page
+        var contactPopup = new bootstrap.Modal(document.getElementById('contactPopup'));
+        contactPopup.show();
+    });
+</script>
 @endpush

@@ -17,10 +17,11 @@ class ActualityController extends Controller
         // recuperer les 5 derniers articles
         $recentActualities = Actuality::where('is_published', true)
             ->where('id', '!=', $item_id) // Exclude the current item
+            ->where('lang', $locale) // Filter by the same language
             ->orderBy('created_at', 'desc')
             ->take(4) // Limit to 4 recent articles
             ->get();
     
-        return view('actuality.show', compact('item', 'recentActualities'));
+        return view('actuality.show', compact('item', 'recentActualities', 'locale'));
     }
 }

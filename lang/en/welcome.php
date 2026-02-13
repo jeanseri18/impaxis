@@ -54,10 +54,20 @@ return [
     |---------------------------------------------------------------------------
     */
     'actu-page-title' => 'News',
-    'macro-title' => 'Evening Macros',
+    'actu-macro-title' => 'Evening Macros',
+    'actu-macro-item' => 'Evening Macro',
     'actu-anavailable' => 'No news available at the moment.',
     'actu-recents' => 'Recent Articles',
     'actu-read-more' => 'Read more',
+    'actu-popup-content' => 'For more information about our news, please check our <a class="link-popup" href="https://www.linkedin.com/company/10577254/admin/page-posts/published/" target="_blank">LinkedIn page</a>.',
+    
+    /*
+    |---------------------------------------------------------------------------
+    | Actualité detail page                                                           |
+    |---------------------------------------------------------------------------
+    */
+    'actu-detail-all-article' => 'All articles',
+    'actu-no-article-availaible' => 'No article available at the moment.',
 
 
     /*

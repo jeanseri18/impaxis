@@ -272,7 +272,7 @@
                             <h3>{{ $item->name }}</h3>
                             <p class="title-role">{{ $item->role }}</p>
                             <p class="experience">{{ $item->experience }} {{ __('about.experience') }} </p>
-                            <a href="{{ route('front.person-biographie', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-outline-light mt-3">
+                            <a href="{{ route('front.person-biographie', ['item_id' => $item->id, 'slug' => $item->slug, 'locale' => app()->getLocale()]) }}" class="btn btn-outline-light mt-3">
                                 {{ __('about.read-more') }}
                             </a>
                         </div>

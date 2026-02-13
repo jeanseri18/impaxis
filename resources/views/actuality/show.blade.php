@@ -88,7 +88,7 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center mt-4">
                     <div style="color: #787878; font-size: 14px; font-style: italic;">
-                        <a href="{{ route('front.actualities') }}" class="text-decoration-none mt-5"><i class="bi bi-arrow-left"></i> Tous les articles </a>
+                        <a href="{{ route('front.actualities') }}" class="text-decoration-none mt-5"><i class="bi bi-arrow-left"></i>{{ __('welcome.actu-detail-all-article') }} </a>
                     </div>
                     <div style="color: #787878; font-size: 14px; font-style: italic;">
                         <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
@@ -99,7 +99,7 @@
             <div class="col-md-4">
                 <h3>{{ __('welcome.actu-recents') }}</h3>
                 @if ($recentActualities->isEmpty())
-                    <p style="color: #919191">Aucun article récent disponible.</p>
+                    <p style="color: #919191">{{ __('welcome.actu-no-article-availaible') }}</p>
                 @endif
                 {{-- Affichage des articles récents --}}
                 @foreach ($recentActualities as $item)
@@ -112,10 +112,10 @@
                         </h5>
                         <div class="d-flex justify-content-between align-items-center">
                             <div style="color: #919191; font-size: 12px;">
-                                <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => 'fr']) }}
+                                <i class="bi bi-clock"></i> {{ $item->created_at->diffForHumans(['locale' => $locale]) }}
                             </div>
                             <div>
-                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-link" style="float: right">{{ __('welcome.actu-read-more') }} </a>
+                                <a href="{{ route('front.actuality.show', ['item_id' => $item->id, 'slug' => $item->slug, 'locale' => app()->getLocale() ]) }}" class="btn btn-link" style="float: right">{{ __('welcome.actu-read-more') }} </a>
                             </div>
                         </div>
                     </div>
