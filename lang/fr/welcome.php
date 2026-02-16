@@ -59,7 +59,7 @@ return [
     'actu-anavailable' => 'Aucune actualité disponible pour le moment.',
     'actu-recents' => 'Articles récents',
     'actu-read-more' => 'Lire plus',
-    'actu-popup-content' => 'Pour plus d\'informations sur nos actualités, veuillez consulter notre <a class="link-popup" href="https://www.linkedin.com/company/10577254/admin/page-posts/published/" target="_blank">page LinkedIn</a>.',
+    'actu-popup-content' => 'Pour plus d\'informations sur nos actualités, veuillez consulter notre <a class="link-popup" href="https://www.linkedin.com/company/impaxis-securities/" target="_blank">page LinkedIn</a>.',
 
     /*
     |---------------------------------------------------------------------------

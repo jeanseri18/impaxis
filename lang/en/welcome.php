@@ -59,7 +59,7 @@ return [
     'actu-anavailable' => 'No news available at the moment.',
     'actu-recents' => 'Recent Articles',
     'actu-read-more' => 'Read more',
-    'actu-popup-content' => 'For more information about our news, please check our <a class="link-popup" href="https://www.linkedin.com/company/10577254/admin/page-posts/published/" target="_blank">LinkedIn page</a>.',
+    'actu-popup-content' => 'For more information about our news, please check our <a class="link-popup" href="https://www.linkedin.com/company/impaxis-securities/" target="_blank">LinkedIn page</a>.',
     
     /*
     |---------------------------------------------------------------------------
