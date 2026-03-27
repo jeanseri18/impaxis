@@ -10,35 +10,49 @@ use Illuminate\Support\Facades\Validator;
 class ContactManager extends Controller
 {
     //
+
     public function sendMailContactForm(Request $request)
     {
-        if($request->ajax()){
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'fullname'       => 'required|string|min:3|max:255',
+                'phone'          => 'required|string|max:20',
+                'email'          => 'required|email:rfc,dns|max:255',
+                'messageContent' => 'required|string|min:10', // Ajout d'un min pour le contenu
+            ]);
+
+            if ($validator->fails()) {
+                if (ob_get_length()) ob_clean();
+                return response()->json([
+                    'status' => 'validation_error',
+                    'errors' => $validator->errors() // <-- C'est cette clé qui est lue par le JS
+                ], 422);
+            }
 
             try {
-                $validator = Validator::make($request->all(), [
-                    'fullname' => 'required|string|min:3|max:255',
-                    'phone' => 'required|string|max:20',
-                    'email' => 'required|email|max:255',
-                    'messageContent' => 'required|string',
-                ]);
+                Mail::to($request->email)->send(new ContactFormSend(
+                    $request->email, 
+                    $request->fullname, 
+                    $request->phone, 
+                    $request->messageContent 
+                ));
 
-                if ($validator->fails()) {
-                    return response()->json([
-                        'errors' => $validator->errors(), // On retourne l'objet d'erreurs complet
-                    ], 422); // <-- Statut HTTP 422 Unprocessable Entity
-                }
-                
-                Mail::to($request->email)->send(new ContactFormSend($request->email, $request->fullname, $request->phone, $request->messageContent));
-                
-                return response()->json(['status' => 'success', 'message' => 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.'], 200);
+                if (ob_get_length()) ob_clean();
+                return response()->json([
+                    'status'  => 'success',
+                    'message' => 'Votre message a été envoyé avec succès.'
+                ], 200);
 
             } catch (\Exception $e) {
-                // En cas d'échec de Mail ou autre erreur interne
+                if (ob_get_length()) ob_clean();
                 return response()->json([
-                    'message' => 'Une erreur interne est survenue. Veuillez réessayer.',
-                    'exception' => $e->getMessage() // Optionnel pour le débogage
-                ], 500); // Statut HTTP 500 Internal Server Error
+                    'status'  => 'error',
+                    'message' => 'Une erreur est survenue lors de l\'envoi du mail.',
+                    'debug'   => $e->getMessage() // À retirer en production
+                ], 500);
             }
         }
+        
+        return abort(404);  // Si la requête n'est pas AJAX, on retourne une 404 pour éviter les accès directs
     }
 }

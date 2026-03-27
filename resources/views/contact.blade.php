@@ -165,7 +165,7 @@
 
                 <div id="globalResponseMessage" class="mt-3"></div>
 
-                <form method="POST" action="{{ route('front.contact.send-mail') }}" class="row mt-2" id="contactForm">
+                <form method="POST" action="{{ route('front.contact.send-mail', ['locale' => app()->getLocale()]) }}" class="row mt-2" id="contactForm">
                     
                     @csrf
                     
@@ -223,4 +223,71 @@
 
 
 @push('scripts')
-@endpush
+<script>
+    $(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+
+        let form = $(this);
+        let submitBtn = $('#submitBtn');
+        let responseMsg = $('#globalResponseMessage');
+
+        // Reset visuel
+        $('.form-control').removeClass('is-invalid');
+        $('.invalid-feedback').text('');
+        responseMsg.html('');
+        // submitBtn.prop('disabled', true).text('Envoi en cours...');
+        submitBtn.prop('disabled', true).text('Envoi en cours...').addClass('opacity-50');
+        // submitBtn.prop('disabled', true).addClass('opacity-50');
+
+        $.ajax({
+            url: form.attr('action'), // Utilise l'URL générée par Laravel (ex: /en/...)
+            method: 'POST',
+            data: form.serialize(),
+            headers: {
+                'Accept': 'application/json' // <--- INDISPENSABLE pour Laravel + AJAX
+            },
+            dataType: 'json',
+            success: function(response) {
+                // submitBtn.prop('disabled', false).removeClass('opacity-50');
+                responseMsg.html('<div class="alert alert-success">' + response.message + '</div>');
+                form[0].reset();
+            },
+            error: function(xhr) {
+                console.log('XHR Status:', xhr.status);
+                console.log('Response JSON:', xhr.responseJSON);
+
+                // submitBtn.prop('disabled', false).removeClass('opacity-50');
+
+                if (xhr.status === 422) {
+
+                    let errors = xhr.responseJSON.errors || xhr.responseJSON.message;
+
+                    $.each(errors, function(key, value) {
+                        // On gère la correspondance entre le 'name' PHP et l'ID HTML
+                        let fieldId = (key === 'messageContent') ? 'message' : key;
+                        
+                        // Ajout de la classe d'erreur à l'input
+                        $('#' + fieldId).addClass('is-invalid');
+                        
+                        // Injection du message traduit par Laravel dans la div d'erreur
+                        // Note: On utilise l'ID exact de la div d'erreur défini dans votre HTML
+                        $('#' + key + '-error').text(value[0]).show();
+                    });
+                } else {
+                    // Message d'erreur générique (à traduire si vous voulez en dur ici)
+                    // console.log('Debug info from server:', xhr.responseJSON.debug);
+                    let errorMsg = (document.documentElement.lang === 'en') 
+                        ? 'A server error occurred.' 
+                        : 'Une erreur serveur est survenue.';
+                    responseMsg.html('<div class="alert alert-danger">' + errorMsg + '</div>');
+                }
+            },
+            complete: function() {
+                submitBtn.prop('disabled', false).removeClass('opacity-50').text('{{ __('contact.btn-send') }}');
+            }
+        });
+    });
+});
+</script>
+@endpush 
