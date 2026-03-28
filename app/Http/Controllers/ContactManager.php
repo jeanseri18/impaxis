@@ -22,7 +22,7 @@ class ContactManager extends Controller
             ]);
 
             if ($validator->fails()) {
-                if (config('app.env') === 'production' && ob_get_length()) ob_clean();
+                if (config('app.env') != 'production' && ob_get_length()) ob_clean();
                 return response()->json([
                     'status' => 'validation_error',
                     'errors' => $validator->errors() // <-- C'est cette clé qui est lue par le JS
@@ -37,7 +37,7 @@ class ContactManager extends Controller
                     $request->messageContent 
                 ));
 
-                if (config('app.env') === 'production' && ob_get_length()) ob_clean();
+                if (config('app.env') != 'production' && ob_get_length()) ob_clean();
                 if (ob_get_length()) ob_clean();
                 return response()->json([
                     'status'  => 'success',
@@ -45,7 +45,7 @@ class ContactManager extends Controller
                 ], 200);
 
             } catch (\Exception $e) {
-                if (config('app.env') === 'production' && ob_get_length()) ob_clean();
+                if (config('app.env') != 'production' && ob_get_length()) ob_clean();
                 return response()->json([
                     'status'  => 'error',
                     'message' => 'Une erreur est survenue lors de l\'envoi du mail.',
