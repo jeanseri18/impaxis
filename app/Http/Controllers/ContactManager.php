@@ -38,7 +38,7 @@ class ContactManager extends Controller
                 ));
 
                 if (config('app.env') != 'production' && ob_get_length()) ob_clean();
-                if (ob_get_length()) ob_clean();
+                // if (ob_get_length()) ob_clean();
                 return response()->json([
                     'status'  => 'success',
                     'message' => 'Votre message a été envoyé avec succès.'
