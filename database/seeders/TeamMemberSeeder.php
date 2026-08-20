@@ -36,7 +36,7 @@ class TeamMemberSeeder extends Seeder
                 'name' => 'Ababacar DIAW',
                 'slug' => Str::slug('Ababacar DIAW'),
                 'lang' => 'fr',
-                'role' => 'AdministrateurDirecteur Général d\'Impaxis Securities',
+                'role' => 'Administrateur Directeur Général d\'Impaxis Securities',
                 'experience' => '+20',
                 'avatar' => public_path() . '/assets/image/equipes/ababacar-diaw.png',
                 'bio' => "
