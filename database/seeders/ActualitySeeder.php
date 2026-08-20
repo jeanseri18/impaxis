@@ -125,7 +125,6 @@ class ActualitySeeder extends Seeder
                 'slug' => $actuality['slug'],
                 'content' => $actuality['content'],
                 'created_by' => $actuality['created_by'],
-                'created_by' => $actuality['created_by'],
                 'lang' => $actuality['lang'],
                 'is_published' => $actuality['is_published'],
                 'published_at' => $actuality['published_at'],
