@@ -48,10 +48,10 @@ class TeamMemberSeeder extends Seeder
                 ",
             ],
             [
-                'name' => 'M. Babacar Ndoye',
-                'slug' => Str::slug('M. Babacar Ndoye'),
+                'name' => 'Babacar Ndoye',
+                'slug' => Str::slug('Babacar Ndoye'),
                 'lang' => 'fr',
-                'role' => 'Directeur Général d\'Impaxis Securities',
+                'role' => 'Directeur Général d’Impaxis Asset Management',
                 'experience' => '+15',
                 'avatar' => public_path() . '/assets/image/equipes/babacar-ndoye.png',
                 'bio' => "
@@ -98,10 +98,10 @@ class TeamMemberSeeder extends Seeder
                 ",
             ],
             [
-                'name' => 'M. Babacar Ndoye',
-                'slug' => Str::slug('M. Babacar Ndoye en'),
+                'name' => 'Babacar Ndoye',
+                'slug' => Str::slug('Babacar Ndoye en'),
                 'lang' => 'en',
-                'role' => 'Managing Director of Impaxis Securities',
+                'role' => 'Managing Director of Impaxis Asset Management',
                 'experience' => '+15',
                 'avatar' => public_path() . '/assets/image/equipes/babacar-ndoye.png',
                 'bio' => "

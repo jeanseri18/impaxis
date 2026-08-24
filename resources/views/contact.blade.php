@@ -107,7 +107,8 @@
 
     <div class="row">
         <div class="col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.279877085147!2d-17.470906298920998!3d14.696758304031952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a8afb3b95%3A0xdc352c7b6f794677!2sFann%20R%C3%A9sidence%2C%20170%20Av.%20des%20Ambassadeurs%2C%20Dakar%2010700%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1760378963450!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2722684284927!2d-17.47092432573162!3d14.69718897470625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a7b91609d%3A0x498fe376c67b95ce!2sx%2C%20103%20Av.%20des%20Ambassadeurs%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1787571577425!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.279877085147!2d-17.470906298920998!3d14.696758304031952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729a8afb3b95%3A0xdc352c7b6f794677!2sFann%20R%C3%A9sidence%2C%20170%20Av.%20des%20Ambassadeurs%2C%20Dakar%2010700%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sci!4v1760378963450!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
         </div>
     </div>
 
@@ -122,19 +123,22 @@
                             <p class="">
                                 <div class="info-inline ">
                                     <div class="icon"><i class="bi bi-geo-alt" style="margin-left: 10px"></i></div>
-                                    <div class="text-5">Fann Résidence rue Aimé Césaire x Corniche Villa 103. BP 45545 Dakar – SENEGAL</div>
+                                    <div class="text-5">Avenue Cheikh Anta DIOP X Avenue des Ambassadeurs, 103 Fann, B.P. 45545, Dakar, SÉNÉGAL</div>
                                 </div>
                             </p>
                             <p>
                                 <div class="info-inline ">
-                                    <div class="icon"><i class="bi bi-phone" style="margin-left: 10px"></i></div>
+                                    <div class="icon"><i class="bi bi-phone" style="margin-left: 10px"></i></div> 
                                     <div class="text-5"><a href="tel:+221338693140">(+221) 33 869 3140</a></div>
                                 </div>
                             </p>
                             <p>
                                 <div class="info-inline ">
                                     <div class="icon"><i class="bi bi-envelope-at" style="margin-left: 10px"></i></div>
-                                    <div class="text-5"><a href="mailto:serviceclient@impaxis-securities.com">serviceclient@impaxis-securities.com</a></div>
+                                    <div class="text-5">
+                                        <a href="mailto:serviceclient@impaxis-securities.com">serviceclient@impaxis-securities.com</a><br>
+                                        <a href="mailto:service.clients@impaxis-am.com">service.clients@impaxis-am.com</a>
+                                    </div>
                                 </div>
                             </p>
                         </div>

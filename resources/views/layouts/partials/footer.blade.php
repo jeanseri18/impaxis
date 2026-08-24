@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-6 footer-right-content">
                     <i class="bi bi-linkedin"></i>
-                    <a href="https://linkedin.com/" target="_blank" style="margin-left: 4px">Linkedin</a>
+                    <a href="https://www.linkedin.com/company/impaxis-securities/posts/?feedView=all" target="_blank" style="margin-left: 4px">Linkedin</a>
                 </div>
             </div>
 
