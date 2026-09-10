@@ -34,9 +34,21 @@ class TeamMember extends Model implements HasMedia
         $media = $this->getFirstMedia('avatarTeam');
 
         if (is_null($media)) {
-            return asset('/assets/image/equipes/default.jpeg');
+            return asset('assets/image/equipes/default.jpeg');
         }
 
-        return $media->getFullUrl();
+        // Lien direct public (storage/...)
+        $relative = 'storage/' . $media->id . '/' . $media->file_name;
+        if (is_file(public_path($relative))) {
+            return asset($relative);
+        }
+
+        // Fallback sur les images déjà présentes dans public/assets
+        $fallback = 'assets/image/equipes/' . $media->file_name;
+        if (is_file(public_path($fallback))) {
+            return asset($fallback);
+        }
+
+        return asset($relative);
     }
 }

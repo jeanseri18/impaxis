@@ -46,10 +46,21 @@ class Actuality extends Model implements HasMedia
         $media = $this->getFirstMedia('actu_cover');
 
         if (is_null($media)) {
-            return asset('/assets/image/cover_actu.jpg');
+            return asset('assets/image/cover_actu.jpg');
         }
 
-        return $media->getFullUrl();
+        // Lien direct public (storage/...)
+        $relative = 'storage/' . $media->id . '/' . $media->file_name;
+        if (is_file(public_path($relative))) {
+            return asset($relative);
+        }
+
+        $fallback = 'assets/image/' . $media->file_name;
+        if (is_file(public_path($fallback))) {
+            return asset($fallback);
+        }
+
+        return asset($relative);
     }
 
     public function category(): BelongsTo
