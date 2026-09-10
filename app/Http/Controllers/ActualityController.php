@@ -9,13 +9,14 @@ class ActualityController extends Controller
     //
     public function showActuality($locale, $item_id, $slug)
     {
-        $item = Actuality::where('id', $item_id)->where('slug', $slug)->firstOrFail();
+        $item = Actuality::where('id', $item_id)->where('slug', $slug)->notDeleted()->firstOrFail();
         // Check if the item is published
         if (!$item->is_published) {
             abort(404); // Not found if the item is not published
         }
         // recuperer les 5 derniers articles
         $recentActualities = Actuality::where('is_published', true)
+            ->notDeleted()
             ->where('id', '!=', $item_id) // Exclude the current item
             ->where('lang', $locale) // Filter by the same language
             ->orderBy('created_at', 'desc')

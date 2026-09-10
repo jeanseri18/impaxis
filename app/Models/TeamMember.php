@@ -13,8 +13,12 @@ class TeamMember extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'slug',
         'role',
         'lang',
+        'linkedin',
+        'twitter',
+        'facebook',
         'experience',
         'bio',
     ];
@@ -25,11 +29,14 @@ class TeamMember extends Model implements HasMedia
             ->singleFile();
     }
 
-    public function getAvatarFullUrl() {
-        if (is_null($this->getFirstMedia('avatarTeam'))) {
+    public function getAvatarFullUrl(): string
+    {
+        $media = $this->getFirstMedia('avatarTeam');
+
+        if (is_null($media)) {
             return asset('/assets/image/equipes/default.jpeg');
         }
 
-        return $this->getFirstMedia('avatarTeam')->getFullUrl();
+        return $media->getFullUrl();
     }
 }

@@ -36,6 +36,7 @@ class ManagerController extends Controller
         $actualities = Actuality::orderBy('created_at', 'desc')
             ->where('lang', $locale)
             ->where('is_published', true)
+            ->notDeleted()
             ->paginate(9);
             
         return view('actualities', compact('actualities'));

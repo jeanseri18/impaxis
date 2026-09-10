@@ -1,100 +1,51 @@
-
 <?php
 
 use App\Http\Controllers\ActualityController;
+use App\Http\Controllers\Admin\ActualityController as AdminActualityController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TeamMemberController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ContactManager;
 use App\Http\Controllers\ManagerController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Redirection automatique de la racine vers le français
 Route::get('/', function () {
     return redirect('/fr');
 });
 
-// Define a route group for the frontend 
 Route::prefix('{locale}')
     ->where(['locale' => 'fr|en'])
     ->middleware(['web', \App\Http\Middleware\SetLocale::class])
     ->group(function () {
-
-    Route::name('front.')->group(function () {
-        Route::get('/', [ManagerController::class, 'welcome'])->name('welcome');
-        Route::get('/a-propos', [ManagerController::class, 'about'])->name('about');
-        Route::get('/equipes/{item_id}/biographie/{slug}', [ManagerController::class, 'getPersonBiographie'])->name('person-biographie');
-        Route::get('/nos-metiers', [ManagerController::class, 'ourJobs'])->name('our-jobs');
-        Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
-        Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
-        Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
-        Route::get('/contact', [ManagerController::class, 'contact'])->name('contact');
-        Route::post('/contact/sendMail', [ContactManager::class, 'sendMailContactForm'])->name('contact.send-mail');
+        Route::name('front.')->group(function () {
+            Route::get('/', [ManagerController::class, 'welcome'])->name('welcome');
+            Route::get('/a-propos', [ManagerController::class, 'about'])->name('about');
+            Route::get('/equipes/{item_id}/biographie/{slug}', [ManagerController::class, 'getPersonBiographie'])->name('person-biographie');
+            Route::get('/nos-metiers', [ManagerController::class, 'ourJobs'])->name('our-jobs');
+            Route::get('/nos-references', [ManagerController::class, 'ourReferences'])->name('our-references');
+            Route::get('/actualities', [ManagerController::class, 'showActualities'])->name('actualities');
+            Route::get('/actualities/{item_id}/{slug}', [ActualityController::class, 'showActuality'])->name('actuality.show');
+            Route::get('/contact', [ManagerController::class, 'contact'])->name('contact');
+        });
+        Route::post('/contact/sendMail', [ContactManager::class, 'sendMailContactForm'])->name('front.contact.send-mail');
     });
-    
-});
 
+Route::prefix('admin')
+    ->middleware(['auth', 'admin'])
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-// // Define a route group for the admin panel
-// Route::middleware('auth')->name('admin.')->group(function () {
-//     Route::get('/dashboard', function () {
-//         // return view('admin.index');
-//         return 'Admin Dashboard';
-//     })->name('index');
-    
-//     // Actuality management routes
-//     Route::get('/actualities', [ActualityController::class, 'index'])->name('actualities.index');
-//     Route::get('/actualities/create', [ActualityController::class, 'create'])->name('actualities.create');
-//     Route::post('/actualities', [ActualityController::class, 'store'])->name('actualities.store');
-//     Route::get('/actualities/{id}/edit', [ActualityController::class, 'edit'])->name('actualities.edit');
-//     Route::put('/actualities/{id}', [ActualityController::class, 'update'])->name('actualities.update');
-//     Route::delete('/actualities/{id}', [ActualityController::class, 'destroy'])->name('actualities.destroy');
-// });
+        Route::resource('actualities', AdminActualityController::class)->except(['show']);
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard')->prefix('admin');
+        Route::resource('team', TeamMemberController::class)
+            ->parameters(['team' => 'member'])
+            ->except(['show']);
 
+        Route::get('account', [UserController::class, 'account'])->name('account');
+        Route::put('account', [UserController::class, 'updateAccount'])->name('account.update');
 
-
-
-
-// <?php
-
-// use App\Http\Controllers\ProfileController;
-// use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
+        Route::resource('users', UserController::class)->except(['show']);
+    });
 
 require __DIR__.'/auth.php';
