@@ -19,7 +19,7 @@
             <div class="admin-brand">
                 <a href="{{ route('admin.dashboard') }}">
                     <img src="{{ asset('assets/logos.png') }}" alt="Impaxis">
-                    <span>Admin</span>
+                    {{-- <span>Admin</span> --}}
                 </a>
             </div>
 

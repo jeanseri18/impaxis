@@ -104,7 +104,7 @@
     <div class="container card-bio">
         <div class="row block-bio-member">
             <div class="col-md-4 photo-bio">
-                {{-- <img src="{{ $item->getAvatarFullUrl() }}" width="300px" alt=""> --}}
+                <img src="{{ $item->getAvatarFullUrl() }}" width="300px" alt="">
             </div>
             <div class="col-md-8 block-bio d-flex align-items-center">
                 <div class="mr-20">
